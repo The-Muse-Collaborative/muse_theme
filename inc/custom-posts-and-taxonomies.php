@@ -6,20 +6,31 @@
 /* Creates custom taxonomy for bios */
 /************************************/
 function bio_init() {
-	register_taxonomy('bio-type', 'bio',
-		array(
-			'label'                 => __( 'Bio Categories' ),
-      'hierarchical'          => true,
-      'show_ui'               => true,
-      'public'                => true,
-      'show_admin_column'     => true,
-			'rewrite'               => array( 'slug' => 'Bioslabel2' ),
-			'capabilities'          => array(
-			'assign_terms'          => 'edit_guides',
-			'edit_terms'            => 'publish_guides'
-			)
-		)
+	$labels = array(
+		'name'              => _x( 'Bios', 'taxonomy general name', 'textdomain' ),
+		'singular_name'     => _x( 'Bio', 'taxonomy singular name', 'textdomain' ),
+		'search_items'      => __( 'Search Bio Categories', 'textdomain' ),
+		'all_items'         => __( 'All Bio Categories', 'textdomain' ),
+		'parent_item'       => __( 'Parent Bio Category', 'textdomain' ),
+		'parent_item_colon' => __( 'Parent Bio Category:', 'textdomain' ),
+		'edit_item'         => __( 'Edit Bio Category', 'textdomain' ),
+		'update_item'       => __( 'Update Bio Category', 'textdomain' ),
+		'add_new_item'      => __( 'Add New Bio Category', 'textdomain' ),
+		'new_item_name'     => __( 'New Bio Name', 'textdomain' ),
+		'menu_name'         => __( 'Bio Categories', 'textdomain' ),
 	);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'public'            => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'bio' ),
+	);
+
+	register_taxonomy('bio', array( 'bio' ), $args);
 }
 
 /************************************/
