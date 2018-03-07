@@ -13,7 +13,12 @@ require get_template_directory() . '/inc/theme-settings.php';
 /**
  * Initialize custom post settings
  */
-require get_template_directory() . '/inc/custom-posts-and-taxonomies.php';
+require get_template_directory() . '/inc/custom-posts.php';
+
+/**
+ * Initialize custom post settings
+ */
+require get_template_directory() . '/inc/custom-taxonomies.php';
 
 /**
  * Theme setup and custom theme supports.

@@ -1,43 +1,5 @@
 <?php
-/**       Custom posts & taxonomies setup        **/
-
-
-/************************************/
-/* Creates custom taxonomy for bios */
-/************************************/
-function bio_init() {
-	$labels = array(
-		'name'              => _x( 'Bios', 'taxonomy general name', 'textdomain' ),
-		'singular_name'     => _x( 'Bio', 'taxonomy singular name', 'textdomain' ),
-		'search_items'      => __( 'Search Bio Categories', 'textdomain' ),
-		'all_items'         => __( 'All Bio Categories', 'textdomain' ),
-		'parent_item'       => __( 'Parent Bio Category', 'textdomain' ),
-		'parent_item_colon' => __( 'Parent Bio Category:', 'textdomain' ),
-		'edit_item'         => __( 'Edit Bio Category', 'textdomain' ),
-		'update_item'       => __( 'Update Bio Category', 'textdomain' ),
-		'add_new_item'      => __( 'Add New Bio Category', 'textdomain' ),
-		'new_item_name'     => __( 'New Bio Name', 'textdomain' ),
-		'menu_name'         => __( 'Bio Categories', 'textdomain' ),
-	);
-
-	$args = array(
-		'hierarchical'      => true,
-		'labels'            => $labels,
-		'show_ui'           => true,
-		'public'            => true,
-		'show_admin_column' => true,
-		'query_var'         => true,
-		'rewrite'           => array( 'slug' => 'bio' ),
-	);
-
-	register_taxonomy('bio', array( 'bio' ), $args);
-}
-
-/************************************/
-/* Runs custom taxonomy for bios */
-/************************************/
-add_action( 'init', 'bio_init' );
-
+/**       Custom posts setup        **/
 
 /*************************************/
 /* Creates custom post type 'Album'  */
@@ -94,6 +56,64 @@ function codex_album_init() {
 
 	register_post_type( 'album', $args );
 }
+
+/*************************************/
+/* Creates custom post type 'Articles'  */
+/*************************************/
+
+add_action( 'init', 'codex_article_init' );
+
+function codex_article_init() {
+	$labels = array(
+		'name'               => _x( 'Articles', 'post type general name', 'your-plugin-textdomain' ),   //Don't know if I need anything other than the first string
+		'singular_name'      => _x( 'Article', 'post type singular name', 'your-plugin-textdomain' ),
+		'menu_name'          => _x( 'Articles', 'admin menu', 'your-plugin-textdomain' ),
+		'name_admin_bar'     => _x( 'Article', 'add new on admin bar', 'your-plugin-textdomain' ),
+		'add_new'            => _x( 'Add New', 'article', 'your-plugin-textdomain' ),
+		'add_new_item'       => __( 'Add New Article', 'your-plugin-textdomain' ),
+		'new_item'           => __( 'New Article', 'your-plugin-textdomain' ),
+		'edit_item'          => __( 'Edit Article', 'your-plugin-textdomain' ),
+		'view_item'          => __( 'View Article', 'your-plugin-textdomain' ),
+    'view_items'         => __( 'View Articles', 'your-plugin-textdomain' ),
+		'all_items'          => __( 'All Articles', 'your-plugin-textdomain' ),
+		'search_items'       => __( 'Search Articles', 'your-plugin-textdomain' ),
+		'parent_item_colon'  => __( 'Parent Articles:', 'your-plugin-textdomain' ),
+		'not_found'          => __( 'No articles found.', 'your-plugin-textdomain' ),
+		'not_found_in_trash' => __( 'No articles found in Trash.', 'your-plugin-textdomain' ),
+    'featured_image'     => __( 'Featured Article Image', 'your-plugin-textdomain' ),
+    'set_featured_image' => __( 'Set Image', 'your-plugin-textdomain' ),
+	);
+
+	$args = array(
+		'labels'             => $labels,
+    'description'        => __( 'Insert description here!.', 'your-plugin-textdomain' ),     // Don't know
+    'menu_icon'          => 'dashicons-format-aside',                                  // Sets icon in wordpress ui
+		'public'             => true,                                               // Makes post searchable, displays in wordpress ui
+    'delete_with_user'   => false,                                              // If author is deleted, post are not deleted if set to false
+    'query_var'          => true,                                               // "If set to true it allows you to request a custom posts type (book) using this: example.com/?book=life-of-pi"
+		'capability_type'    => 'post',                                             // Don't understand
+		'has_archive'        => true,                                               // Don't know
+    'rewrite'            => array( 'slug' => 'albums'),                         // Changes archive page URL
+	  'hierarchical'       => false,                                              // Don't know
+		'menu_position'      => 5,                                                  // Sets order in wordpress ui
+//    'taxonomies'         => array( 'post_tag', 'category'),                  // Creates category-like subdivisions -- needs to be added to register_taxonomy()
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'revisions'),    // Fields enabled on the edit page
+	);
+
+  add_filter( 'enter_title_here', function( $title ) {                          // Changes tool-tip for Album title
+      $screen = get_current_screen();
+
+      if  ( 'article' == $screen->post_type ) {
+          $title = 'Enter article name';
+      }
+
+      return $title;
+  } );
+
+	register_post_type( 'article', $args );
+}
+
+
 
 /*************************************/
 /* Creates custom post type 'Artist'  */
@@ -174,7 +194,7 @@ function codex_bio_init() {
 		'show_ui'            => true,                                               // Don't know
 		'show_in_menu'       => true,                                               // Don't know
 		'query_var'          => true,                                               // Don't know
-		'rewrite'            => array( 'slug' => 'album' ),                         // Don't know
+		'rewrite'            => array( 'slug' => 'bio' ),                         // Don't know
 		'capability_type'    => 'post',                                             // Don't know
 		'has_archive'        => true,                                               // Don't know
 		'hierarchical'       => true,                                              // Sets order in wordpress menu
