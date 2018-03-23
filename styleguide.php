@@ -1,7 +1,7 @@
 <?php
 /**
- * The template for displaying all pages.
- *
+ * Template Name: Styleguide
+ * *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
  * and that other 'pages' on your WordPress site will use a
@@ -22,30 +22,12 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 		<div class="row">
 
-			<!-- Do the left sidebar check -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
 			<main class="site-main" id="main">
-
-				<?php while ( have_posts() ) : the_post(); ?>
-
-					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
-
-					<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-					?>
-
-				<?php endwhile; // end of the loop. ?>
-
+			I am the styleguide.
 			</main><!-- #main -->
 
 		</div><!-- #primary -->
-
-		<!-- Do the right sidebar check -->
-		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
 
 	</div><!-- .row -->
 
