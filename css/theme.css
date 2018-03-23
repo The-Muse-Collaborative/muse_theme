@@ -7067,6 +7067,9 @@ a.text-dark:hover, a.text-dark:focus {
 .entry-footer span {
   padding-right: 10px; }
 
+figure.woocommerce-product-gallery__wrapper {
+  max-width: inherit !important; }
+
 img.wp-post-image,
 article img,
 figure,
@@ -9497,3 +9500,80 @@ a.skip-link {
   .wpcf7 .wpcf7-validation-errors {
     color: #dc3545;
     border: 1px solid #e9ecef; }
+
+body {
+  font-family: "sofia-pro", "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #2d2926; }
+
+h2, h3, h4, h5, h6 {
+  font-weight: bold; }
+
+h2 {
+  font-family: "industry", "Exo 2", sans-serif;
+  color: #c114a2;
+  font-size: 32px; }
+  h2.yellow {
+    color: #ffd100; }
+  h2.black {
+    color: #ffd100; }
+
+h3 {
+  font-family: "industry", "Exo 2", sans-serif;
+  color: #c114a2;
+  font-size: 28px;
+  font-weight: 400; }
+  h3.yellow {
+    color: #ffd100; }
+  h3.black {
+    color: #ffd100; }
+
+h4 {
+  font-size: 24px;
+  font-family: "industry", "Exo 2", sans-serif; }
+
+h5 {
+  font-size: 20px;
+  font-family: "sofia-pro", "Montserrat", sans-serif; }
+
+h6 {
+  font-size: 16px;
+  font-family: "sofia-pro", "Montserrat", sans-serif; }
+
+.mc-styleguide-block + .mc-styleguide-block {
+  margin-top: 40px; }
+
+.mc-styleguide-title {
+  color: #2d2926;
+  padding: 10px;
+  margin-bottom: 20px;
+  background: #ffd100;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.2); }
+
+.mc-styleguide .mc-color-blocks {
+  display: flex;
+  justify-content: flex-start; }
+
+.mc-styleguide .mc-color-block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  width: 100px;
+  height: 100px;
+  border: 5px solid rgba(0, 0, 0, 0.2); }
+  .mc-styleguide .mc-color-block * {
+    width: 100%;
+    text-align: center; }
+  .mc-styleguide .mc-color-block.yellow {
+    background: #ffd100; }
+  .mc-styleguide .mc-color-block.pink {
+    background: #c114a2; }
+  .mc-styleguide .mc-color-block.black {
+    background: #2d2926;
+    color: white; }
+
+.mc-styleguide .mc-color-block + .mc-color-block {
+  margin-left: 10px; }
