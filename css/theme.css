@@ -9502,16 +9502,16 @@ a.skip-link {
     border: 1px solid #e9ecef; }
 
 body {
-  font-family: "sofia-pro", "Montserrat", sans-serif;
-  font-weight: 300;
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
   font-size: 16px;
-  color: #2d2926; }
+  color: #2d2a26; }
 
 h2, h3, h4, h5, h6 {
-  font-weight: bold; }
+  font-weight: 700; }
 
 h2 {
-  font-family: "industry", "Exo 2", sans-serif;
+  font-family: "Saira", sans-serif;
   color: #c114a2;
   font-size: 32px; }
   h2.yellow {
@@ -9520,10 +9520,10 @@ h2 {
     color: #ffd100; }
 
 h3 {
-  font-family: "industry", "Exo 2", sans-serif;
+  font-family: "Saira", sans-serif;
   color: #c114a2;
   font-size: 28px;
-  font-weight: 400; }
+  font-weight: 700; }
   h3.yellow {
     color: #ffd100; }
   h3.black {
@@ -9531,21 +9531,79 @@ h3 {
 
 h4 {
   font-size: 24px;
-  font-family: "industry", "Exo 2", sans-serif; }
+  font-family: "Saira", sans-serif; }
 
 h5 {
   font-size: 20px;
-  font-family: "sofia-pro", "Montserrat", sans-serif; }
+  font-family: "Archivo", sans-serif; }
 
 h6 {
   font-size: 16px;
-  font-family: "sofia-pro", "Montserrat", sans-serif; }
+  font-family: "Archivo", sans-serif; }
+
+.btn, .wpcf7 input[type=submit] {
+  display: inline-block;
+  border-radius: 0;
+  border: 1px solid #2d2a26;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  padding: 12px 24px;
+  margin-bottom: 5px; }
+  .btn:hover, .wpcf7 input[type=submit]:hover {
+    background: #eee;
+    border: 1px solid rgba(45, 42, 38, 0.3); }
+  .btn:focus, .wpcf7 input[type=submit]:focus {
+    box-shadow: 0 0 0 1px rgba(193, 20, 162, 0.3); }
+  .btn.btn-primary, .wpcf7 input.btn-primary[type=submit], .btn.btn-pink, .wpcf7 input.btn-pink[type=submit] {
+    background: #c114a2;
+    border-color: #c114a2;
+    color: #fff;
+    font-weight: 400; }
+    .btn.btn-primary:hover, .wpcf7 input.btn-primary[type=submit]:hover, .btn.btn-pink:hover, .wpcf7 input.btn-pink[type=submit]:hover {
+      background: #aa128f; }
+  .btn.btn-secondary, .wpcf7 input.btn-secondary[type=submit] {
+    background: #524f4b;
+    border-color: #524f4b;
+    color: #fff;
+    font-weight: 400; }
+    .btn.btn-secondary:hover, .wpcf7 input.btn-secondary[type=submit]:hover {
+      background: #45423f; }
+  .btn.btn-special, .wpcf7 input.btn-special[type=submit] {
+    background: #2d2a26;
+    border-color: #2d2a26;
+    color: #ffd100;
+    font-weight: 400; }
+    .btn.btn-special:hover, .wpcf7 input.btn-special[type=submit]:hover {
+      background: #1f1d1a; }
+  .btn.btn-success, .wpcf7 input.btn-success[type=submit] {
+    background: #3f9e42;
+    border-color: #3f9e42;
+    color: white;
+    font-weight: 400; }
+    .btn.btn-success:hover, .wpcf7 input.btn-success[type=submit]:hover {
+      background: #388c3a; }
+  .btn.btn-warning, .wpcf7 input.btn-warning[type=submit] {
+    background: #ffd100;
+    border-color: #ffd100;
+    color: #2d2a26;
+    font-weight: 500; }
+    .btn.btn-warning:hover, .wpcf7 input.btn-warning[type=submit]:hover {
+      background: #e6bc00; }
+  .btn.btn-danger, .wpcf7 input.btn-danger[type=submit] {
+    background: #bf1919;
+    border-color: #bf1919;
+    color: white;
+    font-weight: 400; }
+    .btn.btn-danger:hover, .wpcf7 input.btn-danger[type=submit]:hover {
+      background: #a81616; }
 
 .mc-styleguide-block + .mc-styleguide-block {
   margin-top: 40px; }
 
 .mc-styleguide-title {
-  color: #2d2926;
+  color: #2d2a26;
   padding: 10px;
   margin-bottom: 20px;
   background: #ffd100;
@@ -9572,7 +9630,7 @@ h6 {
   .mc-styleguide .mc-color-block.pink {
     background: #c114a2; }
   .mc-styleguide .mc-color-block.black {
-    background: #2d2926;
+    background: #2d2a26;
     color: white; }
 
 .mc-styleguide .mc-color-block + .mc-color-block {
