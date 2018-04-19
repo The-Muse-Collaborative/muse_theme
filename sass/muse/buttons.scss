@@ -14,7 +14,7 @@
     background: $gray-light;
     border: 1px solid transparentize($black, .7);
   }
-  &:focus { box-shadow: 0 0 0 1px transparentize($pink, .7); }
+  &:focus { box-shadow: 0 0 0 1px transparentize($yellow, .7); }
   &.btn-primary, &.btn-pink {
     background: $pink;
     border-color: $pink;
