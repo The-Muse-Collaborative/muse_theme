@@ -1,0 +1,60 @@
+// Buttons
+
+.btn {
+  display: inline-block;
+  border-radius: 0;
+  border: 1px solid $black;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  padding: 12px 24px;
+  margin-bottom: 5px;
+  &:hover {
+    background: $gray-light;
+    border: 1px solid transparentize($black, .7);
+  }
+  &:focus { box-shadow: 0 0 0 1px transparentize($pink, .7); }
+  &.btn-primary, &.btn-pink {
+    background: $pink;
+    border-color: $pink;
+    color: #fff;
+    font-weight: 400;
+    &:hover { background: darken($pink, 5%)}
+  }
+  &.btn-secondary {
+    background: $gray-dark;
+    border-color: $gray-dark;
+    color: #fff;
+    font-weight: 400;
+    &:hover { background: darken($gray-dark, 5%)}
+  }
+  &.btn-special {
+    background: $black;
+    border-color: $black;
+    color: $yellow;
+    font-weight: 400;
+    &:hover { background: darken($black, 5%)}
+  }
+  &.btn-success {
+    background: $green;
+    border-color: $green;
+    color: white;
+    font-weight: 400;
+    &:hover { background: darken($green, 5%)}
+  }
+  &.btn-warning {
+    background: $yellow;
+    border-color: $yellow;
+    color: $black;
+    font-weight: 500;
+    &:hover { background: darken($yellow, 5%)}
+  }
+  &.btn-danger {
+    background: $red;
+    border-color: $red;
+    color: white;
+    font-weight: 400;
+    &:hover { background: darken($red, 5%)}
+  }
+}

@@ -56,6 +56,30 @@ $container   = get_theme_mod( 'understrap_container_type' );
 					</div>
 				</div>
 
+				<div class="mc-styleguide-block">
+					<h3 class="mc-styleguide-title">Buttons</h3>
+					<div class="row">
+						<div class="col-md-12">
+							<button class="btn btn-default">Standard Button</button>
+							<button class="btn btn-primary">Primary Button</button>
+							<button class="btn btn-secondary">Secondary Button</button>
+							<button class="btn btn-special">Special Button</button>
+							<button class="btn btn-success">Success Button</button>
+							<button class="btn btn-warning">Warning Button</button>
+							<button class="btn btn-danger">Danger Button</button>
+						</div>
+					</div>
+					<div class="row" style="margin-top: 20px;">
+						<div class="col-md-12">
+							<div class="btn-group">
+								<button class="btn btn-success">Success Button</button>
+								<button class="btn btn-warning">Warning Button</button>
+								<button class="btn btn-primary">Danger Button</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</main><!-- #main -->
 
 		</div><!-- #primary -->
