@@ -1,14 +1,14 @@
-$body-font-family: 'sofia-pro', 'Montserrat', sans-serif;
-$header-font-family: 'industry', 'Exo 2', sans-serif;
+$body-font-family: 'Archivo', sans-serif;
+$header-font-family: 'Saira', sans-serif;
 
 body {
   font-family: $body-font-family;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
   color: $black;
 }
 
-h2, h3, h4, h5, h6 { font-weight: bold; }
+h2, h3, h4, h5, h6 { font-weight: 700; }
 
 h2 {
   font-family: $header-font-family;
@@ -21,7 +21,7 @@ h3 {
   font-family: $header-font-family;
   color: $pink;
   font-size: 28px;
-  font-weight: 400;
+  font-weight: 700;
   &.yellow { color: $yellow; }
   &.black { color: $yellow; }
 }
