@@ -1,0 +1,89 @@
+// Forms
+
+.form-heading {
+  position: relative;
+  display: block;
+  background: $yellow;
+  color: $black;
+  padding: 5px;
+  padding-left: 40px;
+  padding-right: 30px;
+  margin-right: 17px;
+  font-size: 20px;
+  &:before {
+    content: ' ';
+    position: absolute;
+    z-index: 1;
+    display: block;
+    left: 20px;
+    top:0;
+    bottom: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid $black;
+  }
+  &:after {
+    content: ' ';
+    position:absolute;
+    right:-17px;
+    display: block;
+    top:0;
+    width: 0;
+    height: 0;
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid transparent;
+    border-left: 17px solid $yellow;
+  }
+}
+
+.form-control {
+  border-radius: 0;
+  margin-bottom: 5px;
+
+  @at-root fieldset#{&} { border: none; }
+  &:focus {
+    border-color: $yellow;
+    box-shadow: 0 0 0 1px transparentize($yellow, .7);
+  }
+  &::placeholder {
+    color: lighten($gray-dark, 50%);
+  }
+  &:-ms-input-placeholder {
+    color: lighten($gray-dark, 50%);
+  }
+  &::-ms-input-placeholder {
+    color: lighten($gray-dark, 50%);
+  }
+
+  // Validation Styles.
+  // You can either insert these classes, or
+  // apend your plug-in specific classes here.
+  &.is-valid {
+    color: $green;
+    border-color: $green;
+    box-shadow: 0 0 0 1px transparentize($green, .7);
+  }
+  &.is-invalid {
+    color: $red;
+    border-color: $red;
+    box-shadow: 0 0 0 1px transparentize($red, .7);
+  }
+}
+
+label {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  &.is-valid { color: $green; }
+  &.is-invalid { color: $red; }
+}
+
+.valid-feedback { color: $green; font-weight: 500;}
+.invalid-feedback { color: $red; font-weight: 500;}
+
+//More general classes to cover a multitude of sins.
+.valid { color: $green; }
+.invalid { color: $red; }
