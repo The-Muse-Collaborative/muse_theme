@@ -93,7 +93,7 @@ function codex_article_init() {
     'query_var'          => true,                                               // "If set to true it allows you to request a custom posts type (book) using this: example.com/?book=life-of-pi"
 		'capability_type'    => 'post',                                             // Don't understand
 		'has_archive'        => true,                                               // Don't know
-    'rewrite'            => array( 'slug' => 'albums'),                         // Changes archive page URL
+    'rewrite'            => array( 'slug' => 'article'),                        // Changes archive page URL
 	  'hierarchical'       => false,                                              // Don't know
 		'menu_position'      => 5,                                                  // Sets order in wordpress ui
 //    'taxonomies'         => array( 'post_tag', 'category'),                  // Creates category-like subdivisions -- needs to be added to register_taxonomy()
