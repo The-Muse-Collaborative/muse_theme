@@ -41,6 +41,11 @@
       background: $black !important;
     }
   }
+  .nav-link.meta.yellow:hover { color: transparentize($yellow, .2) !important;}
+  .active .nav-link.meta.yellow { color: white !important;}
+  .active .nav-link.meta.yellow:hover { color:transparentize($white, .2) !important;}
+
   &.navbar-dark .navbar-nav .dropdown-menu .nav-link:hover { color: $yellow !important;}
+  &.navbar-dark .navbar-nav .nav-link:hover { color: transparentize($yellow, .7)}
   .dropdown:hover .dropdown-menu { display: block; }
 }

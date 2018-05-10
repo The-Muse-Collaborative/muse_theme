@@ -9549,6 +9549,15 @@ h6 {
   .meta.yellow {
     color: #ffd100 !important; }
 
+a.meta.yellow:hover {
+  color: rgba(255, 209, 0, 0.8) !important; }
+
+.active a.meta.yellow {
+  color: white !important; }
+
+.active a.meta.yellow:hover {
+  color: rgba(255, 255, 255, 0.8) !important; }
+
 .btn, .wpcf7 input[type=submit] {
   display: inline-block;
   border-radius: 0;
@@ -9849,8 +9858,16 @@ label {
       color: #2d2a26 !important; }
     .mc-header__submenu .nav-link:hover {
       background: #2d2a26 !important; }
+  .mc-header .nav-link.meta.yellow:hover {
+    color: rgba(255, 209, 0, 0.8) !important; }
+  .mc-header .active .nav-link.meta.yellow {
+    color: white !important; }
+  .mc-header .active .nav-link.meta.yellow:hover {
+    color: rgba(255, 255, 255, 0.8) !important; }
   .mc-header.navbar-dark .navbar-nav .dropdown-menu .nav-link:hover {
     color: #ffd100 !important; }
+  .mc-header.navbar-dark .navbar-nav .nav-link:hover {
+    color: rgba(255, 209, 0, 0.3); }
   .mc-header .dropdown:hover .dropdown-menu {
     display: block; }
 
