@@ -35,3 +35,11 @@ h6 {
   font-size: 16px;
   font-family: $body-font-family;
 }
+
+.meta {
+  font-family: $header-font-family;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  &.yellow { color: $yellow !important; }
+}

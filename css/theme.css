@@ -9541,6 +9541,14 @@ h6 {
   font-size: 16px;
   font-family: "Archivo", sans-serif; }
 
+.meta {
+  font-family: "Saira", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px; }
+  .meta.yellow {
+    color: #ffd100 !important; }
+
 .btn, .wpcf7 input[type=submit] {
   display: inline-block;
   border-radius: 0;
@@ -9799,6 +9807,52 @@ label {
 
 .invalid {
   color: #bf1919; }
+
+.mc-header {
+  margin-bottom: 76px;
+  background: #2d2a26; }
+  @media screen and (min-width: 767px) {
+    .mc-header__container {
+      height: 100px;
+      align-items: flex-end !important; } }
+  .mc-header__logo {
+    width: 100px;
+    height: auto; }
+    @media screen and (min-width: 767px) {
+      .mc-header__logo {
+        width: 300px;
+        margin-bottom: -67px; } }
+  .mc-header__menu {
+    height: 50px;
+    justify-content: flex-end; }
+  .mc-header__submenu {
+    background: #ffd100;
+    color: #2d2a26;
+    border-radius: 0;
+    border: none;
+    border-top: 13px solid #2d2a26;
+    margin-top: 0;
+    padding: 0; }
+    .mc-header__submenu:before {
+      content: " ";
+      height: 10px;
+      width: 10px;
+      position: absolute;
+      border-bottom: 10px #ffd100 solid;
+      border-left: 10px transparent solid;
+      border-right: 10px transparent solid;
+      top: -10px;
+      left: 10px; }
+    .mc-header__submenu .meta {
+      font-weight: 600 !important;
+      font-size: 12px !important;
+      color: #2d2a26 !important; }
+    .mc-header__submenu .nav-link:hover {
+      background: #2d2a26 !important; }
+  .mc-header.navbar-dark .navbar-nav .dropdown-menu .nav-link:hover {
+    color: #ffd100 !important; }
+  .mc-header .dropdown:hover .dropdown-menu {
+    display: block; }
 
 .mc-styleguide-block + .mc-styleguide-block {
   margin-top: 40px; }
