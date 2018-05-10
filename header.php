@@ -35,29 +35,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content',
 		'understrap' ); ?></a>
 
-		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<nav class="navbar navbar-expand-md navbar-dark mc-header">
 
 		<?php if ( 'container' == $container ) : ?>
-			<div class="container">
+			<div class="container mc-header__container">
 		<?php endif; ?>
-
-					<!-- Your site title as branding in the menu -->
-					<?php if ( ! has_custom_logo() ) { ?>
-
-						<?php if ( is_front_page() && is_home() ) : ?>
-
-							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-
-						<?php else : ?>
-
-							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-
-						<?php endif; ?>
-
-
-					<?php } else {
-						the_custom_logo();
-					} ?><!-- end custom logo -->
+				<h1 class="navbar-brand mb-0" style="display: none;"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+				<?php if(get_field('root_page_banner')) : ?>
+					<img src="<?php echo get_template_directory_uri() . '/images/logo.svg'; ?>" class="mc-header__logo" alt="The Muse Collaborative"/>
+				<?php else:  ?>
+					<img src="<?php echo get_template_directory_uri() . '/images/logo-dark.svg'; ?>" class="mc-header__logo" alt="The Muse Collaborative"/>
+				<?php endif;?>
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -67,7 +55,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<?php wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
-						'container_class' => 'collapse navbar-collapse',
+						'container_class' => 'collapse navbar-collapse mc-header__menu',
 						'container_id'    => 'navbarNavDropdown',
 						'menu_class'      => 'navbar-nav',
 						'fallback_cb'     => '',
