@@ -1,0 +1,46 @@
+.mc-header {
+  margin-bottom: 76px;
+  background: $black;
+  &__container {
+    @media screen and (min-width: 767px) {
+      height: 100px;
+      align-items: flex-end !important;
+    }
+  }
+  &__logo {
+    width: 100px;
+    height: auto;
+
+    @media screen and (min-width: 767px) { width: 300px; margin-bottom: -67px;  }
+  }
+  &__menu {
+    height: 50px;
+    justify-content: flex-end;
+  }
+  &__submenu {
+    background: $yellow;
+    color:$black;
+    border-radius: 0;
+    border: none;
+    border-top: 13px solid $black;
+    margin-top: 0;
+    padding: 0;
+    &:before {
+      content: " ";
+      height: 10px;
+      width: 10px;
+      position: absolute;
+      border-bottom: 10px $yellow solid;
+      border-left: 10px transparent solid;
+      border-right: 10px transparent solid;
+      top: -10px;
+      left: 10px;
+    }
+    .meta { font-weight: 600 !important; font-size: 12px !important; color: $black !important}
+    .nav-link:hover {
+      background: $black !important;
+    }
+  }
+  &.navbar-dark .navbar-nav .dropdown-menu .nav-link:hover { color: $yellow !important;}
+  .dropdown:hover .dropdown-menu { display: block; }
+}
