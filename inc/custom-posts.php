@@ -13,7 +13,7 @@ function codex_album_init() {
 		'singular_name'      => _x( 'Album', 'post type singular name', 'your-plugin-textdomain' ),
 		'menu_name'          => _x( 'Albums', 'admin menu', 'your-plugin-textdomain' ),
 		'name_admin_bar'     => _x( 'Album', 'add new on admin bar', 'your-plugin-textdomain' ),
-		'add_new'            => _x( 'Add New', 'album', 'your-plugin-textdomain' ),
+		'add_new'            => _x( 'Add New Album', 'album', 'your-plugin-textdomain' ),
 		'add_new_item'       => __( 'Add New Album', 'your-plugin-textdomain' ),
 		'new_item'           => __( 'New Album', 'your-plugin-textdomain' ),
 		'edit_item'          => __( 'Edit Album', 'your-plugin-textdomain' ),
@@ -69,7 +69,7 @@ function codex_article_init() {
 		'singular_name'      => _x( 'Article', 'post type singular name', 'your-plugin-textdomain' ),
 		'menu_name'          => _x( 'Articles', 'admin menu', 'your-plugin-textdomain' ),
 		'name_admin_bar'     => _x( 'Article', 'add new on admin bar', 'your-plugin-textdomain' ),
-		'add_new'            => _x( 'Add New', 'article', 'your-plugin-textdomain' ),
+		'add_new'            => _x( 'Add New Article', 'article', 'your-plugin-textdomain' ),
 		'add_new_item'       => __( 'Add New Article', 'your-plugin-textdomain' ),
 		'new_item'           => __( 'New Article', 'your-plugin-textdomain' ),
 		'edit_item'          => __( 'Edit Article', 'your-plugin-textdomain' ),
@@ -127,7 +127,7 @@ function codex_artist_init() {
 		'singular_name'      => _x( 'Artist', 'post type singular name', 'your-plugin-textdomain' ),
 		'menu_name'          => _x( 'Artists', 'admin menu', 'your-plugin-textdomain' ),
 		'name_admin_bar'     => _x( 'Artist', 'add new on admin bar', 'your-plugin-textdomain' ),
-		'add_new'            => _x( 'Add New', 'artist', 'your-plugin-textdomain' ),
+		'add_new'            => _x( 'Add New Artist', 'artist', 'your-plugin-textdomain' ),
 		'add_new_item'       => __( 'Add New Artist', 'your-plugin-textdomain' ),
 		'new_item'           => __( 'New Artist', 'your-plugin-textdomain' ),
 		'edit_item'          => __( 'Edit Artist', 'your-plugin-textdomain' ),
@@ -139,6 +139,7 @@ function codex_artist_init() {
 		'not_found'          => __( 'No artists found.', 'your-plugin-textdomain' ),
 		'not_found_in_trash' => __( 'No artists found in Trash.', 'your-plugin-textdomain' )
 	);
+
 
 	$args = array(
 		'labels'             => $labels,
@@ -172,7 +173,7 @@ function codex_bio_init() {
 		'singular_name'      => _x( 'Bio', 'post type singular name', 'your-plugin-textdomain' ),
 		'menu_name'          => _x( 'Bios', 'admin menu', 'your-plugin-textdomain' ),
 		'name_admin_bar'     => _x( 'Bio', 'add new on admin bar', 'your-plugin-textdomain' ),
-		'add_new'            => _x( 'Add New', 'bio', 'your-plugin-textdomain' ),
+		'add_new'            => _x( 'Add New Bio', 'bio', 'your-plugin-textdomain' ),
 		'add_new_item'       => __( 'Add New Bio', 'your-plugin-textdomain' ),
 		'new_item'           => __( 'New Bio', 'your-plugin-textdomain' ),
 		'edit_item'          => __( 'Edit Bio', 'your-plugin-textdomain' ),
