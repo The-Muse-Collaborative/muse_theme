@@ -69,4 +69,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		</nav><!-- .site-navigation -->
 
+		<!-- ************Custom Banner Image Include ************ -->
+		<div>
+			<?php
+
+			$image = get_field('root_page_banner');
+
+			if( !empty($image) ): ?>
+
+				<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+			<?php endif; ?>
+		</div>
+
 	</div><!-- .wrapper-navbar end -->
