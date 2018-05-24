@@ -9509,6 +9509,12 @@ body {
 
 h2, h3, h4, h5, h6 {
   font-weight: 700; }
+  h2.yellow, h3.yellow, h4.yellow, h5.yellow, h6.yellow {
+    color: #ffd100; }
+  h2.white, h3.white, h4.white, h5.white, h6.white {
+    color: #fff; }
+  h2.black, h3.black, h4.black, h5.black, h6.black {
+    color: #ffd100; }
 
 h2 {
   font-family: "Saira", sans-serif;
@@ -9870,6 +9876,42 @@ label {
     color: rgba(255, 209, 0, 0.3); }
   .mc-header .dropdown:hover .dropdown-menu {
     display: block; }
+
+.mc-top-footer {
+  position: relative;
+  background-position: center center;
+  background-size: cover; }
+  .mc-top-footer--right {
+    position: relative;
+    color: #fff;
+    background: rgba(193, 20, 162, 0.8);
+    padding: 40px; }
+    a {
+      color: #fff; }
+      a:hover {
+        opacity: .8;
+        color: #fff; }
+    .mc-top-footer--right::before {
+      content: " ";
+      position: absolute;
+      background: rgba(193, 20, 162, 0.8);
+      width: 50vw;
+      height: 100%;
+      right: 100%;
+      top: 0; }
+  .mc-top-footer--item {
+    position: relative;
+    padding-left: 15px; }
+    .mc-top-footer--item::before {
+      content: " ";
+      position: absolute;
+      top: 5px;
+      left: 0;
+      height: 7px;
+      width: 7px;
+      border-left: #fff 7px solid;
+      border-top: transparent 7px solid;
+      border-bottom: transparent 7px solid; }
 
 .mc-styleguide-block + .mc-styleguide-block {
   margin-top: 40px; }

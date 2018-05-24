@@ -1,0 +1,40 @@
+.mc-top-footer {
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  &--right {
+    position: relative;
+    color: $white;
+    background: transparentize($pink, .2);
+    padding: 40px;
+    @at-root a {
+      color: $white;
+      &:hover { opacity: .8; color: $white; }
+    }
+    &::before {
+      content: " ";
+      position: absolute;
+      background: transparentize($pink, .2);
+      width: 50vw;
+      height: 100%;
+      right: 100%;
+      top: 0;
+    }
+  }
+  &--item{
+    position: relative;
+    padding-left: 15px;
+    &::before {
+      content: " ";
+      position: absolute;
+      top: 5px;
+      left: 0;
+      height: 7px;
+      width: 7px;
+      border-left: $white 7px solid;
+      border-top: transparent 7px solid;
+      border-bottom: transparent 7px solid;
+    }
+  }
+}
+

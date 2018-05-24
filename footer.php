@@ -12,37 +12,33 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <?php get_sidebar( 'footerfull' ); ?>
+	<footer class="mc-footer mc-top-footer" style="background-image: url(<?php echo get_template_directory_uri() . '/images/bottom-banner.jpg'; ?>)">
+		<div class="<?php echo esc_attr( $container ); ?>">
+			<div class="row">
+				<div class="col-md-5 col-sm-12 mc-top-footer--right">
+					<h3 class="white">Contact</h3>
+					<div class="mc-top-footer--item">
+						<p>
+							426 Jackson Street<br />
+							Camden, NJ 08104
+						</p>
+					</div>
+					<div class="mc-top-footer--item">
+						<a href="tel:856.202.3968">856.202.3968</p>
+					</div>
+					<div class="mc-top-footer--item">
+						<a href="mailto:info@themusecollaborative.org">info@themusecollaborative.org</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer><!-- #colophon -->
 
-<div class="wrapper" id="wrapper-footer">
-
-	<div class="<?php echo esc_attr( $container ); ?>">
-
-		<div class="row">
-
-			<div class="col-md-12">
-
-				<footer class="site-footer" id="colophon">
-
-					<div class="site-info">
-
-							<?php printf( // WPCS: XSS ok.
-							/* translators:*/
-								esc_html__( 'Theme: %1$s by %2$s.', 'understrap' ), $the_theme->get( 'Name' ),  '<a href="'.esc_url( __('http://understrap.com', 'understrap')).'">understrap.com</a>' ); ?>
-
-							(<?php printf( // WPCS: XSS ok.
-							/* translators:*/
-								esc_html__( 'Version: %1$s', 'understrap' ), $the_theme->get( 'Version' ) ); ?>)
-					</div><!-- .site-info -->
-
-				</footer><!-- #colophon -->
-
-			</div><!--col end -->
-
-		</div><!-- row end -->
-
-	</div><!-- container end -->
-
-</div><!-- wrapper end -->
+	<footer class="mc-footer mc-bottom-footer">
+			<div class="<?php echo esc_attr( $container ); ?>">
+				<p>Bottom Footer</p>
+			</div>
+	</footer>
 
 </div><!-- #page we need this extra closing tag here -->
 
