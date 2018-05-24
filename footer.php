@@ -36,7 +36,46 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<footer class="mc-footer mc-bottom-footer">
 			<div class="<?php echo esc_attr( $container ); ?>">
-				<p>Bottom Footer</p>
+			<div class="row justify-content-between align-items-center">
+				<div class="col-2">
+					<p class="sm-text" style="text-align: center">Hosting provided by</p>
+					<a href="https://linode.com">
+						<img src="<?php echo get_template_directory_uri() . '/images/linode_icon.svg'; ?>"/>
+					</a>
+				</div>
+				<div class="col-4">
+					<img src="<?php echo get_template_directory_uri() . '/images/bottom-footer-logo.svg'; ?>"/>
+					<div class="row" style="margin-top: 20px">
+						<div class="col-3">
+							<a href="https://instagram.com/cmdmuse" target="blank">
+								<img src="<?php echo get_template_directory_uri() . '/images/instagram-icon.svg'; ?>"/>
+							</a>
+						</div>
+						<div class="col-3">
+							<a href="https://twitter.com/cmdmuse" target="blank">
+								<img src="<?php echo get_template_directory_uri() . '/images/twitter-icon.svg'; ?>"/>
+							</a>
+						</div>
+						<div class="col-3">
+							<a href="https://facebook.com/cmdmuse" target="blank">
+								<img src="<?php echo get_template_directory_uri() . '/images/facebook-icon.svg'; ?>"/>
+							</a>
+						</div>
+						<div class="col-3">
+							<a href="https://plus.google.com/+ThemusecollaborativeOrg1" target="blank">
+								<img src="<?php echo get_template_directory_uri() . '/images/googleplus-icon.svg'; ?>"/>
+							</a>
+						</div>
+						<div class="col-12 text-right">
+							<p class="sm-text" style="margin-top: 20px">
+								&copy; Copyright <?php echo date('Y')?> All Rights Reserved
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 text-center">
+
+				</div>
 			</div>
 	</footer>
 

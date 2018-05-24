@@ -9555,6 +9555,9 @@ h6 {
   .meta.yellow {
     color: #ffd100 !important; }
 
+.sm-text {
+  font-size: 12px; }
+
 a.meta.yellow:hover {
   color: rgba(255, 209, 0, 0.8) !important; }
 
@@ -9912,6 +9915,12 @@ label {
       border-left: #fff 7px solid;
       border-top: transparent 7px solid;
       border-bottom: transparent 7px solid; }
+
+.mc-bottom-footer {
+  background: #2d2a26;
+  color: #eee;
+  padding-top: 40px;
+  padding-bottom: 40px; }
 
 .mc-styleguide-block + .mc-styleguide-block {
   margin-top: 40px; }
