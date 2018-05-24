@@ -8,7 +8,12 @@ body {
   color: $black;
 }
 
-h2, h3, h4, h5, h6 { font-weight: 700; }
+h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  &.yellow { color: $yellow; }
+  &.white { color: $white; }
+  &.black { color: $yellow; }
+}
 
 h2 {
   font-family: $header-font-family;
@@ -43,6 +48,8 @@ h6 {
   letter-spacing: 2px;
   &.yellow { color: $yellow !important; }
 }
+
+.sm-text { font-size: 12px; }
 
 a.meta.yellow:hover { color: transparentize($yellow, .2) !important;}
 .active a.meta.yellow { color: white !important;}
