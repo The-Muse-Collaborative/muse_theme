@@ -9882,6 +9882,7 @@ label {
 
 .mc-top-footer {
   position: relative;
+  background-color: #524f4b;
   background-position: center center;
   background-size: cover; }
   .mc-top-footer--right {
