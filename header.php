@@ -42,9 +42,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<?php endif; ?>
 				<h1 class="navbar-brand mb-0" style="display: none;"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php if(get_field('root_page_banner')) : ?>
-					<img src="<?php echo get_template_directory_uri() . '/images/logo.svg'; ?>" class="mc-header__logo" alt="The Muse Collaborative"/>
+					<a href="/" class="mc-header__logo-link"><img src="<?php echo get_template_directory_uri() . '/images/logo.svg'; ?>" class="mc-header__logo" alt="The Muse Collaborative"/></a>
 				<?php else:  ?>
-					<img src="<?php echo get_template_directory_uri() . '/images/logo-dark.svg'; ?>" class="mc-header__logo" alt="The Muse Collaborative"/>
+					<a href="/" class="mc-header__logo-link"><img src="<?php echo get_template_directory_uri() . '/images/logo-dark.svg'; ?>" class="mc-header__logo" alt="The Muse Collaborative"/></a>
 				<?php endif;?>
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,16 +70,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</nav><!-- .site-navigation -->
 
 		<!-- ************Custom Banner Image Include ************ -->
-		<div>
-			<?php
-
+		<?php
 			$image = get_field('root_page_banner');
-
 			if( !empty($image) ): ?>
+				<div class="mc-banner-image" style="background-image: url(<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>)">
+				</div>
 
-				<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-			<?php endif; ?>
-		</div>
+				<div class="mc-banner-image-bottom-border">
+				</div>
+		<?php endif; ?>
 
 	</div><!-- .wrapper-navbar end -->
