@@ -47,14 +47,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<img src="<?php echo get_template_directory_uri() . '/images/bottom-footer-logo.svg'; ?>"/>
 					<div class="row" style="margin-top: 20px">
 						<div class="col-3">
-							<a href="https://instagram.com/cmdmuse" target="blank">
-								<img src="<?php echo get_template_directory_uri() . '/images/instagram-icon.svg'; ?>"/>
-							</a>
-						</div>
-						<div class="col-3">
 							<a href="https://twitter.com/cmdmuse" target="blank">
 								<img src="<?php echo get_template_directory_uri() . '/images/twitter-icon.svg'; ?>"/>
 							</a>
+						</div>
+						<div class="col-3">
+							<a href="https://instagram.com/cmdmuse" target="blank">
+								<img src="<?php echo get_template_directory_uri() . '/images/instagram-icon.svg'; ?>"/>
+							</a>		
 						</div>
 						<div class="col-3">
 							<a href="https://facebook.com/cmdmuse" target="blank">

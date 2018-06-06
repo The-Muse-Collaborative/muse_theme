@@ -9841,7 +9841,7 @@ label {
       transition: transform .2s ease-in-out; }
       .mc-header__logo-link:hover {
         opacity: 1;
-        transform: scale(1.1); }
+        transform: scale(1.04); }
     @media screen and (min-width: 767px) {
       .mc-header__logo {
         width: 300px;
@@ -9908,7 +9908,7 @@ label {
     background: rgba(193, 20, 162, 0.8);
     padding: 40px; }
     a {
-      color: #fff; }
+      color: #c114a2; }
       a:hover {
         opacity: .8;
         color: #fff; }
@@ -9976,3 +9976,10 @@ label {
 
 .mc-styleguide .mc-color-block + .mc-color-block {
   margin-left: 10px; }
+
+.display-posts-listing .listing-item {
+  clear: both; }
+
+.display-posts-listing img {
+  float: left;
+  margin: 0 30px 10px 0; }

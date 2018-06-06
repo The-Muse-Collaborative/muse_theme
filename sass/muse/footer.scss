@@ -9,7 +9,7 @@
     background: transparentize($pink, .2);
     padding: 40px;
     @at-root a {
-      color: $white;
+      color: $pink; //needs to be white but changes all links on the site
       &:hover { opacity: .8; color: $white; }
     }
     &::before {
