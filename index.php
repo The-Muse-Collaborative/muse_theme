@@ -45,6 +45,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 */
 						get_template_part( 'loop-templates/content', get_post_format() );
+
 						?>
 
 					<?php endwhile; ?>
@@ -64,7 +65,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 		<!-- Do the right sidebar check -->
 		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
-		
+
 
 	</div><!-- .row -->
 

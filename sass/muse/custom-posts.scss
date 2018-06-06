@@ -1,0 +1,16 @@
+// creates left float for posts with featuerd images
+.display-posts-listing .listing-item {
+	clear: both;
+}
+
+.display-posts-listing img {
+	float: left;
+	margin: 0 30px 10px 0;
+}
+
+
+//use this command, but only with custom post type - bio / artist / albums
+//.entry-meta {display:none;}
+
+//use this command, but only with articles custom post and regular wordpress post-formats
+//???
