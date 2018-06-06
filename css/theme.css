@@ -9907,9 +9907,9 @@ label {
     color: #fff;
     background: rgba(193, 20, 162, 0.8);
     padding: 40px; }
-    a {
-      color: #c114a2; }
-      a:hover {
+    .mc-top-footer--right a {
+      color: #fff; }
+      .mc-top-footer--right a:hover {
         opacity: .8;
         color: #fff; }
     .mc-top-footer--right::before {
