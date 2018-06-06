@@ -9876,7 +9876,7 @@ label {
   .mc-header .nav-link.meta.yellow:hover {
     color: rgba(255, 209, 0, 0.8) !important; }
   .mc-header .active .nav-link.meta.yellow {
-    color: white !important; }
+    color: white; }
   .mc-header .active .nav-link.meta.yellow:hover {
     color: rgba(255, 255, 255, 0.8) !important; }
   .mc-header.navbar-dark .navbar-nav .dropdown-menu .nav-link:hover {
