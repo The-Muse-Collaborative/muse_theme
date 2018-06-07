@@ -9900,6 +9900,7 @@ label {
   height: 50px;
   background-repeat: repeat-x;
   background-size: auto 100%;
+  background-position: center bottom;
   margin-top: -50px; }
 
 .mc-top-footer {
