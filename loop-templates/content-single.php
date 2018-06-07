@@ -10,13 +10,17 @@
 
 	<header class="entry-header">
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 
-		<div class="entry-meta">
+		<?php if (is_singular( array( 'bio', 'artist', 'album' ) )): ?>
+			<?php // Do Nothing. ?>
+		<?php else: ?>
+			<div class="entry-meta">
 
-			<?php understrap_posted_on(); ?>
+				<?php understrap_posted_on(); ?>
 
-		</div><!-- .entry-meta -->
+			</div><!-- .entry-meta -->
+		<?php endif ?>
 
 	</header><!-- .entry-header -->
 

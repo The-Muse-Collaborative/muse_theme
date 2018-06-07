@@ -9508,7 +9508,8 @@ body {
   color: #2d2a26; }
 
 h2, h3, h4, h5, h6 {
-  font-weight: 700; }
+  font-weight: 700;
+  text-transform: uppercase; }
   h2.yellow, h3.yellow, h4.yellow, h5.yellow, h6.yellow {
     color: #ffd100; }
   h2.white, h3.white, h4.white, h5.white, h6.white {
@@ -9557,6 +9558,9 @@ h6 {
 
 .sm-text {
   font-size: 12px; }
+
+a {
+  color: #c114a2; }
 
 a.meta.yellow:hover {
   color: rgba(255, 209, 0, 0.8) !important; }
@@ -9876,7 +9880,7 @@ label {
   .mc-header .nav-link.meta.yellow:hover {
     color: rgba(255, 209, 0, 0.8) !important; }
   .mc-header .active .nav-link.meta.yellow {
-    color: white !important; }
+    color: white; }
   .mc-header .active .nav-link.meta.yellow:hover {
     color: rgba(255, 255, 255, 0.8) !important; }
   .mc-header.navbar-dark .navbar-nav .dropdown-menu .nav-link:hover {
@@ -9893,9 +9897,11 @@ label {
   margin-top: -76px; }
 
 .mc-banner-image-bottom-border {
-  height: 40px;
-  background: rgba(193, 20, 162, 0.5);
-  margin-top: -40px; }
+  height: 50px;
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  background-position: center bottom;
+  margin-top: -50px; }
 
 .mc-top-footer {
   position: relative;

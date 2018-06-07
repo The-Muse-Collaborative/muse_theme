@@ -16,6 +16,18 @@ get_header();
 $container   = get_theme_mod( 'understrap_container_type' );
 ?>
 
+<div class="mc-index-header-image">
+	<?php
+				$image = get_field('root_page_banner', get_option('page_for_posts'));
+
+				if( !empty($image) ): ?>
+					<div class="mc-banner-image" style="background-image: url(<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>)">
+					</div>
+
+					<div class="mc-banner-image-bottom-border" style="background-image: url(<?php echo get_template_directory_uri() . '/images/banner-image.png'; ?>)">
+					</div>
+	<?php endif ?>
+</div>
 <?php if ( is_front_page() && is_home() ) : ?>
 	<?php get_template_part( 'global-templates/hero' ); ?>
 <?php endif; ?>
