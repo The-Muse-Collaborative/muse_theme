@@ -52,6 +52,8 @@ h6 {
 
 .sm-text { font-size: 12px; }
 
+a { color: $pink; }
+
 a.meta.yellow:hover { color: transparentize($yellow, .2) !important;}
 .active a.meta.yellow { color: white !important;}
 .active a.meta.yellow:hover { color:transparentize($white, .2) !important;}

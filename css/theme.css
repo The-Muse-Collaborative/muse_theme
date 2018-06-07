@@ -9559,6 +9559,9 @@ h6 {
 .sm-text {
   font-size: 12px; }
 
+a {
+  color: #c114a2; }
+
 a.meta.yellow:hover {
   color: rgba(255, 209, 0, 0.8) !important; }
 
