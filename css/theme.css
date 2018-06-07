@@ -9898,7 +9898,8 @@ label {
 
 .mc-banner-image-bottom-border {
   height: 40px;
-  background: rgba(193, 20, 162, 0.5);
+  background: url("../../images/Banner_Graphic_1.svg");
+  background-size: contain;
   margin-top: -40px; }
 
 .mc-top-footer {
