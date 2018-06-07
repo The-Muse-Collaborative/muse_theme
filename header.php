@@ -76,7 +76,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="mc-banner-image" style="background-image: url(<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>)">
 				</div>
 
-				<div class="mc-banner-image-bottom-border" style="background-image: url(<?php echo get_template_directory_uri() . '/images/Banner_Image_1.svg'; ?>)">
+				<div class="mc-banner-image-bottom-border" style="background-image: url(<?php echo get_template_directory_uri() . '/images/Banner_Graphic_1.svg'; ?>)">
 				</div>
 		<?php endif; ?>
 
