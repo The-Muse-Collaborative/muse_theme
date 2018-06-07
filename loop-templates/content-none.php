@@ -13,7 +13,7 @@
 
 	<header class="page-header">
 
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'understrap' ); ?></h1>
+		<h2 class="page-title"><?php esc_html_e( 'Nothing Found', 'understrap' ); ?></h2>
 
 	</header><!-- .page-header -->
 
@@ -40,5 +40,5 @@
 				get_search_form();
 		endif; ?>
 	</div><!-- .page-content -->
-	
+
 </section><!-- .no-results -->

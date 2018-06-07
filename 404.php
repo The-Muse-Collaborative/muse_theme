@@ -26,8 +26,8 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 						<header class="page-header">
 
-							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.',
-							'understrap' ); ?></h1>
+							<h2 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.',
+							'understrap' ); ?></h2>
 
 						</header><!-- .page-header -->
 

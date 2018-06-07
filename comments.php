@@ -25,7 +25,7 @@ if ( post_password_required() ) {
 	<?php if ( have_comments() ) : ?>
 
 		<h2 class="comments-title">
-			
+
 			<?php
 				$comments_number = get_comments_number();
 				if ( 1 === (int)$comments_number ) {
@@ -53,11 +53,11 @@ if ( post_password_required() ) {
 		</h2><!-- .comments-title -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through. ?>
-			
+
 			<nav class="comment-navigation" id="comment-nav-above">
-				
-				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'understrap' ); ?></h1>
-				
+
+				<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'understrap' ); ?></h2>
+
 				<?php if ( get_previous_comments_link() ) { ?>
 					<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments',
 					'understrap' ) ); ?></div>
@@ -83,11 +83,11 @@ if ( post_password_required() ) {
 		</ol><!-- .comment-list -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through. ?>
-			
+
 			<nav class="comment-navigation" id="comment-nav-below">
-				
-				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'understrap' ); ?></h1>
-				
+
+				<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'understrap' ); ?></h2>
+
 				<?php if ( get_previous_comments_link() ) { ?>
 					<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments',
 					'understrap' ) ); ?></div>
@@ -98,7 +98,7 @@ if ( post_password_required() ) {
 				<?php } ?>
 
 			</nav><!-- #comment-nav-below -->
-			
+
 		<?php endif; // check for comment navigation. ?>
 
 	<?php endif; // endif have_comments(). ?>
