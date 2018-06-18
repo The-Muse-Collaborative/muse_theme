@@ -36,6 +36,8 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
+		<h2><?php single_post_title(); ?></h2>
+				
 		<div class="row">
 
 			<!-- Do the left sidebar check and opens the primary div -->
