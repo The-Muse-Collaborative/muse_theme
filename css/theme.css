@@ -9989,3 +9989,6 @@ label {
 .display-posts-listing img {
   float: left;
   margin: 0 30px 10px 0; }
+
+.display-posts-bios .listing-item {
+  border: 5px solid #73bc32; }

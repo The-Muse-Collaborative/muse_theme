@@ -8,9 +8,6 @@
 	margin: 0 30px 10px 0;
 }
 
-
-//use this command, but only with custom post type - bio / artist / albums
-//.entry-meta {display:none;}
-
-//use this command, but only with articles custom post and regular wordpress post-formats
-//???
+.display-posts-bios .listing-item{
+	border: 5px solid #73bc32
+}
