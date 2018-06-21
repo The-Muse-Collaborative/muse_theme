@@ -76,8 +76,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="mc-banner-image" style="background-image: url(<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>)">
 				</div>
 
-				<div class="mc-banner-image-bottom-border" style="background-image: url(<?php echo get_template_directory_uri() . '/images/banner-image.png'; ?>)">
+		<!-- ************Custom Banner Image Overlay Include ************ -->
+		<?php
+			$image_overlay = get_field('root_page_banner_bottom_overlay');
+			if(!empty($image_overlay)) : ?>
+				<div class="mc-banner-image-bottom-border" style="background-image: url(<?php echo $image_overlay['url']; ?>)" alt="<?php echo $image_overlay['alt']; ?>">
 				</div>
+			<?php endif; ?>
 		<?php endif; ?>
 
 	</div><!-- .wrapper-navbar end -->
