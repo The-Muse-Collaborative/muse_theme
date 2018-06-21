@@ -9,5 +9,56 @@
 }
 
 .display-posts-bios .listing-item{
-	border: 5px solid #73bc32
+	display: block;
+	clear: both;
+	margin-bottom: 20px;
+	min-height: 460px;
+
+	.image {
+		float: left;
+		position: relative;
+		min-width: 303px;
+		img{
+			width: 308px;
+			height: 460px;
+		}
+		&::after {
+			content: ' ';
+			position: absolute;
+			top: 25px;
+			right: 0px;
+			height: 20px;
+			width: 20px;
+			border-top: solid transparent 20px;
+			border-bottom: solid transparent 20px;
+			border-right: solid $white 20px;
+		}
+	}
+	.title,
+	.content {
+		float: left;
+		clear: none;
+		width: calc(100% - 308px);
+		padding: 20px;
+	}
+	.title {
+		@extend h4;
+		color: $pink;
+		margin-bottom: 0;
+		padding-top: 30px;
+	}
+	.content {
+		padding-top: 0;
+		margin-bottom: 20px;
+	}
+
+	&:nth-child(2n-1) {
+		background: $black;
+		.content { color: $white; background: $black;  }
+		.title { color: $yellow; }
+		.image::after {
+			border-right: solid $black 20px;
+		}
+
+	}
 }

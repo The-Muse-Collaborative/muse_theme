@@ -72,7 +72,7 @@ hr {
   height: 0;
   overflow: visible; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, .display-posts-bios .listing-item .title, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
@@ -297,7 +297,7 @@ template {
 [hidden] {
   display: none !important; }
 
-h1, h2, h3, h4, h5, h6,
+h1, h2, h3, h4, .display-posts-bios .listing-item .title, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: inherit;
@@ -314,7 +314,7 @@ h2, .h2 {
 h3, .h3 {
   font-size: 1.75rem; }
 
-h4, .h4 {
+h4, .display-posts-bios .listing-item .title, .h4 {
   font-size: 1.5rem; }
 
 h5, .h5 {
@@ -9507,14 +9507,14 @@ body {
   font-size: 16px;
   color: #2d2a26; }
 
-h2, h3, h4, h5, h6 {
+h2, h3, h4, .display-posts-bios .listing-item .title, h5, h6 {
   font-weight: 700;
   text-transform: uppercase; }
-  h2.yellow, h3.yellow, h4.yellow, h5.yellow, h6.yellow {
+  h2.yellow, h3.yellow, h4.yellow, .display-posts-bios .listing-item .yellow.title, h5.yellow, h6.yellow {
     color: #ffd100; }
-  h2.white, h3.white, h4.white, h5.white, h6.white {
+  h2.white, h3.white, h4.white, .display-posts-bios .listing-item .white.title, h5.white, h6.white {
     color: #fff; }
-  h2.black, h3.black, h4.black, h5.black, h6.black {
+  h2.black, h3.black, h4.black, .display-posts-bios .listing-item .black.title, h5.black, h6.black {
     color: #ffd100; }
 
 h2 {
@@ -9536,7 +9536,7 @@ h3 {
   h3.black {
     color: #ffd100; }
 
-h4 {
+h4, .display-posts-bios .listing-item .title {
   font-size: 24px;
   font-family: "Saira", sans-serif; }
 
@@ -9991,4 +9991,46 @@ label {
   margin: 0 30px 10px 0; }
 
 .display-posts-bios .listing-item {
-  border: 5px solid #73bc32; }
+  display: block;
+  clear: both;
+  margin-bottom: 20px;
+  min-height: 460px; }
+  .display-posts-bios .listing-item .image {
+    float: left;
+    position: relative;
+    min-width: 303px; }
+    .display-posts-bios .listing-item .image img {
+      width: 308px;
+      height: 460px; }
+    .display-posts-bios .listing-item .image::after {
+      content: ' ';
+      position: absolute;
+      top: 25px;
+      right: 0px;
+      height: 20px;
+      width: 20px;
+      border-top: solid transparent 20px;
+      border-bottom: solid transparent 20px;
+      border-right: solid #fff 20px; }
+  .display-posts-bios .listing-item .title,
+  .display-posts-bios .listing-item .content {
+    float: left;
+    clear: none;
+    width: calc(100% - 308px);
+    padding: 20px; }
+  .display-posts-bios .listing-item .title {
+    color: #c114a2;
+    margin-bottom: 0;
+    padding-top: 30px; }
+  .display-posts-bios .listing-item .content {
+    padding-top: 0;
+    margin-bottom: 20px; }
+  .display-posts-bios .listing-item:nth-child(2n-1) {
+    background: #2d2a26; }
+    .display-posts-bios .listing-item:nth-child(2n-1) .content {
+      color: #fff;
+      background: #2d2a26; }
+    .display-posts-bios .listing-item:nth-child(2n-1) .title {
+      color: #ffd100; }
+    .display-posts-bios .listing-item:nth-child(2n-1) .image::after {
+      border-right: solid #2d2a26 20px; }
