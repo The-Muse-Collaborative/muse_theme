@@ -15,7 +15,7 @@
 
 		<?php the_title( '<h4 class="entry-title">', '</h4>' ); ?>
 
-		<?php if (is_singular( array( 'bio', 'artist', 'album' ) )): ?>
+		<?php if (is_singular( array( 'bios', 'artist', 'album' ) )): ?>
 			<?php // Do Nothing. ?>
 		<?php else: ?>
 			<div class="entry-meta">

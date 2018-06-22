@@ -30,6 +30,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 					<header class="page-header">
 
             <h2>Browse All <?php echo post_type_archive_title(); ?></h2>
+						<h2>This is the custom archive-article.php page</h2>
 
 					</header><!-- .page-header -->
 
