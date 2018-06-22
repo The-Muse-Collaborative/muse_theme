@@ -23,8 +23,13 @@ $container   = get_theme_mod( 'understrap_container_type' );
 				if( !empty($image) ): ?>
 					<div class="mc-banner-image" style="background-image: url(<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>)">
 					</div>
+	<?php endif; ?>
 
-					<div class="mc-banner-image-bottom-border" style="background-image: url(<?php echo get_template_directory_uri() . '/images/banner-image.png'; ?>)">
+	<?php
+				$image_overlay = get_field('root_page_banner_bottom_overlay', get_option('page_for_posts'));
+
+				if(!empty($image_overlay)) : ?>
+					<div class="mc-banner-image-bottom-border" style="background-image: url(<?php echo $image_overlay['url']; ?>)" alt="<?php echo $image_overlay['alt']; ?>">
 					</div>
 	<?php endif ?>
 </div>
@@ -37,7 +42,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
 		<h2><?php single_post_title(); ?></h2>
-				
+
 		<div class="row">
 
 			<!-- Do the left sidebar check and opens the primary div -->
