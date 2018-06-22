@@ -27,12 +27,16 @@ h3 {
   font-family: $header-font-family;
   color: $pink;
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 500;
   &.yellow { color: $yellow; }
   &.black { color: $yellow; }
 }
 
-h4 { font-size: 24px; font-family: $header-font-family;}
+h4 {
+  font-size: 24px;
+  font-family: $header-font-family;
+}
+
 h5 {
   font-size: 20px;
   font-family: $body-font-family;

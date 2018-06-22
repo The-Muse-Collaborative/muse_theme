@@ -68,7 +68,7 @@ function article_init() {
 		'rewrite'           => array( 'slug' => 'article' ),
 	);
 
-	register_taxonomy('article', array( 'article' ), $args);
+	register_taxonomy('article', array( 'post' ), $args);
 
 // creates non-hierarchical tags for articles
 	$labels = array(

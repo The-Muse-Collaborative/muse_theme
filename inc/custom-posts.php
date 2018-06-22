@@ -30,10 +30,9 @@ function codex_album_init() {
 
 	$args = array(
 		'labels'             => $labels,
-    'description'        => __( 'Insert description here!.', 'your-plugin-textdomain' ),     // Don't know
     'menu_icon'          => 'dashicons-album',                                  // Sets icon in wordpress ui
 		'public'             => true,                                               // Makes post searchable, displays in wordpress ui
-    'delete_with_user'   => false,                                              // If author is deleted, post are not deleted if set to false
+		'delete_with_user'   => false,                                              // If author is deleted, post are not deleted if set to false
     'query_var'          => true,                                               // "If set to true it allows you to request a custom posts type (book) using this: example.com/?book=life-of-pi"
 		'capability_type'    => 'post',                                             // Don't understand
 		'has_archive'        => true,                                               // Don't know
@@ -86,14 +85,13 @@ function codex_article_init() {
 
 	$args = array(
 		'labels'             => $labels,
-    'description'        => __( 'Insert description here!.', 'your-plugin-textdomain' ),     // Don't know
     'menu_icon'          => 'dashicons-format-aside',                                  // Sets icon in wordpress ui
 		'public'             => true,                                               // Makes post searchable, displays in wordpress ui
     'delete_with_user'   => false,                                              // If author is deleted, post are not deleted if set to false
     'query_var'          => true,                                               // "If set to true it allows you to request a custom posts type (book) using this: example.com/?book=life-of-pi"
 		'capability_type'    => 'post',                                             // Don't understand
 		'has_archive'        => true,                                               // Don't know
-    'rewrite'            => array( 'slug' => 'article'),                        // Changes archive page URL
+    'rewrite'            => array( 'slug' => 'articles'),                        // Changes archive page URL
 	  'hierarchical'       => false,                                              // Don't know
 		'menu_position'      => 5,                                                  // Sets order in wordpress ui
 //    'taxonomies'         => array( 'post_tag', 'category'),                  // Creates category-like subdivisions -- needs to be added to register_taxonomy()
@@ -132,7 +130,7 @@ function codex_artist_init() {
 		'new_item'           => __( 'New Artist', 'your-plugin-textdomain' ),
 		'edit_item'          => __( 'Edit Artist', 'your-plugin-textdomain' ),
 		'view_item'          => __( 'View Artist', 'your-plugin-textdomain' ),
-    'view_items'          => __( 'View Artists', 'your-plugin-textdomain' ),
+    'view_items'         => __( 'View Artists', 'your-plugin-textdomain' ),
 		'all_items'          => __( 'All Artists', 'your-plugin-textdomain' ),
 		'search_items'       => __( 'Search Artists', 'your-plugin-textdomain' ),
 		'parent_item_colon'  => __( 'Parent Artists:', 'your-plugin-textdomain' ),
@@ -143,14 +141,13 @@ function codex_artist_init() {
 
 	$args = array(
 		'labels'             => $labels,
-    'description'        => __( 'Description.', 'your-plugin-textdomain' ),     // Don't know
     'menu_icon'          => 'dashicons-universal-access-alt',                    // Sets icon in wordpress menu
 		'public'             => true,                                               // Don't know
 		'publicly_queryable' => true,                                               // Don't know
 		'show_ui'            => true,                                               // Don't know
 		'show_in_menu'       => true,                                               // Don't know
 		'query_var'          => true,                                               // Don't know
-		'rewrite'            => array( 'slug' => 'artist' ),                         // Don't know
+		'rewrite'            => array( 'slug' => 'artists' ),                         // Don't know
 		'capability_type'    => 'post',                                             // Don't know
 		'has_archive'        => true,                                               // Don't know
 		'hierarchical'       => false,                                              // Sets order in wordpress menu
@@ -178,7 +175,7 @@ function codex_bio_init() {
 		'new_item'           => __( 'New Bio', 'your-plugin-textdomain' ),
 		'edit_item'          => __( 'Edit Bio', 'your-plugin-textdomain' ),
 		'view_item'          => __( 'View Bio', 'your-plugin-textdomain' ),
-    'view_items'          => __( 'View Bios', 'your-plugin-textdomain' ),
+    'view_items'         => __( 'View Bios', 'your-plugin-textdomain' ),
 		'all_items'          => __( 'All Bios', 'your-plugin-textdomain' ),
 		'search_items'       => __( 'Search Bios', 'your-plugin-textdomain' ),
 		'parent_item_colon'  => __( 'Parent Bios:', 'your-plugin-textdomain' ),
@@ -188,14 +185,13 @@ function codex_bio_init() {
 
 	$args = array(
 		'labels'             => $labels,
-    'description'        => __( 'Description.', 'your-plugin-textdomain' ),     // Don't know
     'menu_icon'          => 'dashicons-groups',                                 // Sets icon in wordpress menu
 		'public'             => true,                                               // Don't know
 		'publicly_queryable' => true,                                               // Don't know
 		'show_ui'            => true,                                               // Don't know
 		'show_in_menu'       => true,                                               // Don't know
 		'query_var'          => true,                                               // Don't know
-		'rewrite'            => array( 'slug' => 'bio' ),                         // Don't know
+		'rewrite'            => array( 'slug' => 'bios' ),                         // Don't know
 		'capability_type'    => 'post',                                             // Don't know
 		'has_archive'        => true,                                               // Don't know
 		'hierarchical'       => true,                                              // Sets order in wordpress menu
