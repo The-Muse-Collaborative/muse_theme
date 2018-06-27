@@ -1,15 +1,12 @@
 <?php
 /**       Custom posts setup        **/
 
-/*************************************/
-/* Creates custom post type 'Album'  */
-/*************************************/
-
+// Creates custom post type 'Album'
 add_action( 'init', 'codex_album_init' );
 
 function codex_album_init() {
 	$labels = array(
-		'name'               => _x( 'Albums', 'post type general name', 'your-plugin-textdomain' ),   //Don't know if I need anything other than the first string
+		'name'               => _x( 'Albums', 'post type general name', 'your-plugin-textdomain' ),
 		'singular_name'      => _x( 'Album', 'post type singular name', 'your-plugin-textdomain' ),
 		'menu_name'          => _x( 'Albums', 'admin menu', 'your-plugin-textdomain' ),
 		'name_admin_bar'     => _x( 'Album', 'add new on admin bar', 'your-plugin-textdomain' ),
@@ -30,21 +27,19 @@ function codex_album_init() {
 
 	$args = array(
 		'labels'             => $labels,
-    'description'        => __( 'Insert description here!.', 'your-plugin-textdomain' ),     // Don't know
-    'menu_icon'          => 'dashicons-album',                                  // Sets icon in wordpress ui
-		'public'             => true,                                               // Makes post searchable, displays in wordpress ui
-    'delete_with_user'   => false,                                              // If author is deleted, post are not deleted if set to false
-    'query_var'          => true,                                               // "If set to true it allows you to request a custom posts type (book) using this: example.com/?book=life-of-pi"
-		'capability_type'    => 'post',                                             // Don't understand
-		'has_archive'        => true,                                               // Don't know
-    'rewrite'            => array( 'slug' => 'albums'),                         // Changes archive page URL
-	  'hierarchical'       => false,                                              // Don't know
-		'menu_position'      => 5,                                                  // Sets order in wordpress ui
-//    'taxonomies'         => array( 'post_tag', 'category'),                  // Creates category-like subdivisions -- needs to be added to register_taxonomy()
-		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'custom-fields', 'revisions', 'post-formats'),    // Fields enabled on the edit page
+    'menu_icon'          => 'dashicons-album',
+		'public'             => true,
+		'delete_with_user'   => false,
+    'query_var'          => true,
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+    'rewrite'            => array( 'slug' => 'albums'),
+	  'hierarchical'       => false,
+		'menu_position'      => 5,
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'custom-fields', 'revisions', 'post-formats'),
 	);
 
-  add_filter( 'enter_title_here', function( $title ) {                          // Changes tool-tip for Album title
+	add_filter( 'enter_title_here', function( $title ) {
       $screen = get_current_screen();
 
       if  ( 'album' == $screen->post_type ) {
@@ -57,15 +52,12 @@ function codex_album_init() {
 	register_post_type( 'album', $args );
 }
 
-/*************************************/
-/* Creates custom post type 'Articles'  */
-/*************************************/
+// Creates custom post type 'Articles'
+add_action( 'init', 'codex_articles_init' );
 
-add_action( 'init', 'codex_article_init' );
-
-function codex_article_init() {
+function codex_articles_init() {
 	$labels = array(
-		'name'               => _x( 'Articles', 'post type general name', 'your-plugin-textdomain' ),   //Don't know if I need anything other than the first string
+		'name'               => _x( 'Articles', 'post type general name', 'your-plugin-textdomain' ),
 		'singular_name'      => _x( 'Article', 'post type singular name', 'your-plugin-textdomain' ),
 		'menu_name'          => _x( 'Articles', 'admin menu', 'your-plugin-textdomain' ),
 		'name_admin_bar'     => _x( 'Article', 'add new on admin bar', 'your-plugin-textdomain' ),
@@ -86,39 +78,34 @@ function codex_article_init() {
 
 	$args = array(
 		'labels'             => $labels,
-    'description'        => __( 'Insert description here!.', 'your-plugin-textdomain' ),     // Don't know
-    'menu_icon'          => 'dashicons-format-aside',                                  // Sets icon in wordpress ui
-		'public'             => true,                                               // Makes post searchable, displays in wordpress ui
-    'delete_with_user'   => false,                                              // If author is deleted, post are not deleted if set to false
-    'query_var'          => true,                                               // "If set to true it allows you to request a custom posts type (book) using this: example.com/?book=life-of-pi"
-		'capability_type'    => 'post',                                             // Don't understand
-		'has_archive'        => true,                                               // Don't know
-    'rewrite'            => array( 'slug' => 'article'),                        // Changes archive page URL
-	  'hierarchical'       => false,                                              // Don't know
-		'menu_position'      => 5,                                                  // Sets order in wordpress ui
-//    'taxonomies'         => array( 'post_tag', 'category'),                  // Creates category-like subdivisions -- needs to be added to register_taxonomy()
-		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'revisions'),    // Fields enabled on the edit page
+    'menu_icon'          => 'dashicons-format-aside',
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'						 => true,
+    'delete_with_user'   => false,
+    'query_var'          => true,
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+    'rewrite'            => array('slug' => 'articles', 'with_front' => false ),
+	  'hierarchical'       => false,
+		'menu_position'      => 5,
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'revisions')
 	);
 
-  add_filter( 'enter_title_here', function( $title ) {                          // Changes tool-tip for Album title
+  add_filter( 'enter_title_here', function( $title ) {
       $screen = get_current_screen();
 
-      if  ( 'article' == $screen->post_type ) {
+      if  ( 'articles' == $screen->post_type ) {
           $title = 'Enter article name';
       }
 
       return $title;
   } );
 
-	register_post_type( 'article', $args );
+	register_post_type( 'articles', $args );
 }
 
-
-
-/*************************************/
-/* Creates custom post type 'Artist'  */
-/*************************************/
-
+// Creates custom post type 'Artist'
 add_action( 'init', 'codex_artist_init' );
 
 function codex_artist_init() {
@@ -132,7 +119,7 @@ function codex_artist_init() {
 		'new_item'           => __( 'New Artist', 'your-plugin-textdomain' ),
 		'edit_item'          => __( 'Edit Artist', 'your-plugin-textdomain' ),
 		'view_item'          => __( 'View Artist', 'your-plugin-textdomain' ),
-    'view_items'          => __( 'View Artists', 'your-plugin-textdomain' ),
+    'view_items'         => __( 'View Artists', 'your-plugin-textdomain' ),
 		'all_items'          => __( 'All Artists', 'your-plugin-textdomain' ),
 		'search_items'       => __( 'Search Artists', 'your-plugin-textdomain' ),
 		'parent_item_colon'  => __( 'Parent Artists:', 'your-plugin-textdomain' ),
@@ -143,31 +130,27 @@ function codex_artist_init() {
 
 	$args = array(
 		'labels'             => $labels,
-    'description'        => __( 'Description.', 'your-plugin-textdomain' ),     // Don't know
-    'menu_icon'          => 'dashicons-universal-access-alt',                    // Sets icon in wordpress menu
-		'public'             => true,                                               // Don't know
-		'publicly_queryable' => true,                                               // Don't know
-		'show_ui'            => true,                                               // Don't know
-		'show_in_menu'       => true,                                               // Don't know
-		'query_var'          => true,                                               // Don't know
-		'rewrite'            => array( 'slug' => 'artist' ),                         // Don't know
-		'capability_type'    => 'post',                                             // Don't know
-		'has_archive'        => true,                                               // Don't know
-		'hierarchical'       => false,                                              // Sets order in wordpress menu
-		'menu_position'      => 5,                                                  // Don't know
-		'supports'           => array( 'title', 'editor', 'author', 'thumbnail')    // Don't know
+    'menu_icon'          => 'dashicons-universal-access-alt',
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'artists' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 5,
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail')
 	);
 
 	register_post_type( 'artist', $args );
 }
 
-/*************************************/
-/* Creates custom post type 'Bio'  */
-/*************************************/
+// Creates custom post type 'Bio'
+add_action( 'init', 'codex_bios_init' );
 
-add_action( 'init', 'codex_bio_init' );
-
-function codex_bio_init() {
+function codex_bios_init() {
 	$labels = array(
 		'name'               => _x( 'Bios', 'post type general name', 'your-plugin-textdomain' ),
 		'singular_name'      => _x( 'Bio', 'post type singular name', 'your-plugin-textdomain' ),
@@ -178,7 +161,7 @@ function codex_bio_init() {
 		'new_item'           => __( 'New Bio', 'your-plugin-textdomain' ),
 		'edit_item'          => __( 'Edit Bio', 'your-plugin-textdomain' ),
 		'view_item'          => __( 'View Bio', 'your-plugin-textdomain' ),
-    'view_items'          => __( 'View Bios', 'your-plugin-textdomain' ),
+    'view_items'         => __( 'View Bios', 'your-plugin-textdomain' ),
 		'all_items'          => __( 'All Bios', 'your-plugin-textdomain' ),
 		'search_items'       => __( 'Search Bios', 'your-plugin-textdomain' ),
 		'parent_item_colon'  => __( 'Parent Bios:', 'your-plugin-textdomain' ),
@@ -188,21 +171,20 @@ function codex_bio_init() {
 
 	$args = array(
 		'labels'             => $labels,
-    'description'        => __( 'Description.', 'your-plugin-textdomain' ),     // Don't know
-    'menu_icon'          => 'dashicons-groups',                                 // Sets icon in wordpress menu
-		'public'             => true,                                               // Don't know
-		'publicly_queryable' => true,                                               // Don't know
-		'show_ui'            => true,                                               // Don't know
-		'show_in_menu'       => true,                                               // Don't know
-		'query_var'          => true,                                               // Don't know
-		'rewrite'            => array( 'slug' => 'bio' ),                         // Don't know
-		'capability_type'    => 'post',                                             // Don't know
-		'has_archive'        => true,                                               // Don't know
-		'hierarchical'       => true,                                              // Sets order in wordpress menu
-		'menu_position'      => 5,                                                  // Don't know
-    'taxonomies'         => array( 'bios'),                  // Creates category-like subdivisions -- needs to be added to register_taxonomy()
-    'supports'           => array( 'title', 'editor', 'author', 'thumbnail')    // Don't know
+    'menu_icon'          => 'dashicons-groups',
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array('slug' => 'bios', 'with_front' => false ),
+		'capability_type'    => 'post',
+		'has_archive'        => false,
+		'hierarchical'       => true,
+		'menu_position'      => 5,
+    'taxonomies'         => array( 'bios'),
+    'supports'           => array( 'title', 'editor', 'author', 'thumbnail')
 	);
 
-	register_post_type( 'bio', $args );
+	register_post_type( 'bios', $args );
 }

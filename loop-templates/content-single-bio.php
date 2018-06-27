@@ -7,12 +7,15 @@
 
 ?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+	<div class="bio-single">
 
-	<header class="entry-header">
+	<div class="image"><?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?></div>
+
+	<header class="title">
 
 		<?php the_title( '<h4 class="entry-title">', '</h4>' ); ?>
 
-		<?php if (is_singular( array( 'bio', 'artist', 'album' ) )): ?>
+		<?php if (is_singular( array( 'bios', 'artist', 'album' ) )): ?>
 			<?php // Do Nothing. ?>
 		<?php else: ?>
 			<div class="entry-meta">
@@ -24,9 +27,8 @@
 
 	</header><!-- .entry-header -->
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
-	<div class="entry-content">
+	<div class="content">
 
 		<?php the_content(); ?>
 
@@ -44,5 +46,5 @@
 		<?php understrap_entry_footer(); ?>
 
 	</footer><!-- .entry-footer -->
-
+</div>
 </article><!-- #post-## -->
