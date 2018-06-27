@@ -1,11 +1,8 @@
 <?php
 /**       Custom posts setup        **/
 
-
-/************************************/
-/* Creates custom taxonomy for bios */
-/************************************/
-function bio_init() {
+// Creates custom taxonomy for bios
+function bios_init() {
 	$labels = array(
 		'name'              => _x( 'Bios', 'taxonomy general name', 'textdomain' ),
 		'singular_name'     => _x( 'Bio', 'taxonomy singular name', 'textdomain' ),
@@ -27,26 +24,22 @@ function bio_init() {
 		'public'            => true,
 		'show_admin_column' => true,
 		'query_var'         => true,
-		'rewrite'           => array( 'slug' => 'bio' ),
+	  'has_archive'				=> true,
+		'rewrite'           => array( 'slug' => 'bio', 'with_front' => false),
 	);
 
-	register_taxonomy('bio', array( 'bio' ), $args);
+	register_taxonomy('bio', array( 'bios' ), $args);
 }
 
-/************************************/
-/* Runs custom taxonomy for bios */
-/************************************/
-add_action( 'init', 'bio_init' );
+// Runs custom taxonomy for bios
+add_action( 'init', 'bios_init' );
 
-/****************************************/
-/* Creates custom taxonomy for articles */
-/****************************************/
-
-// creates hierarchical categories for articles
-function article_init() {
+// Creates custom taxonomy for articles
+// Creates hierarchical categories for articles
+function articles_init() {
 	$labels = array(
-		'name'              => _x( 'Articles', 'taxonomy general name', 'textdomain' ),
-		'singular_name'     => _x( 'Article', 'taxonomy singular name', 'textdomain' ),
+		'name'              => _x( 'Article Categories', 'taxonomy general name', 'textdomain' ),
+		'singular_name'     => _x( 'Article Category', 'taxonomy singular name', 'textdomain' ),
 		'search_items'      => __( 'Search Article Categories', 'textdomain' ),
 		'all_items'         => __( 'All Article Categories', 'textdomain' ),
 		'parent_item'       => __( 'Parent Article Category', 'textdomain' ),
@@ -54,23 +47,25 @@ function article_init() {
 		'edit_item'         => __( 'Edit Article Category', 'textdomain' ),
 		'update_item'       => __( 'Update Article Category', 'textdomain' ),
 		'add_new_item'      => __( 'Add New Article Category', 'textdomain' ),
-		'new_item_name'     => __( 'New Article Name', 'textdomain' ),
+		'new_item_name'     => __( 'New Article Category', 'textdomain' ),
 		'menu_name'         => __( 'Article Categories', 'textdomain' ),
 	);
 
 	$args = array(
 		'hierarchical'      => true,
 		'labels'            => $labels,
+	  'show_in_nav_menus' => true,
 		'show_ui'           => true,
 		'public'            => true,
 		'show_admin_column' => true,
 		'query_var'         => true,
-		'rewrite'           => array( 'slug' => 'article' ),
+		'has_archive'				=> true,
+		'rewrite'           => array( 'slug' => 'article', 'with_front' => false),
 	);
 
-	register_taxonomy('article', array( 'post' ), $args);
+	register_taxonomy('article', array( 'articles' ), $args);
 
-// creates non-hierarchical tags for articles
+// Creates non-hierarchical tags for articles
 	$labels = array(
 		'name'              				 => _x( 'Article Tags', 'taxonomy general name', 'textdomain' ),
 		'singular_name'    					 => _x( 'Article Tag', 'taxonomy singular name', 'textdomain' ),
@@ -100,9 +95,8 @@ function article_init() {
 		'rewrite'          		  => array( 'slug' => 'tag' ),
 	);
 
-	register_taxonomy('tag', array( 'article' ), $args);
+	register_taxonomy('tag', array( 'articles' ), $args);
 }
-/*************************************/
-/* Runs custom taxonomy for articles */
-/*************************************/
-add_action( 'init', 'article_init', 0 );
+
+// Runs custom taxonomy for articles
+add_action( 'init', 'articles_init', 0 );
