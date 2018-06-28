@@ -24,6 +24,8 @@ function understrap_posted_on() {
 		esc_html_x( '%s', 'post date', 'understrap' ),
 	  $time_string
 	);
+
+	// This is where we need to link to the bio.
 	$byline = sprintf(
 		esc_html_x( '%s', 'post author', 'understrap' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'

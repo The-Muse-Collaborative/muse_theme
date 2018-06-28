@@ -9,7 +9,7 @@
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 	<div class="row">
-		<header class="entry-header mc-excerpt-header col-md-4">
+		<header class="entry-header mc-news-header col-md-4">
 
 			<?php the_title( sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
 			'</a></h4>' ); ?>
@@ -26,7 +26,7 @@
 
 		<div class="col-md-1"></div>
 
-		<div class="entry-content mc-excerpt-content col-md-7">
+		<div class="entry-content mc-news-content col-md-7">
 			<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
 				<?php the_content(); ?>
