@@ -100,3 +100,36 @@ function articles_init() {
 
 // Runs custom taxonomy for articles
 add_action( 'init', 'articles_init', 0 );
+
+// Creates custom taxonomy for albums
+function albums_init() {
+	$labels = array(
+		'name'              => _x( 'Albums', 'taxonomy general name', 'textdomain' ),
+		'singular_name'     => _x( 'Album', 'taxonomy singular name', 'textdomain' ),
+		'search_items'      => __( 'Search Album Categories', 'textdomain' ),
+		'all_items'         => __( 'All Album Categories', 'textdomain' ),
+		'parent_item'       => __( 'Parent Album Category', 'textdomain' ),
+		'parent_item_colon' => __( 'Parent Album Category:', 'textdomain' ),
+		'edit_item'         => __( 'Edit Album Category', 'textdomain' ),
+		'update_item'       => __( 'Update Album Category', 'textdomain' ),
+		'add_new_item'      => __( 'Add New Album Category', 'textdomain' ),
+		'new_item_name'     => __( 'New Album Name', 'textdomain' ),
+		'menu_name'         => __( 'Album Categories', 'textdomain' ),
+	);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'public'            => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+	  'has_archive'				=> true,
+		'rewrite'           => array( 'slug' => 'album', 'with_front' => false),
+	);
+
+	register_taxonomy('album', array( 'albums' ), $args);
+}
+
+// Runs custom taxonomy for albums
+add_action( 'init', 'albums_init' );

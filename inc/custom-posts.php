@@ -1,10 +1,10 @@
 <?php
 /**       Custom posts setup        **/
 
-// Creates custom post type 'Album'
-add_action( 'init', 'codex_album_init' );
+// Creates custom post type Albums
+add_action( 'init', 'codex_albums_init' );
 
-function codex_album_init() {
+function codex_albums_init() {
 	$labels = array(
 		'name'               => _x( 'Albums', 'post type general name', 'your-plugin-textdomain' ),
 		'singular_name'      => _x( 'Album', 'post type singular name', 'your-plugin-textdomain' ),
@@ -33,7 +33,7 @@ function codex_album_init() {
     'query_var'          => true,
 		'capability_type'    => 'post',
 		'has_archive'        => true,
-    'rewrite'            => array( 'slug' => 'albums'),
+    'rewrite'            => array( 'slug' => 'albums', 'with_front' => false ),
 	  'hierarchical'       => false,
 		'menu_position'      => 5,
 		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'custom-fields', 'revisions', 'post-formats'),
@@ -42,17 +42,17 @@ function codex_album_init() {
 	add_filter( 'enter_title_here', function( $title ) {
       $screen = get_current_screen();
 
-      if  ( 'album' == $screen->post_type ) {
+      if  ( 'albums' == $screen->post_type ) {
           $title = 'Enter album name';
       }
 
       return $title;
   } );
 
-	register_post_type( 'album', $args );
+	register_post_type( 'albums', $args );
 }
 
-// Creates custom post type 'Articles'
+// Creates custom post type Articles
 add_action( 'init', 'codex_articles_init' );
 
 function codex_articles_init() {
@@ -105,10 +105,10 @@ function codex_articles_init() {
 	register_post_type( 'articles', $args );
 }
 
-// Creates custom post type 'Artist'
-add_action( 'init', 'codex_artist_init' );
+// Creates custom post type Artists
+add_action( 'init', 'codex_artists_init' );
 
-function codex_artist_init() {
+function codex_artists_init() {
 	$labels = array(
 		'name'               => _x( 'Artists', 'post type general name', 'your-plugin-textdomain' ),
 		'singular_name'      => _x( 'Artist', 'post type singular name', 'your-plugin-textdomain' ),
@@ -144,10 +144,10 @@ function codex_artist_init() {
 		'supports'           => array( 'title', 'editor', 'author', 'thumbnail')
 	);
 
-	register_post_type( 'artist', $args );
+	register_post_type( 'artists', $args );
 }
 
-// Creates custom post type 'Bio'
+// Creates custom post type Bios
 add_action( 'init', 'codex_bios_init' );
 
 function codex_bios_init() {
