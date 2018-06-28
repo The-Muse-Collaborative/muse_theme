@@ -1,0 +1,15 @@
+.mc-news-header,
+.mc-news-content {
+  border-top: 2px solid transparentize($pink, .75);
+  padding-top: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.mc-news-content {
+  margin-bottom: 50px;
+}
+
+.mc-news-header .posted-on{
+  color: $gray-dark;
+}

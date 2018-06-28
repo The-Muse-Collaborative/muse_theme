@@ -10067,3 +10067,16 @@ label {
     .bio-single:nth-child(2n-1) .image::after,
     .display-posts-bios .listing-item:nth-child(2n-1) .image::after {
       border-right: solid #2d2a26 20px; }
+
+.mc-news-header,
+.mc-news-content {
+  border-top: 2px solid rgba(193, 20, 162, 0.25);
+  padding-top: 10px;
+  padding-left: 0px;
+  padding-right: 0px; }
+
+.mc-news-content {
+  margin-bottom: 50px; }
+
+.mc-news-header .posted-on {
+  color: #524f4b; }
