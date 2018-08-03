@@ -29,8 +29,8 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 					<header class="page-header">
 
-            <h2>Browse All <?php echo post_type_archive_title(); ?></h2>
-						<h2>This is the taxonomy-article.php page</h2>
+            <h2>Browse All <?php echo get_the_term_list( $post->ID, 'article' ) ?></h2>
+
 					</header><!-- .page-header -->
 
 					<?php /* Start the Loop */ ?>
