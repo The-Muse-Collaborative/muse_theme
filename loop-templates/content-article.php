@@ -6,6 +6,7 @@
  */
 
 ?>
+
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 	<div class="row">
 		<div class="col-md-4">
@@ -15,7 +16,8 @@
 
 				<?php if (is_singular( array( 'bios', 'artists', 'albums' ) )): ?>
 					<?php // Do Nothing. ?>
-				<?php else: ?>
+
+				<?php else: ?><h2>check</h2>
 					<div class="entry-meta">
 						<?php understrap_posted_on(); ?>
 

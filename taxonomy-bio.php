@@ -29,29 +29,39 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 					<header class="page-header">
 
-            <h2>Browse All <?php echo get_the_term_list( $post->ID, 'bio' ) ?></h2>
+			            <?php $category = get_the_term_list( $post->ID, 'bio' ); ?>
+
+						<h2><?= $category; ?></h2>
 
 					</header><!-- .page-header -->
 
-					<?php /* Start the Loop */ ?>
+					<?php
+					// Get category of bio taxonomy's slug so that we can port that into the shortcode bio listing
+					$terms = get_terms( array(
+					    'taxonomy' => 'bio',
+					    'name' => $category,
+					) );
+					// Get slug from array
+					$catSlug = $terms[0]->slug;
+					// Place slug in the tax_term / category based on page
+					echo do_shortcode( '[display-posts post_type="bios" taxonomy="bio" tax_term="'. $catSlug .'" posts_per_page="0" include_content="true" wrapper="div" wrapper_class="display-posts-bios" image_size="original" order="ASC" orderby="title"]' ); ?>
 
-					<?php while ( have_posts() ) : the_post(); ?>
+
 
 						<?php
-
 						/*
 						 * Include the Post-Format-specific template for the content.
 						 * If you want to override this in a child theme, then include a file
 						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 */
-						get_template_part( 'loop-templates/content', 'bio' );
+						// get_template_part( 'loop-templates/content-single-bio', get_post_format() );
 						?>
 
-					<?php endwhile; ?>
+					<?php //endwhile; ?>
 
 				<?php else : ?>
 
-					<?php get_template_part( 'loop-templates/content', 'bio' ); ?>
+					<?php get_template_part( 'loop-templates/content', 'none' ); ?>
 
 				<?php endif; ?>
 
