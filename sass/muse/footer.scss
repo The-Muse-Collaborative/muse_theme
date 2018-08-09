@@ -6,7 +6,6 @@
   &--right {
     position: relative;
     color: $white;
-    background: transparentize($pink, .2);
     padding: 40px;
     a {
       color: $white;
@@ -45,4 +44,8 @@
   padding-top: 40px;
   padding-bottom: 40px;
 
+}
+.contact_bg {
+  background-size: cover;
+  background-position: right 0px center;
 }
