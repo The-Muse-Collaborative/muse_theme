@@ -49,3 +49,24 @@
   background-size: cover;
   background-position: right 0px center;
 }
+img.socials {
+    height: 35px;
+    
+    @media (min-width: 100px) {
+      padding-left: 20px;
+      padding-top: 4px;
+    }
+    @media (min-width: 469px) {
+      padding-left: 0px;
+      padding-top: 0px;
+      padding-right: 4px;
+    }
+    @media (min-width: 769px) {
+      padding-left: 0px;
+      padding-top: 0px;
+      padding-right: 14px;
+    }
+}
+.clear-both {
+  clear: both;
+}
