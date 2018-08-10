@@ -44,7 +44,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</a>
 				</div>
 				<div class="col-4">
-					<img src="<?php echo get_template_directory_uri() . '/images/bottom-footer-logo.svg'; ?>"/>
+					<!-- Hide this logo on mobile -->
+					<img class="d-none d-sm-block" src="<?php echo get_template_directory_uri() . '/images/bottom-footer-logo.svg'; ?>"/>
+					<!-- Show this logo on mobile -->
+					<img class="d-block d-sm-none" src="<?php echo get_template_directory_uri() . '/images/bottom-footer-logo-mobile.svg'; ?>"/>
 					<div class="row pull-right" style="margin-top: 20px">
 						<!-- <div class="col-3"> -->
 							<a href="https://twitter.com/cmdmuse" target="blank">
