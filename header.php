@@ -42,9 +42,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<?php endif; ?>
 				<h1 class="navbar-brand mb-0" style="display: none;"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php if(get_field('root_page_banner')) : ?>
-					<a href="/" class="mc-header__logo-link"><img src="<?php echo get_template_directory_uri() . '/images/logo.svg'; ?>" class="mc-header__logo" alt="The Muse Collaborative"/></a>
+					<a href="/" class="mc-header__logo-link">
+						<!-- Hide this logo on mobile -->
+						<img src="<?php echo get_template_directory_uri() . '/images/logo.svg'; ?>" class="d-none d-sm-block mc-header__logo" alt="The Muse Collaborative"/>
+						<!-- Show this logo on mobile -->
+						<img src="<?php echo get_template_directory_uri() . '/images/logo-mobile.svg'; ?>" class="d-block d-sm-none mc-header__logo" alt="The Muse Collaborative"/>
+					</a>
+
 				<?php else:  ?>
-					<a href="/" class="mc-header__logo-link"><img src="<?php echo get_template_directory_uri() . '/images/logo-dark.svg'; ?>" class="mc-header__logo" alt="The Muse Collaborative"/></a>
+					<a href="/" class="mc-header__logo-link">
+						<!-- Hide this logo on mobile -->
+						<img src="<?php echo get_template_directory_uri() . '/images/logo-dark.svg'; ?>" class="d-none d-sm-block mc-header__logo" alt="The Muse Collaborative"/>
+						<!-- Show this logo on mobile -->
+						<img src="<?php echo get_template_directory_uri() . '/images/logo-mobile.svg'; ?>" class="d-block d-sm-none mc-header__logo" alt="The Muse Collaborative"/>
+					</a>
 				<?php endif;?>
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
