@@ -9893,6 +9893,11 @@ label {
   .mc-header__menu {
     height: 50px;
     justify-content: flex-end; }
+    @media (max-width: 768px) {
+      .mc-header__menu {
+        height: auto;
+        text-align: center;
+        padding-top: 11px; } }
     @media screen and (max-width: 991px) and (min-width: 767px) {
       .mc-header__menu {
         width: 100%; } }

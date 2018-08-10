@@ -33,6 +33,11 @@
   }
   &__menu {
     height: 50px;
+    @media (max-width: 768px) {
+      height: auto;
+      text-align: center;
+      padding-top: 11px;
+    } 
     justify-content: flex-end;
     @media screen and (max-width:991px) and (min-width: 767px) {
       width: 100%;
@@ -69,4 +74,7 @@
   &.navbar-dark .navbar-nav .dropdown-menu .nav-link:hover { color: $yellow !important;}
   &.navbar-dark .navbar-nav .nav-link:hover { color: transparentize($yellow, .7)}
   .dropdown:hover .dropdown-menu { display: block; }
+}
+.menu-item-has-children a {
+  .dropdown-toggle;
 }
