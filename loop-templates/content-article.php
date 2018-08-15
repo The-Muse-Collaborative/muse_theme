@@ -12,17 +12,16 @@
 		<div class="col-md-4">
 			<header class="entry-header mc-news-header">
 
-				<?php the_title( '<h4 class="entry-title">', '</h4>' ); ?>
+				<?php the_title( sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+				'</a></h4>' ); ?>
 
-				<?php if (is_singular( array( 'bios', 'artists', 'albums' ) )): ?>
-					<?php // Do Nothing. ?>
+				<?php if ( 'articles' == get_post_type() ) : ?>
 
-				<?php else: ?><h2>check</h2>
 					<div class="entry-meta">
 						<?php understrap_posted_on(); ?>
-
 					</div><!-- .entry-meta -->
-				<?php endif ?>
+
+				<?php endif; ?>
 
 			</header><!-- .entry-header -->
 		</div>
@@ -32,7 +31,7 @@
 
 			<div class="entry-content mc-news-content">
 
-				<?php the_content(); ?>
+				<?php the_excerpt(); ?>
 
 				<?php
 				wp_link_pages( array(

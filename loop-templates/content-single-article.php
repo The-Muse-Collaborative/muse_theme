@@ -6,20 +6,21 @@
  */
 
 ?>
+
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 	<div class="row">
 		<div class="col-md-4">
 			<header class="entry-header mc-news-header">
 
-				<?php the_title( '<h4 class="entry-title">', '</h4>' ); ?>
+				<?php the_title( '<h4 class="entry-title">',  '</h4>' ); ?>
 
 				<?php if (is_singular( array( 'bios', 'artists', 'albums' ) )): ?>
 					<?php // Do Nothing. ?>
 				<?php else: ?>
 					<div class="entry-meta">
 						<?php understrap_posted_on(); ?>
-
 					</div><!-- .entry-meta -->
+					
 				<?php endif ?>
 
 			</header><!-- .entry-header -->
