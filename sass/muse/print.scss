@@ -1,0 +1,18 @@
+@media print {
+
+    body {
+        font-size: 16px;
+        color: #000;
+      }
+
+    //Need to add logo from header to top of pages
+
+    //Need to remove entireity of footer, minus contact details (and change font to black), and copyright with date
+
+
+    // Adds urls to non-theme-domain links
+    // TO DO - change url to relative reference
+    //a[href^="https"]:not([href*="192.168.33.10"]):after {
+    //content: " (" attr(href) ")";
+  }
+}

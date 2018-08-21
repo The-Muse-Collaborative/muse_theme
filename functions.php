@@ -50,6 +50,9 @@ require get_template_directory() . '/inc/woocommerce.php';
 /** Load Editor functions. **/
 require get_template_directory() . '/inc/editor.php';
 
+/** Load wp-admin bar changes **/
+require get_template_directory() . '/inc/admin-bar.php';
+
 /** CURRENTLY INACTIVE FUNCTIONS **/
 
 /** Load custom file-types for media folder. **/

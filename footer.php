@@ -57,7 +57,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<!-- <div class="col-3"> -->
 							<a href="https://instagram.com/cmdmuse" target="blank">
 								<img class="socials" src="<?php echo get_template_directory_uri() . '/images/instagram-icon.svg'; ?>"/>
-							</a>		
+							</a>
 						<!-- </div> -->
 						<!-- <div class="col-3"> -->
 							<a href="https://facebook.com/cmdmuse" target="blank">
@@ -65,7 +65,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</a>
 						<!-- </div> -->
 						<!-- <div class="col-3"> -->
-							<a href="https://plus.google.com/+ThemusecollaborativeOrg1" target="blank"> 
+							<a href="https://plus.google.com/+ThemusecollaborativeOrg1" target="blank">
 								<img class="socials" src="<?php echo get_template_directory_uri() . '/images/googleplus-icon.svg'; ?>"/>
 							</a>
 					</div>
@@ -93,5 +93,5 @@ $container = get_theme_mod( 'understrap_container_type' );
 </html>
 
 <style type="text/css">
-	
+
 </style>
