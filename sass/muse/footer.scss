@@ -56,6 +56,9 @@ img.socials {
       padding-left: 20px;
       padding-top: 4px;
     }
+    @media (min-width: 460px) {
+      padding-left: 25px;
+    }
     @media (min-width: 469px) {
       padding-left: 0px;
       padding-top: 0px;
