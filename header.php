@@ -96,4 +96,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<?php endif; ?>
 		<?php endif; ?>
 
+		<!-- ************Michael, you added this div ************ -->
+	<div class="d-none d-print-block">
+		<img src="<?php echo get_template_directory_uri() . '/images/logo-mobile.svg'; ?>" class="d-none d-sm-block mc-header__logo">
+	</div>
+
 	</div><!-- .wrapper-navbar end -->
