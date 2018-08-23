@@ -87,3 +87,66 @@ label {
 //More general classes to cover a multitude of sins.
 .valid { color: $green; }
 .invalid { color: $red; }
+
+// CIVICRM Styling
+#crm-container {
+  & .crm-public input[type="text"], .crm-container textarea {
+      background: #534f4c;
+      width: 80%;
+      border: none;
+      border-radius: 0px !important;
+    }
+  & .crm-public .label {
+    /*  visibility: hidden;*/
+      position: absolute;
+      color: white;
+      padding-top: 11px !important;
+    }
+}
+
+.crm-container { 
+  & textarea {
+    width: 102% !important;
+    /*border-radius: 3px;*/
+  }
+  & .crm-section .label {
+    width: unset !important;
+  }
+  & div.messages, #printer-friendly, .crm-submit-buttons .cancel {
+    visibility: hidden;
+    position: absolute;
+  }
+  & .required {
+    color: white !important;
+  }
+  & .crm-marker, .crm-i-button>.crm-i {
+    visibility: hidden;
+  }
+  & .crm-section .content {
+    margin: 0px !important;
+  }
+  & .crm-button {
+    border-radius: 0px !important;
+    text-shadow: none !important;
+    background: #534f4c !important;
+    border: none !important;
+    text-align: center !important;
+  }
+  & .crm-button.crm-i-button input.crm-form-submit {
+    padding: 5px 32px !important;
+    font-size: 15px !important;
+  }
+}
+
+#editrow-last_name .label label{
+  padding-left: 7px;
+}
+
+div.crm-container label {
+  display: table !important;
+  padding-left: 8px;
+}
+
+.crm-submit-buttons {
+  margin-top: 50px !important;
+}
