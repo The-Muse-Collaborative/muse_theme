@@ -13,3 +13,6 @@ dist-product
 npm-debug.log
 
 /vendor/
+
+.DS_Store
+images/.DS_Store
