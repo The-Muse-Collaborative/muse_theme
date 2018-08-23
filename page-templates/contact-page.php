@@ -43,6 +43,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php get_footer(); ?>
 
+<!-- This is a hacky way of getting what should be the placeholder text in Civi form to hide upon text in input -->
 <script type="text/javascript">
 
 	jQuery(document).ready(function(){

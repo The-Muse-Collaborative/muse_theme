@@ -5,6 +5,10 @@
 		transform: rotate(90deg);
 		max-height: 200px !important;
 	}	
+	.confirmation {
+		transform: rotate(-90deg) !important;
+	}
+		
 	.mobile_text_center {
 		text-align: center;
 	}
