@@ -9489,6 +9489,48 @@ a.skip-link {
   .mobile_text_center {
     text-align: center; } }
 
+.event_black {
+  color: white;
+  background: url("../images/event_blck_bg_down.png");
+  background-size: cover;
+  background-position: 50%;
+  height: fit-content; }
+  @media (min-width: 576px) {
+    .event_black {
+      background: url("../images/event_blck_bg_down.png");
+      background-size: cover;
+      background-position: 50%;
+      height: fit-content; } }
+  @media (min-width: 768px) {
+    .event_black {
+      background: url("../images/black_event_bg.png");
+      background-size: cover;
+      background-position: right 0px center;
+      height: fit-content; } }
+
+#crm-container.crm-public .content {
+  padding-top: 0px !important; }
+
+div#google_map {
+  z-index: -1;
+  margin-left: 0px;
+  margin-top: -23px; }
+  @media (min-width: 576px) {
+    div#google_map {
+      margin-left: 0px;
+      margin-top: -23px; } }
+  @media (min-width: 768px) {
+    div#google_map {
+      margin-left: -23px;
+      margin-top: 0px; } }
+
+.crm-event-manage-tab-actions-ribbon {
+  visibility: hidden;
+  position: absolute; }
+
+span.yellow {
+  color: #ffc107 !important; }
+
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style
@@ -10096,6 +10138,9 @@ img.socials {
 
 .mc-styleguide .mc-color-block + .mc-color-block {
   margin-left: 10px; }
+
+.font-large {
+  font-size: 48px; }
 
 .display-posts-listing .listing-item {
   clear: both; }
