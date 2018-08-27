@@ -57,3 +57,6 @@ require get_template_directory() . '/inc/admin-bar.php';
 
 /** Load custom file-types for media folder. **/
 //require get_template_directory() . '/inc/custom-media-files.php';
+
+// disable the admin bar
+// show_admin_bar(false);
