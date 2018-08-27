@@ -109,17 +109,18 @@
             {/crmRegion}
           </div>
         {/if}
-
+        <!-- {php} the_title( '<h2 class="entry-title white">', '</h2>' ); {/php} -->
+        <h2 class="entry-title white">{$event.title}</h2>
         {if $event.summary}
-            <div class="crm-section event_summary-section">
-              <h2 class="entry-title white">{$event.summary} /</h2>
-            </div>
+            <!-- <div class="crm-section event_summary-section">
+              <h2 class="entry-title white">{$event.summary}</h2>
+            </div> -->
         {/if}
-        {if $event.description}
+        <!-- {if $event.description}
             <div class="crm-section event_description-section summary">
-                <h2 class="entry-title white">{$event.description}</h2>
+                <h2 class="entry-title">{$event.description}</h2>
             </div>
-        {/if}
+        {/if} -->
         <div class="clear"></div>
         <div class="crm-section event_date_time-section">
             <!-- <div class="label"><label>{ts}When{/ts}</label></div> -->
@@ -202,6 +203,16 @@
         {/if}
   <!-- END OF MAP -->
   </div>
+  
+  <div class="row">
+    <div class="col">
+      {if $event.description}
+          <div class="crm-section event_description-section summary pt-4">
+              <h2 class="entry-title">{$event.description}</h2>
+          </div>
+      {/if}
+    </div>
+  </div>  
 
     {/if}{*End of isShowLocation condition*}
 
