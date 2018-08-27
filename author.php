@@ -30,7 +30,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						$author_name ) : get_userdata( intval( $author ) );
 					?>
 
-					<h2 class="entry-title"><?php esc_html_e( 'About:', 'understrap' ); ?><?php echo esc_html( $curauth->nickname ); ?></h2>
+					<h2 class="entry-title"><?php echo esc_html( $curauth->display_name ); ?></h2>
 
 					<?php if ( ! empty( $curauth->ID ) ) : ?>
 						<?php echo get_avatar( $curauth->ID ); ?>
@@ -50,8 +50,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						<?php endif; ?>
 					</dl>
 
-					<h2><?php esc_html_e( 'Posts by', 'understrap' ); ?> <?php echo esc_html( $curauth->nickname ); ?>
-						:</h2>
+					<h2><?php esc_html_e( 'Posts', 'understrap' ); ?>:</h2>
 
 				</header><!-- .page-header -->
 
