@@ -6920,13 +6920,15 @@ button.bg-dark:focus {
 .text-capitalize {
   text-transform: capitalize !important; }
 
-.font-weight-light {
+.font-weight-light, .civievent-widget-event-start-time,
+.civievent-widget-event-end-time,
+.civievent-widget-event-summary {
   font-weight: 300 !important; }
 
 .font-weight-normal {
   font-weight: 400 !important; }
 
-.font-weight-bold {
+.font-weight-bold, .civievent-widget-event-start-date {
   font-weight: 700 !important; }
 
 .font-italic {
@@ -9550,6 +9552,14 @@ div#google_map {
 
 span.yellow {
   color: #ffc107 !important; }
+
+span.civievent-widget-event-datetime,
+span.civievent-widget-event-title {
+  border-top: 1px solid #e83e8c; }
+
+header.entry-header {
+  visibility: hidden;
+  position: absolute; }
 
 /*
 * Use existing Bootstrap 4 classes and
