@@ -22,7 +22,7 @@
     @include media-breakpoint-up(sm) {
     	background: url('../images/event_blck_bg_down.png');
     	background-size: cover;
-    	background-position: 50%;
+    	background-position: bottom center;
     	height: fit-content;
     }
     @include media-breakpoint-up(md) {
@@ -34,7 +34,7 @@
     @include media-breakpoint-up(xs) {
     	background: url('../images/event_blck_bg_down.png');
     	background-size: cover;
-    	background-position: 50%;
+    	background-position: bottom center;
     	height: fit-content;
     }
 }
