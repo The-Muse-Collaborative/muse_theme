@@ -1,4 +1,11 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+.border-top-pink {
+    border-top: 1px solid $pink;
+}
+.home input#custom_17 {
+    visibility: hidden;
+    position: absolute;
+}
 
 @media (max-width: 575px) {
 	.vinyl_img {

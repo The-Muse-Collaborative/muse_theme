@@ -9502,6 +9502,13 @@ a.skip-link {
 .gallery-caption {
   display: block; }
 
+.border-top-pink {
+  border-top: 1px solid #e83e8c; }
+
+.home input#custom_17 {
+  visibility: hidden;
+  position: absolute; }
+
 @media (max-width: 575px) {
   .vinyl_img {
     transform: rotate(90deg);
@@ -9618,10 +9625,22 @@ h3 {
   font-family: "Saira", sans-serif;
   color: #c114a2;
   font-size: 28px;
-  font-weight: 500; }
+  font-weight: 500;
+  background-color: transparent; }
   h3.yellow {
     color: #ffd100; }
   h3.black {
+    color: #ffd100; }
+
+h3.force {
+  font-family: "Saira", sans-serif !important;
+  color: #c114a2 !important;
+  font-size: 28px !important;
+  font-weight: 500 !important;
+  background-color: transparent !important; }
+  h3.force.yellow {
+    color: #ffd100; }
+  h3.force.black {
     color: #ffd100; }
 
 h4, .bio-single .title,
@@ -9648,7 +9667,7 @@ h6 {
 .sm-text {
   font-size: 12px; }
 
-a {
+a, .pink {
   color: #c114a2; }
 
 a.meta.yellow:hover {

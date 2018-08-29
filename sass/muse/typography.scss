@@ -28,6 +28,16 @@ h3 {
   color: $pink;
   font-size: 28px;
   font-weight: 500;
+  background-color: transparent;
+  &.yellow { color: $yellow; }
+  &.black { color: $yellow; }
+}
+h3.force {
+  font-family: $header-font-family !important;
+  color: $pink !important;
+  font-size: 28px !important;
+  font-weight: 500 !important;
+  background-color: transparent !important;
   &.yellow { color: $yellow; }
   &.black { color: $yellow; }
 }
@@ -56,7 +66,7 @@ h6 {
 
 .sm-text { font-size: 12px; }
 
-a { color: $pink; }
+a, .pink{ color: $pink; }
 
 a.meta.yellow:hover { color: transparentize($yellow, .2) !important;}
 .active a.meta.yellow { color: white !important;}

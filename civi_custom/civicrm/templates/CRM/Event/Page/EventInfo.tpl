@@ -204,7 +204,7 @@
   <!-- END OF MAP -->
   </div>
   
-  <div class="row">
+<!--   <div class="row">
     <div class="col">
       {if $event.description}
           <div class="crm-section event_description-section summary pt-4">
@@ -212,7 +212,7 @@
           </div>
       {/if}
     </div>
-  </div>  
+  </div>   -->
 
     {/if}{*End of isShowLocation condition*}
 
@@ -298,6 +298,16 @@
       </div>
   <!-- </div> -->
 </div> <!-- End of row -->
+
+<div class="row mt-3">
+  <div class="col ">
+    <h3 class="pink border-top-pink pt-2 force" style="padding:0px;">{$event.title}</h3>
+    <p><span class="bold">{$event.event_start_date|date_format}</span> | <span class="font-weight-light">{$event.event_end_date|crmDate:0:1}</span></p>
+  </div>
+  <div class="col">
+    <div class="border-top-pink pt-2">{$event.description}</div>
+  </div>
+</div>
 
 {literal}
 <script type="text/javascript">
