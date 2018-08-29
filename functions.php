@@ -60,3 +60,35 @@ require get_template_directory() . '/inc/admin-bar.php';
 
 // disable the admin bar
 // show_admin_bar(false);
+
+
+function home_album_form_fix() {
+    if(is_front_page()){ 
+        ?>
+        <script type="text/javascript">
+
+			jQuery(document).ready(function(){
+				
+				jQuery('#editrow-email-Primary').keyup(function () { 
+					jQuery('#editrow-email-Primary').find('.label').hide(); 
+				});
+
+				jQuery('#editrow-custom_15').keyup(function () { 
+					jQuery('#editrow-custom_15').find('.label').hide(); 
+				});
+				
+				jQuery('#editrow-custom_14').keyup(function () { 
+					jQuery('#editrow-custom_14').find('.label').hide(); 
+				});
+
+				jQuery('#editrow-custom_17').keyup(function () { 
+					jQuery('#editrow-custom_17').find('.label').hide(); 
+				});
+
+			});
+		</script>
+
+        <?php
+    }
+}
+add_action( 'wp_head', 'home_album_form_fix' );
