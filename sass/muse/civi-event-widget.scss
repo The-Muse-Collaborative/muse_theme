@@ -1,0 +1,12 @@
+span.civievent-widget-event-datetime,
+span.civievent-widget-event-title {
+    border-top: 1px solid $pink;
+}
+.civievent-widget-event-start-date {
+    @extend .font-weight-bold;
+}
+.civievent-widget-event-start-time,
+.civievent-widget-event-end-time,
+.civievent-widget-event-summary {
+    @extend .font-weight-light;
+}

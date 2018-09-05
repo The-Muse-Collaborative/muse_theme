@@ -63,26 +63,26 @@ require get_template_directory() . '/inc/admin-bar.php';
 
 
 function home_album_form_fix() {
-    if(is_front_page()){ 
+    if(is_front_page()){
         ?>
         <script type="text/javascript">
 
 			jQuery(document).ready(function(){
-				
-				jQuery('#editrow-email-Primary').keyup(function () { 
-					jQuery('#editrow-email-Primary').find('.label').hide(); 
+
+				jQuery('#editrow-email-Primary').keyup(function () {
+					jQuery('#editrow-email-Primary').find('.label').hide();
 				});
 
-				jQuery('#editrow-custom_15').keyup(function () { 
-					jQuery('#editrow-custom_15').find('.label').hide(); 
-				});
-				
-				jQuery('#editrow-custom_14').keyup(function () { 
-					jQuery('#editrow-custom_14').find('.label').hide(); 
+				jQuery('#editrow-custom_15').keyup(function () {
+					jQuery('#editrow-custom_15').find('.label').hide();
 				});
 
-				jQuery('#editrow-custom_17').keyup(function () { 
-					jQuery('#editrow-custom_17').find('.label').hide(); 
+				jQuery('#editrow-custom_14').keyup(function () {
+					jQuery('#editrow-custom_14').find('.label').hide();
+				});
+
+				jQuery('#editrow-custom_17').keyup(function () {
+					jQuery('#editrow-custom_17').find('.label').hide();
 				});
 
 			});
