@@ -7,85 +7,9 @@
     position: absolute;
 }
 
-@media (max-width: 575px) {
-	.vinyl_img {
-		transform: rotate(90deg);
-		max-height: 200px !important;
-	}	
-	.confirmation {
-		transform: rotate(-90deg) !important;
-	}
-		
-	.mobile_text_center {
-		text-align: center;
-	}
-}
 
-// EVENTS PAGE INDIVIDUAL
-.event_black {
-	color: white;
-	
 
-    @include media-breakpoint-up(sm) {
-    	background: url('../images/event_blck_bg_down.png');
-    	background-size: cover;
-    	background-position: bottom center;
-    	height: fit-content;
-    }
-    @include media-breakpoint-up(md) {
-    	background: url('../images/black_event_bg.png');
-    	background-size: cover;
-	    background-position: right 0px center;
-	    height: fit-content;
-    }
-    @include media-breakpoint-up(xs) {
-    	background: url('../images/event_blck_bg_down.png');
-    	background-size: cover;
-    	background-position: bottom center;
-    	height: fit-content;
-    }
-}
-#crm-container.crm-public .content {
-    padding-top: 0px !important;
-}
-div#google_map {
-    z-index: -1;
-    @include media-breakpoint-up(sm) {
-    	margin-left: 0px;
-    	margin-top: -23px;
-    }
-    @include media-breakpoint-up(md) { 
-    	margin-left: -23px;
-    	margin-top: 0px;
-    }
-    @include media-breakpoint-up(xs) {
-    	margin-left: 0px;
-    	margin-top: -23px;
-    }
-    
-}
-.crm-event-manage-tab-actions-ribbon {
-	visibility: hidden;
-	position: absolute;
-}
-span.yellow {
-	color: $yellow !important;
-}
-// EVENTS PAGE LIST
-
-span.civievent-widget-event-datetime,
-span.civievent-widget-event-title {
-    border-top: 1px solid $pink;
-}
-.civievent-widget-event-start-date {
-    @extend .font-weight-bold;
-}
-.civievent-widget-event-start-time, 
-.civievent-widget-event-end-time,
-.civievent-widget-event-summary {
-    @extend .font-weight-light;
-}
-header.entry-header {
-    visibility: hidden;
-    position: absolute;
-}
+//header.entry-header {
+//    visibility: hidden;
+//    position: absolute;
+//}

@@ -13,7 +13,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 <?php get_sidebar( 'footerfull' ); ?>
-<div class="d-print-none"><!-- Michael, you added this div -->
 	<footer class="mc-footer mc-top-footer" style="background-image: url(<?php echo get_template_directory_uri() . '/images/bottom-banner.jpg'; ?>)">
 		<div class="<?php echo esc_attr( $container ); ?>">
 			<div class="row">
@@ -85,7 +84,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</div>
 			</div>
 	</footer>
-</div><!-- Michael, you added this div -->
 
 </div><!-- #page we need this extra closing tag here -->
 

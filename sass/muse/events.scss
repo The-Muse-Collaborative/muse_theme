@@ -1,0 +1,48 @@
+.event_black {
+	color: white;
+
+    @include media-breakpoint-up(sm) {
+    	background: url('../images/event_blck_bg_down.png');
+    	background-size: cover;
+    	background-position: bottom center;
+    	height: fit-content;
+    }
+    @include media-breakpoint-up(md) {
+    	background: url('../images/black_event_bg.png');
+    	background-size: cover;
+	    background-position: right 0px center;
+	    height: fit-content;
+    }
+    @include media-breakpoint-up(xs) {
+    	background: url('../images/event_blck_bg_down.png');
+    	background-size: cover;
+    	background-position: bottom center;
+    	height: fit-content;
+    }
+}
+#crm-container.crm-public .content {
+    padding-top: 0px !important;
+}
+div#google_map {
+    z-index: -1;
+    @include media-breakpoint-up(sm) {
+    	margin-left: 0px;
+    	margin-top: -23px;
+    }
+    @include media-breakpoint-up(md) {
+    	margin-left: -23px;
+    	margin-top: 0px;
+    }
+    @include media-breakpoint-up(xs) {
+    	margin-left: 0px;
+    	margin-top: -23px;
+    }
+
+}
+.crm-event-manage-tab-actions-ribbon {
+	visibility: hidden;
+	position: absolute;
+}
+span.yellow {
+	color: $yellow !important;
+}
