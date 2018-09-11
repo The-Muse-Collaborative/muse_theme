@@ -1,12 +1,51 @@
 span.civievent-widget-event-datetime,
+
 span.civievent-widget-event-title {
-    border-top: 1px solid $pink;
+    border-top: 2px solid transparentize($pink, .75);
 }
+
 .civievent-widget-event-start-date {
+  padding-top: 38px;
+  position:relative;
+  left: -5px;
+  top: 10px;
     @extend .font-weight-bold;
+    color: $black;
+    text-transform: uppercase;
 }
-.civievent-widget-event-start-time,
-.civievent-widget-event-end-time,
+
+.civievent-widget-infolink {
+  position: relative;
+  left: -495px;
+  top: 10px;
+  font-size: 24px;
+  font-family: $header-font-family;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.civievent-widget-event-start-time {
+  color: $gray-medium;
+  position:relative;
+  right: -5px;
+  top: 10px;
+}
+
+.civievent-widget-event-end-time {
+  color: $gray-medium;
+}
+
 .civievent-widget-event-summary {
     @extend .font-weight-light;
+    padding-top: 90px;
+    position: relative;
+    top: -110px;
+}
+
+.civievent-widget-event-odd {
+    background: none!important;
+}
+
+.civievent-widget-event-even {
+    background: none!important;
 }
