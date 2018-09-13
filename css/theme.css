@@ -10224,19 +10224,20 @@ img.socials {
 
 .event_black {
   color: white;
-  background: url("../images/event_blck_bg_down.png");
+  min-height: 480px;
+  background: url("../images/event_blck_bg_down2.png");
   background-size: cover;
   background-position: bottom center;
   height: fit-content; }
   @media (min-width: 576px) {
     .event_black {
-      background: url("../images/event_blck_bg_down.png");
+      background: url("../images/event_blck_bg_down2.png");
       background-size: cover;
       background-position: bottom center;
       height: fit-content; } }
   @media (min-width: 768px) {
     .event_black {
-      background: url("../images/black_event_bg.png");
+      background: url("../images/black_event_bg2.png");
       background-size: cover;
       background-position: right 0px center;
       height: fit-content; } }
