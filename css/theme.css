@@ -9936,6 +9936,44 @@ div.crm-container label {
 .crm-submit-buttons {
   margin-top: 50px !important; }
 
+.alpaca-field-object {
+  padding: 0px; }
+  .alpaca-field-object .form-control:focus, .alpaca-field-object .wpcf7 input:focus[type=text], .wpcf7 .alpaca-field-object input:focus[type=text],
+  .alpaca-field-object .wpcf7 input:focus[type=search], .wpcf7 .alpaca-field-object input:focus[type=search],
+  .alpaca-field-object .wpcf7 input:focus[type=url], .wpcf7 .alpaca-field-object input:focus[type=url],
+  .alpaca-field-object .wpcf7 input:focus[type=tel], .wpcf7 .alpaca-field-object input:focus[type=tel],
+  .alpaca-field-object .wpcf7 input:focus[type=number], .wpcf7 .alpaca-field-object input:focus[type=number],
+  .alpaca-field-object .wpcf7 input:focus[type=range], .wpcf7 .alpaca-field-object input:focus[type=range],
+  .alpaca-field-object .wpcf7 input:focus[type=date], .wpcf7 .alpaca-field-object input:focus[type=date],
+  .alpaca-field-object .wpcf7 input:focus[type=month], .wpcf7 .alpaca-field-object input:focus[type=month],
+  .alpaca-field-object .wpcf7 input:focus[type=week], .wpcf7 .alpaca-field-object input:focus[type=week],
+  .alpaca-field-object .wpcf7 input:focus[type=time], .wpcf7 .alpaca-field-object input:focus[type=time],
+  .alpaca-field-object .wpcf7 input:focus[type=datetime], .wpcf7 .alpaca-field-object input:focus[type=datetime],
+  .alpaca-field-object .wpcf7 input:focus[type=datetime-local], .wpcf7 .alpaca-field-object input:focus[type=datetime-local],
+  .alpaca-field-object .wpcf7 input:focus[type=color], .wpcf7 .alpaca-field-object input:focus[type=color],
+  .alpaca-field-object .wpcf7 input:focus[type=email], .wpcf7 .alpaca-field-object input:focus[type=email],
+  .alpaca-field-object .wpcf7 input:focus[type=file], .wpcf7 .alpaca-field-object input:focus[type=file],
+  .alpaca-field-object .wpcf7 input:focus[type=submit], .wpcf7 .alpaca-field-object input:focus[type=submit],
+  .alpaca-field-object .wpcf7 select:focus, .wpcf7 .alpaca-field-object select:focus,
+  .alpaca-field-object .wpcf7 textarea:focus, .wpcf7 .alpaca-field-object textarea:focus, .alpaca-field-object .wpcf7 .wpcf7-validation-errors:focus, .wpcf7 .alpaca-field-object .wpcf7-validation-errors:focus {
+    border-color: #c114a2; }
+
+.alpaca-container-label {
+  padding: 2px 0 4px 32px;
+  font-size: 1em;
+  text-transform: uppercase;
+  background: url("../images/donation_legend.png") no-repeat; }
+
+.alpaca-field input, .alpaca-field select, .StripeElement {
+  background-color: #ECECEC !important;
+  color: black;
+  border-radius: inherit !important; }
+
+.radio {
+  margin: 5px 0;
+  padding: 9px 0 3px 12px;
+  background: url("../images/radio_button2.png") no-repeat; }
+
 .mc-header {
   margin-bottom: 76px;
   background: #2d2a26; }
