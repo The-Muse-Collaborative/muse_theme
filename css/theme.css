@@ -9483,10 +9483,76 @@ a.skip-link {
 .border-top-pink {
   border-top: 1px solid #e83e8c; }
 
-.home input#custom_17 {
+.home input#custom_17,
+.home .editrow_custom_17-section label {
   visibility: hidden;
   position: absolute; }
 
+<<<<<<< Updated upstream
+=======
+.crm-profile-name-Album_Set_3_Suggestion_18 .crm-submit-buttons {
+  margin-top: 15px !important; }
+
+@media (max-width: 575px) {
+  .vinyl_img {
+    transform: rotate(90deg);
+    max-height: 200px !important; }
+  .confirmation {
+    transform: rotate(-90deg) !important; }
+  .mobile_text_center {
+    text-align: center; } }
+
+.event_black {
+  color: white;
+  background: url("../images/event_blck_bg_down.png");
+  background-size: cover;
+  background-position: bottom center;
+  height: fit-content; }
+  @media (min-width: 576px) {
+    .event_black {
+      background: url("../images/event_blck_bg_down.png");
+      background-size: cover;
+      background-position: bottom center;
+      height: fit-content; } }
+  @media (min-width: 768px) {
+    .event_black {
+      background: url("../images/black_event_bg.png");
+      background-size: cover;
+      background-position: right 0px center;
+      height: fit-content; } }
+
+#crm-container.crm-public .content {
+  padding-top: 0px !important; }
+
+div#google_map {
+  z-index: -1;
+  margin-left: 0px;
+  margin-top: -23px; }
+  @media (min-width: 576px) {
+    div#google_map {
+      margin-left: 0px;
+      margin-top: -23px; } }
+  @media (min-width: 768px) {
+    div#google_map {
+      margin-left: -23px;
+      margin-top: 0px; } }
+
+.crm-event-manage-tab-actions-ribbon {
+  visibility: hidden;
+  position: absolute; }
+
+span.yellow {
+  color: #ffc107 !important; }
+
+span.civievent-widget-event-datetime,
+span.civievent-widget-event-title {
+  border-top: 1px solid #e83e8c; }
+
+header.entry-header {
+  visibility: hidden;
+  position: absolute; }
+
+>>>>>>> Stashed changes
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style
