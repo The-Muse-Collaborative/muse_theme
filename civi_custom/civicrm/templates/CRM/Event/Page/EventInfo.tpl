@@ -338,11 +338,26 @@ window.$ = jQuery.noConflict();
 
 $(document).ready(function() {
     $(window).resize(function() {
+        var windowWidth = window.matchMedia("(max-width: 767px)")
+       
         var mapheight = $('.event_black').height();
         $("#google_map").height(mapheight);
 
         var mapwidth = $('.event_black').width();
         $('#google_map').width(mapwidth);
+        
+        // Width is less than or equal 
+        if (windowWidth.matches) {
+          var mapheight = $('.event_black').height();
+          $("#google_map").height(mapheight+23);
+        }
+        else {
+          var mapwidth = $('.event_black').width();
+          $('#google_map').width(mapwidth+23);
+        }
+
+        
+
     }).resize();
 });
 </script>
