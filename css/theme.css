@@ -10010,7 +10010,7 @@ div.crm-container label {
     @media (max-width: 768px) {
       .mc-header__menu {
         height: auto;
-        text-align: center;
+        text-align: right;
         padding-top: 11px; } }
     @media screen and (max-width: 991px) and (min-width: 767px) {
       .mc-header__menu {
@@ -10110,6 +10110,9 @@ div.crm-container label {
 .contact_bg {
   background-size: cover;
   background-position: right 0px center; }
+  @media (max-width: 460px) {
+    .contact_bg {
+      text-align: center; } }
 
 img.socials {
   height: 35px; }

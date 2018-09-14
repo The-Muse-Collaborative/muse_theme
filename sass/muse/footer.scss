@@ -48,6 +48,10 @@
 .contact_bg {
   background-size: cover;
   background-position: right 0px center;
+
+  @media (max-width: 460px) {
+    text-align: center;
+  }
 }
 img.socials {
     height: 35px;
