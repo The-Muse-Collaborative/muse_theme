@@ -93,9 +93,9 @@
 <div class="row no-gutters row-eq-height ">
   <!-- <div class="vevent crm-event-id-{$event.id} crm-block crm-event-info-form-block"> -->
     <div class="col-lg-6 col-md-6 event_black">
-     
-     
-      
+
+
+
         <div class="event-info py-5 px-5 align-middle">
         {* Display top buttons only if the page is long enough to merit duplicate buttons *}
         {if $event.summary or $event.description}
@@ -132,7 +132,7 @@
                     <span class="yellow">{$event.event_start_date|date_format:"%b"}.</span>
                     <span class="yellow font-large pl-1">{$event.event_start_date|date_format:"%d"}</span>
                   </h2>
-                  
+
                   <!-- {if $event.event_end_date}
                       &nbsp; {ts}through{/ts} &nbsp;
                       {* Only show end time if end date = start date *}
@@ -174,7 +174,7 @@
                       <br>
                       <h2 class="purple pt-5">
                         <i class="fa fa-caret-right fa-lg" aria-hidden="true"></i>
-                        {$event.event_end_date|crmDate:0:1}
+                        {$event.event_start_date|crmDate:0:1}
                       </h2>
                   {else}
                       <abbr class="dtend" title="{$event.event_end_date|crmDate}">
@@ -183,7 +183,7 @@
                   {/if}
               {/if}
         </div>
-      
+
     </div> <!-- End of col-lg-6 col-md-6 -->
 
 
@@ -203,7 +203,7 @@
         {/if}
   <!-- END OF MAP -->
   </div>
-  
+
 <!--   <div class="row">
     <div class="col">
       {if $event.description}
@@ -300,9 +300,9 @@
 </div> <!-- End of row -->
 
 <div class="row mt-3">
-  <div class="col ">
+  <div class="col-md-4">
     <h3 class="pink border-top-pink pt-2 force" style="padding:0px;">{$event.title}</h3>
-    <p><span class="bold">{$event.event_start_date|date_format}</span> | <span class="font-weight-light">{$event.event_end_date|crmDate:0:1}</span></p>
+    <p><span class="bold">{$event.event_start_date|date_format}</span> | <span class="font-weight-light">{$event.event_start_date|crmDate:0:1}</span></p>
   </div>
   <div class="col">
     <div class="border-top-pink pt-2">{$event.description}</div>
@@ -339,14 +339,14 @@ window.$ = jQuery.noConflict();
 $(document).ready(function() {
     $(window).resize(function() {
         var windowWidth = window.matchMedia("(max-width: 767px)")
-       
+
         var mapheight = $('.event_black').height();
         $("#google_map").height(mapheight);
 
         var mapwidth = $('.event_black').width();
         $('#google_map').width(mapwidth);
-        
-        // Width is less than or equal 
+
+        // Width is less than or equal
         if (windowWidth.matches) {
           var mapheight = $('.event_black').height();
           $("#google_map").height(mapheight+23);
@@ -356,7 +356,7 @@ $(document).ready(function() {
           $('#google_map').width(mapwidth+23);
         }
 
-        
+
 
     }).resize();
 });
