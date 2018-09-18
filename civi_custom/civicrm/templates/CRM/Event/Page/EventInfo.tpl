@@ -128,7 +128,7 @@
                   <!-- <abbr class="dtstart" title="{$event.event_start_date|crmDate}">
                   {$event.event_start_date|crmDate}
                   </abbr> -->
-                  </br>
+                  <br>
                   <h2 class="entry-title pt-2">
                     <span class="yellow">{$event.event_start_date|date_format:"%b"}.</span>
                     <span class="yellow font-large pl-1">{$event.event_start_date|date_format:"%d"}</span>
