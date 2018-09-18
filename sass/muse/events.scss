@@ -46,3 +46,7 @@ div#google_map {
 span.yellow {
 	color: $yellow !important;
 }
+
+.border-top-pink {
+	border-top: 2px solid transparentize($pink, .75);
+}
