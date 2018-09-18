@@ -30,7 +30,7 @@
   {assign var=height value="600px"}
   {assign var=width  value="100%"}
 {/if}
-{assign var=defaultZoom value=16}
+{assign var=defaultZoom value=15}
 {literal}
 <script src="//maps.googleapis.com/maps/api/js?{/literal}{if $mapKey}key={$mapKey}{/if}{literal}&sensor=false&callback=initMap" type="text/javascript" defer="defer"></script>
 <script type="text/javascript">
@@ -259,13 +259,14 @@
     function createMarker(map, point, data, image) {
         var marker = new google.maps.Marker({ position: point,
                                               map: map,
-                                              icon: image
+                                              icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png' <!-- REPLACE ICON -->
                                             });
         var infowindow = new google.maps.InfoWindow();
         google.maps.event.addListener(marker, 'click', function() { infowindow.setContent(data);
                                                                     infowindow.open(map,marker);
                                                                    });
     }
+
 
     function gpopUp() {
   var from   = document.getElementById('from').value;

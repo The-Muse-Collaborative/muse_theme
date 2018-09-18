@@ -1,0 +1,15 @@
+.accordion .card-header:after {
+    font-family: 'FontAwesome';
+    content: "\F078";
+    color: #fff;;
+    float: right;
+}
+.accordion .card-header.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\F077";
+}
+
+.accordion .card-header {
+  background: $pink;
+  border-color: #fff;
+}
