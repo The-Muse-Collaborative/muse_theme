@@ -128,6 +128,7 @@
                   <!-- <abbr class="dtstart" title="{$event.event_start_date|crmDate}">
                   {$event.event_start_date|crmDate}
                   </abbr> -->
+                  </br>
                   <h2 class="entry-title pt-2">
                     <span class="yellow">{$event.event_start_date|date_format:"%b"}.</span>
                     <span class="yellow font-large pl-1">{$event.event_start_date|date_format:"%d"}</span>
@@ -161,27 +162,13 @@
                       <div class="content">{$location.address.1.display|nl2br}</div>
                       <div class="clear"></div>
                   </div>
+                  <br>
+                  <h2 class="purple pt-5">
+                    <i class="fa fa-caret-right fa-lg" aria-hidden="true"></i>
+                    {$event.event_start_date|crmDate:0:1}
+                  </h2>
               {/if}
 
-              {if $event.event_end_date}
-                  <!-- https://www.smarty.net/docsv2/en/language.modifier.date.format.tpl -->
-                  <!-- &nbsp; {ts}through{/ts} &nbsp; -->
-                  {* Only show end time if end date = start date *}
-                  {if $event.event_end_date|date_format:"%Y%m%d" == $event.event_start_date|date_format:"%Y%m%d"}
-                      <!-- <abbr class="dtend" title="{$event.event_end_date|crmDate:0:1}">
-                      {$event.event_end_date|crmDate:0:1}
-                      </abbr> -->
-                      <br>
-                      <h2 class="purple pt-5">
-                        <i class="fa fa-caret-right fa-lg" aria-hidden="true"></i>
-                        {$event.event_start_date|crmDate:0:1}
-                      </h2>
-                  {else}
-                      <abbr class="dtend" title="{$event.event_end_date|crmDate}">
-                      {$event.event_end_date|crmDate}
-                      </abbr>
-                  {/if}
-              {/if}
         </div>
 
     </div> <!-- End of col-lg-6 col-md-6 -->
