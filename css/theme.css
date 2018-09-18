@@ -10023,16 +10023,6 @@ div.crm-container label {
     border-top: 13px solid #2d2a26;
     margin-top: 0;
     padding: 0; }
-    .mc-header__submenu:before {
-      content: " ";
-      height: 10px;
-      width: 10px;
-      position: absolute;
-      border-bottom: 10px #ffd100 solid;
-      border-left: 10px transparent solid;
-      border-right: 10px transparent solid;
-      top: -10px;
-      left: 10px; }
     .mc-header__submenu .meta {
       font-weight: 600 !important;
       font-size: 12px !important;
@@ -10051,6 +10041,12 @@ div.crm-container label {
     color: rgba(255, 209, 0, 0.3); }
   .mc-header .dropdown:hover .dropdown-menu {
     display: block; }
+
+@media (max-width: 767px) {
+  .menu-item-has-children a {
+    background: url("../images/yellow_dropdown.png");
+    background-repeat: no-repeat;
+    background-position: center; } }
 
 .mc-banner-image {
   min-height: 500px;
