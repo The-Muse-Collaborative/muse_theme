@@ -286,13 +286,13 @@
   <!-- </div> -->
 </div> <!-- End of row -->
 
-<div class="row mt-3">
+<div class="row mt-5">
   <div class="col-md-4">
-    <h3 class="pink border-top-pink pt-2 force" style="padding:0px;">{$event.title}</h3>
-    <p><span class="bold">{$event.event_start_date|date_format}</span> | <span class="font-weight-light">{$event.event_start_date|crmDate:0:1}</span></p>
+    <h4 class="pink border-top-pink pt-4 force" style="padding:0px;">{$event.title}</h4>
+    <p class="mc-event-date"><span class="bold">{$event.event_start_date|date_format}</span> | <span class="font-weight-light text-gray-medium">{$event.event_start_date|crmDate:0:1}</span></p>
   </div>
   <div class="col">
-    <div class="border-top-pink pt-2">{$event.description}</div>
+    <div class="border-top-pink pt-4">{$event.description}</div>
   </div>
 </div>
 

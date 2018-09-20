@@ -1,14 +1,28 @@
-span.civievent-widget-event-datetime,
-
-span.civievent-widget-event-title {
-    border-top: 2px solid transparentize($pink, .75);
+.civievent-widget-list {
+    margin-top: 30px;
 }
 
+.civievent-widget-item {
+    margin-bottom: 60px;
+}
+
+.civievent-widget-event-datetime,
+.civievent-widget-event-title {
+    display: block !important;
+    padding: 0px!important;
+}
+
+.civievent-widget-event-title h4 { margin-bottom: 10px; }
+
+.civievent-widget-date-title,
+.civievent-widget-summary {
+    border-top: 2px solid transparentize($pink, .75);
+    padding-top: 30px;
+}
+
+
 .civievent-widget-event-start-date {
-  padding-top: 38px;
   position:relative;
-  left: -5px;
-  top: 10px;
     @extend .font-weight-bold;
     color: $black;
     text-transform: uppercase;
@@ -16,8 +30,6 @@ span.civievent-widget-event-title {
 
 .civievent-widget-infolink {
   position: relative;
-  left: -495px;
-  top: 10px;
   font-size: 24px;
   font-family: $header-font-family;
   font-weight: 700;
@@ -27,8 +39,6 @@ span.civievent-widget-event-title {
 .civievent-widget-event-start-time {
   color: $gray-medium;
   position:relative;
-  right: -5px;
-  top: 10px;
 }
 
 .civievent-widget-event-end-time {
@@ -37,9 +47,7 @@ span.civievent-widget-event-title {
 
 .civievent-widget-event-summary {
     @extend .font-weight-light;
-    padding-top: 90px;
     position: relative;
-    top: -110px;
 }
 
 .civievent-widget-event-odd {

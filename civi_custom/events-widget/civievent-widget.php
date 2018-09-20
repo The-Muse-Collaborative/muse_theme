@@ -316,25 +316,27 @@ class civievent_Widget extends WP_Widget {
 				$title = CRM_Utils_Array::value( 'title', $event );
 				$summary = CRM_Utils_Array::value( 'summary', $event, '' );
 				$row =  '<div class="civievent-widget-item row">';
-					$row .= '<div class="civievent-widget-date-title md-col-4">';
-						if ( $title ) {
-							$row .= ' <div class="civievent-widget-event-title">';
-							$row .= self::locFix( $event, $event['event_id'], $instance, 'civievent-widget-event' );
-							$row .= '<span class="civievent-widget-infolink">';
-							$row .= ($url) ? "<a href=\"$url\">$title</a>" : $title;
-							$row .= '</div>';
-						}
-						$row .= $this->dateFix( $event, 'civievent-widget-event' );
-						$row .= self::regFix( $event, $event['event_id'], 'civievent-widget' );
+					$row .= '<div class="col-md-4">';
+						$row .= '<div class="civievent-widget-date-title">';
+							if ( $title ) {
+								$row .= '<div class="civievent-widget-event-title">';
+								$row .= self::locFix( $event, $event['event_id'], $instance, 'civievent-widget-event' );
+								$row .= ($url) ? "<a href=\"$url\"><h4>$title</h4></a>" : "<h4>$title</h4>";
+								$row .= '</div>';
+							}
+							$row .= $this->dateFix( $event, 'civievent-widget-event' );
+							$row .= self::regFix( $event, $event['event_id'], 'civievent-widget' );
+						$row .= '</div>';
 					$row .= '</div>';
 
-					$row .= '<div class="civievent-widget-summary md-col-8">';
-						if ( $instance['summary'] ) {
-							$row .= "<div class=\"civievent-widget-event-summary\">$summary</span>";
-						}
+					$row .= '<div class="col-md-8">';
+						$row .= '<div class="civievent-widget-summary">';
+							if ( $instance['summary'] ) {
+								$row .= "<div class=\"civievent-widget-event-summary\">$summary</div>";
+							}
+						$row .= '</div>';
 					$row .= '</div>';
 				$row .= '</div>';
-
 
 				$oe = ($index&1) ? 'odd' : 'even';
 				$content .= "<div class=\"civievent-widget-event civievent-widget-event-$oe civievent-widget-event-$index\">$row</div>";
@@ -647,7 +649,7 @@ HEREDOC;
 		$start = CRM_Utils_Array::value( 'start_date', $event );
 		$end = CRM_Utils_Array::value( 'end_date', $event );
 		if ( $start ) {
-			$date = '<span class="' . $classPrefix . '-start-date">' . CRM_Utils_Date::customFormat( $start, $this->_dateFormat ) . '</span>';
+			$date = '<span class="' . $classPrefix . '-start-date">' . CRM_Utils_Date::customFormat( $start, $this->_dateFormat ) . ' | </span>';
 			$date .= ' <span class="' . $classPrefix . '-start-time">' . CRM_Utils_Date::customFormat( $start, $this->_timeFormat ) . '</span>';
 			if ( $end ) {
 				$date .= ' &ndash;';
