@@ -10260,6 +10260,7 @@ img.socials {
     color: #000; } }
 
 .event_black {
+  z-index: 2;
   color: white;
   min-height: 480px;
   background: url("../images/event_blck_bg_down2.png");
@@ -10283,7 +10284,7 @@ img.socials {
   padding-top: 0px !important; }
 
 div#google_map {
-  z-index: -1;
+  z-index: 1;
   margin-left: 0px;
   margin-top: -23px; }
   @media (min-width: 576px) {
