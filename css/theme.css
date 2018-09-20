@@ -10290,25 +10290,40 @@ div#google_map {
 span.yellow {
   color: #ffd100 !important; }
 
+.mc-event-date .text-gray-medium {
+  color: #a5a1a1; }
+
 .border-top-pink {
   border-top: 2px solid rgba(193, 20, 162, 0.25); }
 
-span.civievent-widget-event-datetime,
-span.civievent-widget-event-title {
-  border-top: 2px solid rgba(193, 20, 162, 0.25); }
+.civievent-widget-list {
+  margin-top: 30px; }
+
+.civievent-widget-item {
+  margin-bottom: 60px; }
+
+.civievent-widget-event-datetime,
+.civievent-widget-event-title {
+  display: block !important;
+  padding: 0px !important; }
+
+.civievent-widget-event-title h4, .civievent-widget-event-title .bio-single .title, .bio-single .civievent-widget-event-title .title, .civievent-widget-event-title
+.display-posts-bios .listing-item .title,
+.display-posts-bios .listing-item .civievent-widget-event-title .title {
+  margin-bottom: 10px; }
+
+.civievent-widget-date-title,
+.civievent-widget-summary {
+  border-top: 2px solid rgba(193, 20, 162, 0.25);
+  padding-top: 30px; }
 
 .civievent-widget-event-start-date {
-  padding-top: 38px;
   position: relative;
-  left: -5px;
-  top: 10px;
   color: #2d2a26;
   text-transform: uppercase; }
 
 .civievent-widget-infolink {
   position: relative;
-  left: -495px;
-  top: 10px;
   font-size: 24px;
   font-family: "Saira", sans-serif;
   font-weight: 700;
@@ -10316,17 +10331,13 @@ span.civievent-widget-event-title {
 
 .civievent-widget-event-start-time {
   color: #a5a1a1;
-  position: relative;
-  right: -5px;
-  top: 10px; }
+  position: relative; }
 
 .civievent-widget-event-end-time {
   color: #a5a1a1; }
 
 .civievent-widget-event-summary {
-  padding-top: 90px;
-  position: relative;
-  top: -110px; }
+  position: relative; }
 
 .civievent-widget-event-odd {
   background: none !important; }
