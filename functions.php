@@ -53,6 +53,9 @@ require get_template_directory() . '/inc/editor.php';
 /** Load wp-admin bar changes **/
 require get_template_directory() . '/inc/admin-bar.php';
 
+/** Load author url changes **/
+require get_template_directory() . '/inc/author-urls.php';
+
 /** CURRENTLY INACTIVE FUNCTIONS **/
 
 /** Load custom file-types for media folder. **/
