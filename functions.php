@@ -56,6 +56,9 @@ require get_template_directory() . '/inc/admin-bar.php';
 /** Load author url changes **/
 require get_template_directory() . '/inc/author-urls.php';
 
+/** Load author url changes **/
+require get_template_directory() . '/inc/excerpts.php';
+
 /** CURRENTLY INACTIVE FUNCTIONS **/
 
 /** Load custom file-types for media folder. **/
