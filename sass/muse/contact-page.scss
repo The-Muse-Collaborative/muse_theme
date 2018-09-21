@@ -1,3 +1,10 @@
+.contact-address {
+	align-self: flex-start;
+}
+.vinyl_sm {
+	transform: rotate(90deg);
+    width: 25%;
+}
 @media (max-width: 575px) {
 	.vinyl_img {
 		transform: rotate(90deg);
@@ -15,8 +22,18 @@
 		width: 100%;
 	}
 
+	.contact-address {
+		// @extend .align-self-start;
+		align-self: center;
+	}
 	// This now lives in the contact-page.php due to issues with the civi.css
 	// .crm-container span.crm-button {
 	// 	float: initial !important;
 	// }
+}
+@media (min-width: 575px){
+	.vinyl_sm {
+		visibility: hidden;
+		position: absolute;
+	}
 }

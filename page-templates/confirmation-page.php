@@ -26,7 +26,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 
-				<img class="vinyl_img confirmation" style="max-height: 800px; transform: scaleX(-1);" src="<?php echo get_template_directory_uri() . '/images/contact_vinyl.svg'; ?>)">
+				<img class="vinyl_img confirmation" style="max-height: 584px; transform: scaleX(-1);" src="<?php echo get_template_directory_uri() . '/images/contact_vinyl.svg'; ?>)">
 				
 			</div>
 

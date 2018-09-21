@@ -10350,6 +10350,13 @@ span.yellow {
 .civievent-widget-event-even {
   background: none !important; }
 
+.contact-address {
+  align-self: flex-start; }
+
+.vinyl_sm {
+  transform: rotate(90deg);
+  width: 25%; }
+
 @media (max-width: 575px) {
   .vinyl_img {
     transform: rotate(90deg);
@@ -10359,7 +10366,14 @@ span.yellow {
   .mobile_text_center {
     text-align: center; }
   #crm-container .crm-public input[type=text] {
-    width: 100%; } }
+    width: 100%; }
+  .contact-address {
+    align-self: center; } }
+
+@media (min-width: 575px) {
+  .vinyl_sm {
+    visibility: hidden;
+    position: absolute; } }
 
 .mc-homepage-background-image {
   min-height: 300px;
