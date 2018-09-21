@@ -10,4 +10,13 @@
 	.mobile_text_center {
 		text-align: center;
 	}
+
+	#crm-container .crm-public input[type=text] {
+		width: 100%;
+	}
+
+	// This now lives in the contact-page.php due to issues with the civi.css
+	// .crm-container span.crm-button {
+	// 	float: initial !important;
+	// }
 }

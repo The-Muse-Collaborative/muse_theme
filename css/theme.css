@@ -10357,7 +10357,9 @@ span.yellow {
   .confirmation {
     transform: rotate(-90deg) !important; }
   .mobile_text_center {
-    text-align: center; } }
+    text-align: center; }
+  #crm-container .crm-public input[type=text] {
+    width: 100%; } }
 
 .mc-homepage-background-image {
   min-height: 300px;

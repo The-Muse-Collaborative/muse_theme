@@ -23,13 +23,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 				
 			</div>
 
-			<div class="col-lg-6 col-md-6 align-self-center col-sm-6 col-xs-12">
-				<p class="mobile_text_center">426 Jackson Street
+			<div class="col-lg-6 col-md-6 align-self-center col-sm-6 col-xs-12 mobile_text_center">
+				<p class="">426 Jackson Street
 				<br>Camden, NJ 08104</p>
 				<p class="mobile_text_center"><b>856.202.3968</b></p>
 
 				<h2 class="pt-5 entry-title ">SEND US A MESSAGE</h2>
 				<?= do_shortcode( '[civicrm component="profile" gid="16" mode="create" hijack="1"]' ); ?>
+
+
 
 				<!-- Message Confirmation lives here...
 				https://themusecollaborative.org/contact/message-confirmation/ -->
@@ -42,3 +44,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 </div><!-- Wrapper end -->
 
 <?php get_footer(); ?>
+
+<style type="text/css">
+	@media only screen and (max-width: 575px) {
+		.crm-container span.crm-button {
+			float: initial !important;
+		}
+	}
+
+</style>
