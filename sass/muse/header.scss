@@ -51,17 +51,17 @@
     border-top: 13px solid $black;
     margin-top: 0;
     padding: 0;
-    // &:before {
-    //   content: " ";
-    //   height: 10px;
-    //   width: 10px;
-    //   position: absolute;
-    //   border-bottom: 10px $yellow solid;
-    //   border-left: 10px transparent solid;
-    //   border-right: 10px transparent solid;
-    //   top: -10px;
-    //   left: 10px;
-    // }
+    &:before {
+      content: " ";
+      height: 10px;
+      width: 10px;
+      position: absolute;
+      border-bottom: 10px $yellow solid;
+      border-left: 10px transparent solid;
+      border-right: 10px transparent solid;
+      top: -10px;
+      left: 10px;
+    }
     .meta { font-weight: 600 !important; font-size: 12px !important; color: $black !important}
     .nav-link:hover {
       background: $black !important;
@@ -75,14 +75,14 @@
   &.navbar-dark .navbar-nav .nav-link:hover { color: transparentize($yellow, .7)}
   .dropdown:hover .dropdown-menu { display: block; }
 }
-
-@media (max-width: 767px) {
-  .menu-item-has-children a {
-    background: url('../images/yellow_dropdown.png');
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-}
+// Josh's caret fix
+// @media (max-width: 767px) {
+//   .menu-item-has-children a {
+//     background: url('../images/yellow_dropdown.png');
+//     background-repeat: no-repeat;
+//     background-position: center;
+//   }
+// }
 
 .navbar-nav .nav-link {
   // width: fit-content;
