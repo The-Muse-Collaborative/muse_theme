@@ -128,6 +128,7 @@
                   <!-- <abbr class="dtstart" title="{$event.event_start_date|crmDate}">
                   {$event.event_start_date|crmDate}
                   </abbr> -->
+                  <br>
                   <h2 class="entry-title pt-2">
                     <span class="yellow">{$event.event_start_date|date_format:"%b"}.</span>
                     <span class="yellow font-large pl-1">{$event.event_start_date|date_format:"%d"}</span>
@@ -161,27 +162,13 @@
                       <div class="content">{$location.address.1.display|nl2br}</div>
                       <div class="clear"></div>
                   </div>
+                  <br>
+                  <h2 class="purple pt-5">
+                    <i class="fa fa-caret-right fa-lg" aria-hidden="true"></i>
+                    {$event.event_start_date|crmDate:0:1}
+                  </h2>
               {/if}
 
-              {if $event.event_end_date}
-                  <!-- https://www.smarty.net/docsv2/en/language.modifier.date.format.tpl -->
-                  <!-- &nbsp; {ts}through{/ts} &nbsp; -->
-                  {* Only show end time if end date = start date *}
-                  {if $event.event_end_date|date_format:"%Y%m%d" == $event.event_start_date|date_format:"%Y%m%d"}
-                      <!-- <abbr class="dtend" title="{$event.event_end_date|crmDate:0:1}">
-                      {$event.event_end_date|crmDate:0:1}
-                      </abbr> -->
-                      <br>
-                      <h2 class="purple pt-5">
-                        <i class="fa fa-caret-right fa-lg" aria-hidden="true"></i>
-                        {$event.event_start_date|crmDate:0:1}
-                      </h2>
-                  {else}
-                      <abbr class="dtend" title="{$event.event_end_date|crmDate}">
-                      {$event.event_end_date|crmDate}
-                      </abbr>
-                  {/if}
-              {/if}
         </div>
 
     </div> <!-- End of col-lg-6 col-md-6 -->
@@ -299,13 +286,13 @@
   <!-- </div> -->
 </div> <!-- End of row -->
 
-<div class="row mt-3">
+<div class="row mt-5">
   <div class="col-md-4">
-    <h3 class="pink border-top-pink pt-2 force" style="padding:0px;">{$event.title}</h3>
-    <p><span class="bold">{$event.event_start_date|date_format}</span> | <span class="font-weight-light">{$event.event_start_date|crmDate:0:1}</span></p>
+    <h4 class="pink border-top-pink pt-4 force" style="padding:0px;">{$event.title}</h4>
+    <p class="mc-event-date"><span class="bold">{$event.event_start_date|date_format}</span> | <span class="font-weight-light text-gray-medium">{$event.event_start_date|crmDate:0:1}</span></p>
   </div>
   <div class="col">
-    <div class="border-top-pink pt-2">{$event.description}</div>
+    <div class="border-top-pink pt-4">{$event.description}</div>
   </div>
 </div>
 

@@ -259,7 +259,7 @@
     function createMarker(map, point, data, image) {
         var marker = new google.maps.Marker({ position: point,
                                               map: map,
-                                              icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png' <!-- REPLACE ICON -->
+                                              icon:'/wp-content/themes/muse_theme/images/maps-marker.svg'
                                             });
         var infowindow = new google.maps.InfoWindow();
         google.maps.event.addListener(marker, 'click', function() { infowindow.setContent(data);

@@ -47,3 +47,11 @@ div#google_map {
 span.yellow {
 	color: $yellow !important;
 }
+
+.mc-event-date .text-gray-medium {
+	color: $gray-medium;
+}
+
+.border-top-pink {
+	border-top: 2px solid transparentize($pink, .75);
+}
