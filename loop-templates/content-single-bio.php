@@ -33,6 +33,18 @@
 		<?php the_content(); ?>
 
 		<?php
+			$args = array(
+		  	'post_type' => 'articles',
+		  	'author_name' => $pagename,
+		  	'posts_per_page' => -1
+		);
+			$loop = new WP_Query( $args );
+			while ( $loop->have_posts() ) : $loop->the_post();
+		  	echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
+			endwhile;
+		?>
+
+		<?php
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
 			'after'  => '</div>',
