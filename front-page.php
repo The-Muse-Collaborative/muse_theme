@@ -11,7 +11,6 @@ get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-
 <?php // Include for background image through advance custom fields; needs to be moved to background and have homepage-slider.scss changed
 	$image = get_field('home_background_image');
 	if( !empty($image) ): ?>

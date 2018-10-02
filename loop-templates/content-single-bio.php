@@ -27,27 +27,107 @@
 
 	</header><!-- .entry-header -->
 
-
 	<div class="content">
 
 		<?php the_content(); ?>
 
 		<?php
 			$args = array(
-		  	'post_type' => 'articles',
-		  	'author_name' => $pagename,
-		  	'posts_per_page' => -1
-		);
-			$loop = new WP_Query( $args );
-			while ( $loop->have_posts() ) : $loop->the_post();
-		  	echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
-			endwhile;
+				'taxonomy' => 'article',
+				'term' => 'album-reviews',
+		    'author_name' => $pagename,
+			);
+
+			$the_query = new WP_Query( $args );
+
+			if ( $the_query->found_posts > 0 ) {
+
+		?>
+				<br><h4>Album Reviews</h4>
+				<?php
+	  			$args = array(
+		    		'taxonomy' 			 => 'article',
+						'term' 					 => 'album-reviews',
+		    		'author_name'		 => $pagename,
+		    		'posts_per_page' => -1
+					);
+
+		  $loop = new WP_Query( $args );
+		  while ( $loop->have_posts() ) : $loop->the_post();
+		    echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
+		  endwhile;
+
+				}
+
+				else{}
+		?>
+
+		<?php
+			$args = array(
+				'taxonomy' => 'article',
+				'term' => 'album-sets',
+		    'author_name' => $pagename,
+			);
+
+			$the_query = new WP_Query( $args );
+
+			if ( $the_query->found_posts > 0 ) {
+
+		?>
+				<br><br><h4>Album Set Articles</h4>
+				<?php
+	  			$args = array(
+		    		'taxonomy' 			 => 'article',
+						'term' 					 => 'album-sets',
+		    		'author_name'		 => $pagename,
+		    		'posts_per_page' => -1
+					);
+
+		  $loop = new WP_Query( $args );
+		  while ( $loop->have_posts() ) : $loop->the_post();
+		    echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
+		  endwhile;
+
+				}
+
+				else{}
+		?>
+
+		<?php
+			$args = array(
+				'taxonomy' => 'article',
+				'term' => 'meta-hop',
+		    'author_name' => $pagename,
+			);
+
+			$the_query = new WP_Query( $args );
+
+			if ( $the_query->found_posts > 0 ) {
+
+		?>
+				<br><br><h4>Meta-hop Articles</h4>
+				<?php
+	  			$args = array(
+		    		'taxonomy' 			 => 'article',
+						'term' 					 => 'meta-hop',
+		    		'author_name'		 => $pagename,
+		    		'posts_per_page' => -1
+					);
+
+		  $loop = new WP_Query( $args );
+		  while ( $loop->have_posts() ) : $loop->the_post();
+		    echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
+		  endwhile;
+
+				}
+
+				else{}
 		?>
 
 		<?php
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-			'after'  => '</div>',
+		  'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+		  'after'  => '</div>',
 		) );
 		?>
 
