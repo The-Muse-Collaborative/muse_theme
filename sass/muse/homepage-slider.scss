@@ -1,7 +1,10 @@
 .mc-homepage-background-image {
-  min-height: 100px;
-  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: $gray-light;
   background-size: cover;
   background-position: center center;
-  margin-top: -76px;
 }

@@ -10372,11 +10372,14 @@ span.yellow {
     position: absolute; } }
 
 .mc-homepage-background-image {
-  min-height: 100px;
-  width: 100%;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #eee;
   background-size: cover;
-  background-position: center center;
-  margin-top: -76px; }
+  background-position: center center; }
 
 .home input#custom_17,
 .home .editrow_custom_17-section label {
