@@ -63,3 +63,4 @@ require get_template_directory() . '/inc/excerpts.php';
 
 /** Load custom file-types for media folder. **/
 //require get_template_directory() . '/inc/custom-media-files.php';
+

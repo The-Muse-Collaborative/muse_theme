@@ -107,3 +107,16 @@ if ( ! function_exists( 'understrap_post_nav' ) ) :
 		<?php
 	}
 endif;
+
+function muse_display_posts( $output, $original_atts ) {
+	// Return early if our "layout" attribute is not specified
+	if( empty( $original_atts['layout'] ) )
+		return $output;
+	ob_start();
+	get_template_part( 'loop-templates/content', $original_atts['layout'] );
+	$new_output = ob_get_clean();
+	if( !empty( $new_output ) )
+		$output = $new_output;
+	return $output;
+}
+add_action( 'display_posts_shortcode_output', 'muse_display_posts', 10, 2 );
