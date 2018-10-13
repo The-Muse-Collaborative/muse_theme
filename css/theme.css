@@ -10025,8 +10025,11 @@ div.crm-container label {
       background: #2d2a26 !important; }
   .mc-header .nav-link.meta.yellow:hover {
     color: rgba(255, 209, 0, 0.8) !important; }
+  .mc-header .current_page_parent.nav-item > .nav-link.meta.yellow {
+    color: white !important; }
   .mc-header .active .nav-link.meta.yellow {
     color: white; }
+  .mc-header .current_page_parent.nav-item > .nav-link.meta.yellow:hover,
   .mc-header .active .nav-link.meta.yellow:hover {
     color: rgba(255, 255, 255, 0.8) !important; }
   .mc-header.navbar-dark .navbar-nav .dropdown-menu .nav-link:hover {
