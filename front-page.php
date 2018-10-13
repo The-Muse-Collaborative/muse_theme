@@ -34,10 +34,12 @@ $container = get_theme_mod( 'understrap_container_type' );
     				while ( have_rows('home_cards') ) : the_row();
 					?>
 
-					<div class="card card--faded mb-3">
+					<div class="card card--faded mb-5">
 						<div class="card-body">
+						<?php if( !empty(get_sub_field('home_card_title')) ): ?>
 							<h3><?php the_sub_field('home_card_title'); ?></h3>
-							<?php the_sub_field('home_card_content'); ?>
+						<?php endif ?>
+						<?php the_sub_field('home_card_content'); ?>
 						</div>
 					</div>
 
