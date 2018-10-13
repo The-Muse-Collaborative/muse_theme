@@ -16,11 +16,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="<?php echo esc_attr( $container ); ?>" id="content">
 
 		<div class="d-flex justify-content-center mb-5">
-					
-			<div class="justify-content-center d-none d-sm-block">
 
-				<img class="vinyl_img pr-4" style="max-height: 584px;" src="<?php echo get_template_directory_uri() . '/images/vinyl_0padding.png'; ?>)">
-				
+			<div class="justify-content-flex-end flex-fill d-sm-block d-none">
+
+				<img class="vinyl_img pr-4" style="max-height: 584px; width: 100%;" src="<?php echo get_template_directory_uri() . '/images/contact_vinyl.svg'; ?>)">
+
 			</div>
 
 			<div class="flex-column align-items-end mobile_text_center d-flex justify-content-center">
@@ -31,9 +31,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<br>Camden, NJ 08104</p>
 				<p class="mobile_text_center"><b>856.202.3968</b></p>
 				</div>
-				
+
 				<div class="align-self-end mt-auto">
-				<h2 class="pt-5 entry-title ">SEND US A MESSAGE</h2>
+				<h3 class="pt-5 entry-title ">Send us a message</h3>
 				<?= do_shortcode( '[civicrm component="profile" gid="16" mode="create" hijack="1"]' ); ?>
 				</div>
 
