@@ -9,7 +9,7 @@
  function remove_left_menus(){
 
    remove_menu_page( 'edit-comments.php' );          // Comments
-   remove_menu_page( 'themes.php' );                 // Appearance
+   //remove_menu_page( 'themes.php' );                 // Appearance
 
  }
  add_action( 'admin_menu', 'remove_left_menus' );

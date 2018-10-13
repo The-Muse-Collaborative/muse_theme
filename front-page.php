@@ -28,34 +28,24 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<main class="site-main" id="main" role="main">
 
+					<?php
+						if( have_rows('home_cards') ):
+
+    				while ( have_rows('home_cards') ) : the_row();
+					?>
+
 					<div class="card card--faded mb-3">
 						<div class="card-body">
-							<?php while ( have_posts() ) : the_post(); ?>
-								<!-- Add any content you want . . .  -->
-								<?php get_template_part( 'loop-templates/content', 'front' ); ?>
-							<?php endwhile; // end of the loop. ?>
+							<h3><?php the_sub_field('home_card_title'); ?></h3>
+							<?php the_sub_field('home_card_content'); ?>
 						</div>
 					</div>
-					<!-- Loop for Posts -->
-					<?php // Include for background image through advance custom fields; needs to be moved to background and have homepage-slider.scss changed
-						$featured_articles = get_field('featured_articles');
-						if( !empty($featured_articles) ): ?>
-							<div class="card card--faded mb-3">
-								<div class="card-body">
-									<?php the_field('featured_articles') ?>
-								</div>
-							</div>
-					<?php endif; ?>
-					<!-- Loop for Events -->
-					<?php // Include for background image through advance custom fields; needs to be moved to background and have homepage-slider.scss changed
-						$featured_events = get_field('featured_events');
-						if( !empty($featured_events) ): ?>
-							<div class="card card--faded mb-3">
-								<div class="card-body">
-								<?php the_field('featured_events') ?>
-								</div>
-							</div>
-					<?php endif; ?>
+
+					<?php
+						endwhile;
+						else :
+						endif;
+					?>
 
 				</main><!-- #main -->
 
