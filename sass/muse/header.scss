@@ -37,7 +37,7 @@
       height: auto;
       text-align: right;
       padding-top: 11px;
-    } 
+    }
     justify-content: flex-end;
     @media screen and (max-width:991px) and (min-width: 767px) {
       width: 100%;
@@ -68,7 +68,9 @@
     }
   }
   .nav-link.meta.yellow:hover { color: transparentize($yellow, .2) !important;}
-  .active .nav-link.meta.yellow { color: white;}
+  .current_page_parent.nav-item > .nav-link.meta.yellow { color: white !important}
+  .active .nav-link.meta.yellow { color: white}
+  .current_page_parent.nav-item > .nav-link.meta.yellow:hover,
   .active .nav-link.meta.yellow:hover { color:transparentize($white, .2) !important;}
 
   &.navbar-dark .navbar-nav .dropdown-menu .nav-link:hover { color: $yellow !important;}
@@ -84,8 +86,3 @@
 //   }
 // }
 
-.navbar-nav .nav-link {
-  // width: fit-content;
-  // float: right;
-  // padding-left: 28px !important;
-}
