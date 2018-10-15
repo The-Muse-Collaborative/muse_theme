@@ -10,6 +10,6 @@ function theme_slug_excerpt_length( $length ) {
         if ( is_admin() ) {
                 return $length;
         }
-        return 175; // total number of words
+        return 125; // total number of words
 }
 add_filter( 'excerpt_length', 'theme_slug_excerpt_length', 999 );
