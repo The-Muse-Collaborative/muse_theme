@@ -231,83 +231,49 @@
 
 </div> {* end crm-container div *}
 
-<script type="text/javascript">
-  {if $drupalCms}
-    {literal}
-    if ( document.getElementsByName("cms_create_account")[0].checked ) {
-      cj('#details').show();
-    }
-    else {
-      cj('#details').hide();
-    }
-    {/literal}
+  <script type="text/javascript">
+    {if $drupalCms}
+      {literal}
+      if ( document.getElementsByName("cms_create_account")[0].checked ) {
+        cj('#details').show();
+      }
+      else {
+        cj('#details').hide();
+      }
+      {/literal}
+    {/if}
+  </script>
+  {/if} {* fields array is not empty *}
+  {if $multiRecordFieldListing and empty($fields)}
+    {include file="CRM/Profile/Page/MultipleRecordFieldsListing.tpl" showListing=true}
   {/if}
-</script>
-{/if} {* fields array is not empty *}
-{if $multiRecordFieldListing and empty($fields)}
-  {include file="CRM/Profile/Page/MultipleRecordFieldsListing.tpl" showListing=true}
-{/if}
-{if $drupalCms}
-{include file="CRM/common/showHideByFieldValue.tpl"
-trigger_field_id    ="create_account"
-trigger_value       =""
-target_element_id   ="details"
-target_element_type ="block"
-field_type          ="radio"
-invert              = 0
-}
-{elseif $statusMessage}
-<div class="messages status no-popup">
-  <div class="icon inform-icon"></div>
-  {$statusMessage}
-</div>
-{/if}
+  {if $drupalCms}
+    {include file="CRM/common/showHideByFieldValue.tpl"
+      trigger_field_id    ="create_account"
+      trigger_value       =""
+      target_element_id   ="details"
+      target_element_type ="block"
+      field_type          ="radio"
+      invert              = 0
+    }
+  {elseif $statusMessage}
+    <div class="messages status no-popup">
+      <div class="icon inform-icon"></div>
+      {$statusMessage}
+    </div>
+  {/if}
 {/if} {*end of if for $deleteRecord*}
 {literal}
-<script type="text/javascript">
-
-CRM.$(function($) {
-  cj('#selector tr:even').addClass('odd-row ');
-  cj('#selector tr:odd ').addClass('even-row');
-});
-
-jQuery(document).ready(function(){
-        
-  jQuery('#editrow-email-Primary').keyup(function () { 
-    jQuery('#editrow-email-Primary').find('.label').hide(); 
-  });
-
-  jQuery('#editrow-custom_15').keyup(function () { 
-    jQuery('#editrow-custom_15').find('.label').hide(); 
-  });
-  
-  jQuery('#editrow-custom_14').keyup(function () { 
-    jQuery('#editrow-custom_14').find('.label').hide(); 
-  });
-
-  jQuery('#editrow-custom_17').keyup(function () { 
-    jQuery('#editrow-custom_17').find('.label').hide(); 
-  });
-  
-
-  jQuery('#editrow-email-Primary').keyup(function () { 
-    jQuery('#editrow-email-Primary').find('.label').hide(); 
-  });
-
-  jQuery('#editrow-first_name').keyup(function () { 
-    jQuery('#editrow-first_name').find('.label').hide(); 
-  });
-  
-  jQuery('#editrow-last_name').keyup(function () { 
-    jQuery('#editrow-last_name').find('.label').hide(); 
-  });
-
-  jQuery('#custom_8').keyup(function () { 
-    jQuery('#editrow-custom_8').find('.label').hide(); 
-  });
-});
+  <script type="text/javascript">
+    CRM.$(function($) {
+      cj('#selector tr:even').addClass('odd-row ');
+      cj('#selector tr:odd ').addClass('even-row');
+      if(cj('#email-Primary').length){
+        cj('#email-Primary').focus();
+      }
+    });
+  </script>
 {/literal}
-</script>
 
 {/crmRegion}
 </div> {* end crm-profile-NAME *}
