@@ -25,7 +25,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<div class="col-sm flex-column align-items-start mobile_text_center d-flex justify-content-center">
 				<div class="contact-address">
-				<img class="vinyl_sm" src="<?php echo get_template_directory_uri() . '/images/vinyl_0padding.png'; ?>)">
+				<img class="vinyl_sm mb-5" src="<?php echo get_template_directory_uri() . '/images/vinyl_0padding.png'; ?>)">
 				<p class="">426 Jackson Street
 				<br>Camden, NJ 08104</p>
 				<p class="mobile_text_center"><b>856.202.3968</b></p>
