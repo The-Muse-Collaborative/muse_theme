@@ -144,20 +144,25 @@ div.crm-container label {   font-weight: 700 !important; }
     margin: 0px !important;
   }
   & .crm-button {
+    @extend .btn;
     border-radius: 0px !important;
     text-shadow: none !important;
-    background: #534f4c !important;
-    border: none !important;
+    background: white !important;
+    color: $black !important;
     text-align: center !important;
+    &:hover { background: $gray-light !important; }
   }
   & .crm-button.crm-i-button input.crm-form-submit {
     padding: 5px 32px !important;
     font-size: 15px !important;
+    margin-bottom: 0;
+    text-shadow: none !important;
+    color: $black !important;
   }
 }
 
 .crm-submit-buttons {
-  margin-top: 24px !important;
+  margin-top: 15px !important;
 }
 
 //  Donate Form ////////////////////////////////////////////////////////////////
