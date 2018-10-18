@@ -81,6 +81,8 @@ label {
   &.is-invalid { color: $red; }
 }
 
+div.crm-container label {   font-weight: 700 !important; }
+
 .valid-feedback { color: $green; font-weight: 500;}
 .invalid-feedback { color: $red; font-weight: 500;}
 
@@ -91,17 +93,35 @@ label {
 // CIVICRM Styling
 #crm-container {
   & .crm-public input[type="text"], .crm-container textarea {
-      background: #534f4c;
-      width: 80%;
-      border: none;
-      border-radius: 0px !important;
+
     }
-  & .crm-public .label {
-    /*  visibility: hidden;*/
-      position: absolute;
-      color: white;
-      padding-top: 11px !important;
-    }
+}
+
+
+#crm-container .crm-container textarea, #crm-container .crm-public input[type=text], .form-control, .wpcf7 .wpcf7-validation-errors, .wpcf7 input[type=color], .wpcf7 input[type=date], .wpcf7 input[type=datetime-local], .wpcf7 input[type=datetime], .wpcf7 input[type=email], .wpcf7 input[type=file], .wpcf7 input[type=month], .wpcf7 input[type=number], .wpcf7 input[type=range], .wpcf7 input[type=search], .wpcf7 input[type=submit], .wpcf7 input[type=tel], .wpcf7 input[type=text], .wpcf7 input[type=time], .wpcf7 input[type=url], .wpcf7 input[type=week], .wpcf7 select, .wpcf7 textarea {
+  @extend .form-control;
+  background: none;
+  // While it's unrecommendable to use the !important override, these cases call for it thanks
+  // to Civi's overly global CSS issues.
+  border-radius: 0 !important;
+  padding: .375rem .75rem !important;
+}
+
+.crm-container .crm-error,
+.crm-container .crm-inline-error {
+  background: none !important;
+  color: $black !important;
+}
+.crm-container .crm-error:not(.crm-error-label) {
+  color: $red !important;
+  &:before {
+    content: "* ";
+  }
+}
+
+.crm-container input.error, .crm-container textarea.error {
+  border-color: $red !important;
+  box-shadow: 0 0 0 1px transparentize($red, .7);
 }
 
 .crm-container {
@@ -116,9 +136,7 @@ label {
     visibility: hidden;
     position: absolute;
   }
-  & .required {
-    color: white !important;
-  }
+
   & .crm-marker, .crm-i-button>.crm-i {
     visibility: hidden;
   }
@@ -126,29 +144,25 @@ label {
     margin: 0px !important;
   }
   & .crm-button {
+    @extend .btn;
     border-radius: 0px !important;
     text-shadow: none !important;
-    background: #534f4c !important;
-    border: none !important;
+    background: white !important;
+    color: $black !important;
     text-align: center !important;
+    &:hover { background: $gray-light !important; }
   }
   & .crm-button.crm-i-button input.crm-form-submit {
     padding: 5px 32px !important;
     font-size: 15px !important;
+    margin-bottom: 0;
+    text-shadow: none !important;
+    color: $black !important;
   }
 }
 
-#editrow-last_name .label label{
-  padding-left: 7px;
-}
-
-div.crm-container label {
-  display: table !important;
-  padding-left: 8px;
-}
-
 .crm-submit-buttons {
-  margin-top: 50px !important;
+  margin-top: 15px !important;
 }
 
 //  Donate Form ////////////////////////////////////////////////////////////////

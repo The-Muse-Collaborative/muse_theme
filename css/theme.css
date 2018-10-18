@@ -1251,7 +1251,7 @@ pre {
   .table-responsive > .table-bordered {
     border: 0; }
 
-.form-control, .wpcf7 input[type=text],
+.wpcf7 input[type=text],
 .wpcf7 input[type=search],
 .wpcf7 input[type=url],
 .wpcf7 input[type=tel],
@@ -1268,7 +1268,7 @@ pre {
 .wpcf7 input[type=file],
 .wpcf7 input[type=submit],
 .wpcf7 select,
-.wpcf7 textarea, .wpcf7 .wpcf7-validation-errors {
+.wpcf7 textarea, .wpcf7 .wpcf7-validation-errors, #crm-container .crm-container textarea, #crm-container .crm-public input[type=text], .form-control {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
@@ -1280,7 +1280,7 @@ pre {
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
-  .form-control::-ms-expand, .wpcf7 input[type=text]::-ms-expand,
+  .wpcf7 input[type=text]::-ms-expand,
   .wpcf7 input[type=search]::-ms-expand,
   .wpcf7 input[type=url]::-ms-expand,
   .wpcf7 input[type=tel]::-ms-expand,
@@ -1297,10 +1297,10 @@ pre {
   .wpcf7 input[type=file]::-ms-expand,
   .wpcf7 input[type=submit]::-ms-expand,
   .wpcf7 select::-ms-expand,
-  .wpcf7 textarea::-ms-expand, .wpcf7 .wpcf7-validation-errors::-ms-expand {
+  .wpcf7 textarea::-ms-expand, .wpcf7 .wpcf7-validation-errors::-ms-expand, #crm-container .crm-container textarea::-ms-expand, #crm-container .crm-public input[type=text]::-ms-expand, .form-control::-ms-expand {
     background-color: transparent;
     border: 0; }
-  .form-control:focus, .wpcf7 input[type=text]:focus,
+  .wpcf7 input[type=text]:focus,
   .wpcf7 input[type=search]:focus,
   .wpcf7 input[type=url]:focus,
   .wpcf7 input[type=tel]:focus,
@@ -1317,13 +1317,13 @@ pre {
   .wpcf7 input[type=file]:focus,
   .wpcf7 input[type=submit]:focus,
   .wpcf7 select:focus,
-  .wpcf7 textarea:focus, .wpcf7 .wpcf7-validation-errors:focus {
+  .wpcf7 textarea:focus, .wpcf7 .wpcf7-validation-errors:focus, #crm-container .crm-container textarea:focus, #crm-container .crm-public input[type=text]:focus, .form-control:focus {
     color: #495057;
     background-color: #fff;
     border-color: #ceb9ee;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(135, 83, 213, 0.25); }
-  .form-control::placeholder, .wpcf7 input[type=text]::placeholder,
+  .wpcf7 input[type=text]::placeholder,
   .wpcf7 input[type=search]::placeholder,
   .wpcf7 input[type=url]::placeholder,
   .wpcf7 input[type=tel]::placeholder,
@@ -1340,10 +1340,10 @@ pre {
   .wpcf7 input[type=file]::placeholder,
   .wpcf7 input[type=submit]::placeholder,
   .wpcf7 select::placeholder,
-  .wpcf7 textarea::placeholder, .wpcf7 .wpcf7-validation-errors::placeholder {
+  .wpcf7 textarea::placeholder, .wpcf7 .wpcf7-validation-errors::placeholder, #crm-container .crm-container textarea::placeholder, #crm-container .crm-public input[type=text]::placeholder, .form-control::placeholder {
     color: #6c757d;
     opacity: 1; }
-  .form-control:disabled, .wpcf7 input[type=text]:disabled,
+  .wpcf7 input[type=text]:disabled,
   .wpcf7 input[type=search]:disabled,
   .wpcf7 input[type=url]:disabled,
   .wpcf7 input[type=tel]:disabled,
@@ -1360,7 +1360,7 @@ pre {
   .wpcf7 input[type=file]:disabled,
   .wpcf7 input[type=submit]:disabled,
   .wpcf7 select:disabled,
-  .wpcf7 textarea:disabled, .wpcf7 .wpcf7-validation-errors:disabled, .form-control[readonly], .wpcf7 input[readonly][type=text],
+  .wpcf7 textarea:disabled, .wpcf7 .wpcf7-validation-errors:disabled, #crm-container .crm-container textarea:disabled, #crm-container .crm-public input[type=text]:disabled, .form-control:disabled, .wpcf7 input[readonly][type=text],
   .wpcf7 input[readonly][type=search],
   .wpcf7 input[readonly][type=url],
   .wpcf7 input[readonly][type=tel],
@@ -1377,16 +1377,16 @@ pre {
   .wpcf7 input[readonly][type=file],
   .wpcf7 input[readonly][type=submit],
   .wpcf7 select[readonly],
-  .wpcf7 textarea[readonly], .wpcf7 [readonly].wpcf7-validation-errors {
+  .wpcf7 textarea[readonly], .wpcf7 [readonly].wpcf7-validation-errors, #crm-container .crm-container textarea[readonly], #crm-container .crm-public input[readonly][type=text], [readonly].form-control {
     background-color: #e9ecef;
     opacity: 1; }
 
-select.form-control:not([size]):not([multiple]),
-.wpcf7 select:not([size]):not([multiple]) {
+
+.wpcf7 select:not([size]):not([multiple]), select.form-control:not([size]):not([multiple]) {
   height: calc(2.25rem + 2px); }
 
-select.form-control:focus::-ms-value,
-.wpcf7 select:focus::-ms-value {
+
+.wpcf7 select:focus::-ms-value, select.form-control:focus::-ms-value {
   color: #495057;
   background-color: #fff; }
 
@@ -1424,7 +1424,7 @@ select.form-control:focus::-ms-value,
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0; }
-  .form-control-plaintext.form-control-sm, .input-group-sm > .form-control-plaintext.form-control, .wpcf7 .input-group-sm > input.form-control-plaintext[type=text],
+  .form-control-plaintext.form-control-sm, .wpcf7 .input-group-sm > input.form-control-plaintext[type=text],
   .wpcf7 .input-group-sm > input.form-control-plaintext[type=search],
   .wpcf7 .input-group-sm > input.form-control-plaintext[type=url],
   .wpcf7 .input-group-sm > input.form-control-plaintext[type=tel],
@@ -1441,13 +1441,15 @@ select.form-control:focus::-ms-value,
   .wpcf7 .input-group-sm > input.form-control-plaintext[type=file],
   .wpcf7 .input-group-sm > input.form-control-plaintext[type=submit],
   .wpcf7 .input-group-sm > select.form-control-plaintext,
-  .wpcf7 .input-group-sm > textarea.form-control-plaintext, .wpcf7 .input-group-sm > .form-control-plaintext.wpcf7-validation-errors,
+  .wpcf7 .input-group-sm > textarea.form-control-plaintext, .wpcf7 .input-group-sm > .form-control-plaintext.wpcf7-validation-errors, #crm-container .crm-container .input-group-sm > textarea.form-control-plaintext, #crm-container .crm-public .input-group-sm > input.form-control-plaintext[type=text], .input-group-sm > .form-control-plaintext.form-control,
   .input-group-sm > .input-group-prepend > .form-control-plaintext.input-group-text,
   .input-group-sm > .input-group-append > .form-control-plaintext.input-group-text,
   .input-group-sm > .input-group-prepend > .form-control-plaintext.btn, .wpcf7
-  .input-group-sm > .input-group-prepend > input.form-control-plaintext[type=submit],
+  .input-group-sm > .input-group-prepend > input.form-control-plaintext[type=submit], .crm-container
+  .input-group-sm > .input-group-prepend > .form-control-plaintext.crm-button,
   .input-group-sm > .input-group-append > .form-control-plaintext.btn, .wpcf7
-  .input-group-sm > .input-group-append > input.form-control-plaintext[type=submit], .form-control-plaintext.form-control-lg, .input-group-lg > .form-control-plaintext.form-control, .wpcf7 .input-group-lg > input.form-control-plaintext[type=text],
+  .input-group-sm > .input-group-append > input.form-control-plaintext[type=submit], .crm-container
+  .input-group-sm > .input-group-append > .form-control-plaintext.crm-button, .form-control-plaintext.form-control-lg, .wpcf7 .input-group-lg > input.form-control-plaintext[type=text],
   .wpcf7 .input-group-lg > input.form-control-plaintext[type=search],
   .wpcf7 .input-group-lg > input.form-control-plaintext[type=url],
   .wpcf7 .input-group-lg > input.form-control-plaintext[type=tel],
@@ -1464,17 +1466,19 @@ select.form-control:focus::-ms-value,
   .wpcf7 .input-group-lg > input.form-control-plaintext[type=file],
   .wpcf7 .input-group-lg > input.form-control-plaintext[type=submit],
   .wpcf7 .input-group-lg > select.form-control-plaintext,
-  .wpcf7 .input-group-lg > textarea.form-control-plaintext, .wpcf7 .input-group-lg > .form-control-plaintext.wpcf7-validation-errors,
+  .wpcf7 .input-group-lg > textarea.form-control-plaintext, .wpcf7 .input-group-lg > .form-control-plaintext.wpcf7-validation-errors, #crm-container .crm-container .input-group-lg > textarea.form-control-plaintext, #crm-container .crm-public .input-group-lg > input.form-control-plaintext[type=text], .input-group-lg > .form-control-plaintext.form-control,
   .input-group-lg > .input-group-prepend > .form-control-plaintext.input-group-text,
   .input-group-lg > .input-group-append > .form-control-plaintext.input-group-text,
   .input-group-lg > .input-group-prepend > .form-control-plaintext.btn, .wpcf7
-  .input-group-lg > .input-group-prepend > input.form-control-plaintext[type=submit],
+  .input-group-lg > .input-group-prepend > input.form-control-plaintext[type=submit], .crm-container
+  .input-group-lg > .input-group-prepend > .form-control-plaintext.crm-button,
   .input-group-lg > .input-group-append > .form-control-plaintext.btn, .wpcf7
-  .input-group-lg > .input-group-append > input.form-control-plaintext[type=submit] {
+  .input-group-lg > .input-group-append > input.form-control-plaintext[type=submit], .crm-container
+  .input-group-lg > .input-group-append > .form-control-plaintext.crm-button {
     padding-right: 0;
     padding-left: 0; }
 
-.form-control-sm, .input-group-sm > .form-control, .wpcf7 .input-group-sm > input[type=text],
+.form-control-sm, .wpcf7 .input-group-sm > input[type=text],
 .wpcf7 .input-group-sm > input[type=search],
 .wpcf7 .input-group-sm > input[type=url],
 .wpcf7 .input-group-sm > input[type=tel],
@@ -1491,27 +1495,31 @@ select.form-control:focus::-ms-value,
 .wpcf7 .input-group-sm > input[type=file],
 .wpcf7 .input-group-sm > input[type=submit],
 .wpcf7 .input-group-sm > select,
-.wpcf7 .input-group-sm > textarea, .wpcf7 .input-group-sm > .wpcf7-validation-errors,
+.wpcf7 .input-group-sm > textarea, .wpcf7 .input-group-sm > .wpcf7-validation-errors, #crm-container .crm-container .input-group-sm > textarea, #crm-container .crm-public .input-group-sm > input[type=text], .input-group-sm > .form-control,
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn, .wpcf7
-.input-group-sm > .input-group-prepend > input[type=submit],
+.input-group-sm > .input-group-prepend > input[type=submit], .crm-container
+.input-group-sm > .input-group-prepend > .crm-button,
 .input-group-sm > .input-group-append > .btn, .wpcf7
-.input-group-sm > .input-group-append > input[type=submit] {
+.input-group-sm > .input-group-append > input[type=submit], .crm-container
+.input-group-sm > .input-group-append > .crm-button {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
   border-radius: 0.2rem; }
 
-select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.form-control:not([size]):not([multiple]),
-.wpcf7 .input-group-sm > select:not([size]):not([multiple]),
+select.form-control-sm:not([size]):not([multiple]),
+.wpcf7 .input-group-sm > select:not([size]):not([multiple]), .input-group-sm > select.form-control:not([size]):not([multiple]),
 .input-group-sm > .input-group-prepend > select.input-group-text:not([size]):not([multiple]),
 .input-group-sm > .input-group-append > select.input-group-text:not([size]):not([multiple]),
-.input-group-sm > .input-group-prepend > select.btn:not([size]):not([multiple]),
-.input-group-sm > .input-group-append > select.btn:not([size]):not([multiple]) {
+.input-group-sm > .input-group-prepend > select.btn:not([size]):not([multiple]), .crm-container
+.input-group-sm > .input-group-prepend > select.crm-button:not([size]):not([multiple]),
+.input-group-sm > .input-group-append > select.btn:not([size]):not([multiple]), .crm-container
+.input-group-sm > .input-group-append > select.crm-button:not([size]):not([multiple]) {
   height: calc(1.8125rem + 2px); }
 
-.form-control-lg, .input-group-lg > .form-control, .wpcf7 .input-group-lg > input[type=text],
+.form-control-lg, .wpcf7 .input-group-lg > input[type=text],
 .wpcf7 .input-group-lg > input[type=search],
 .wpcf7 .input-group-lg > input[type=url],
 .wpcf7 .input-group-lg > input[type=tel],
@@ -1528,24 +1536,28 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .wpcf7 .input-group-lg > input[type=file],
 .wpcf7 .input-group-lg > input[type=submit],
 .wpcf7 .input-group-lg > select,
-.wpcf7 .input-group-lg > textarea, .wpcf7 .input-group-lg > .wpcf7-validation-errors,
+.wpcf7 .input-group-lg > textarea, .wpcf7 .input-group-lg > .wpcf7-validation-errors, #crm-container .crm-container .input-group-lg > textarea, #crm-container .crm-public .input-group-lg > input[type=text], .input-group-lg > .form-control,
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn, .wpcf7
-.input-group-lg > .input-group-prepend > input[type=submit],
+.input-group-lg > .input-group-prepend > input[type=submit], .crm-container
+.input-group-lg > .input-group-prepend > .crm-button,
 .input-group-lg > .input-group-append > .btn, .wpcf7
-.input-group-lg > .input-group-append > input[type=submit] {
+.input-group-lg > .input-group-append > input[type=submit], .crm-container
+.input-group-lg > .input-group-append > .crm-button {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]),
-.wpcf7 .input-group-lg > select:not([size]):not([multiple]),
+select.form-control-lg:not([size]):not([multiple]),
+.wpcf7 .input-group-lg > select:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]),
 .input-group-lg > .input-group-prepend > select.input-group-text:not([size]):not([multiple]),
 .input-group-lg > .input-group-append > select.input-group-text:not([size]):not([multiple]),
-.input-group-lg > .input-group-prepend > select.btn:not([size]):not([multiple]),
-.input-group-lg > .input-group-append > select.btn:not([size]):not([multiple]) {
+.input-group-lg > .input-group-prepend > select.btn:not([size]):not([multiple]), .crm-container
+.input-group-lg > .input-group-prepend > select.crm-button:not([size]):not([multiple]),
+.input-group-lg > .input-group-append > select.btn:not([size]):not([multiple]), .crm-container
+.input-group-lg > .input-group-append > select.crm-button:not([size]):not([multiple]) {
   height: calc(2.875rem + 2px); }
 
 .form-group, .wpcf7 .wpcf7-form p {
@@ -1612,7 +1624,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   background-color: rgba(40, 167, 69, 0.8);
   border-radius: .2rem; }
 
-.was-validated .form-control:valid, .was-validated .wpcf7 input[type=text]:valid, .wpcf7 .was-validated input[type=text]:valid, .was-validated
+.was-validated .wpcf7 input[type=text]:valid, .wpcf7 .was-validated input[type=text]:valid, .was-validated
 .wpcf7 input[type=search]:valid,
 .wpcf7 .was-validated input[type=search]:valid, .was-validated
 .wpcf7 input[type=url]:valid,
@@ -1646,7 +1658,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .wpcf7 select:valid,
 .wpcf7 .was-validated select:valid, .was-validated
 .wpcf7 textarea:valid,
-.wpcf7 .was-validated textarea:valid, .was-validated .wpcf7 .wpcf7-validation-errors:valid, .wpcf7 .was-validated .wpcf7-validation-errors:valid, .form-control.is-valid, .wpcf7 input.is-valid[type=text],
+.wpcf7 .was-validated textarea:valid, .was-validated .wpcf7 .wpcf7-validation-errors:valid, .wpcf7 .was-validated .wpcf7-validation-errors:valid, .was-validated #crm-container .crm-container textarea:valid, #crm-container .crm-container .was-validated textarea:valid, .was-validated #crm-container .crm-public input[type=text]:valid, #crm-container .crm-public .was-validated input[type=text]:valid, .was-validated .form-control:valid, .wpcf7 input.is-valid[type=text],
 .wpcf7 input.is-valid[type=search],
 .wpcf7 input.is-valid[type=url],
 .wpcf7 input.is-valid[type=tel],
@@ -1663,11 +1675,11 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .wpcf7 input.is-valid[type=file],
 .wpcf7 input.is-valid[type=submit],
 .wpcf7 select.is-valid,
-.wpcf7 textarea.is-valid, .wpcf7 .is-valid.wpcf7-validation-errors, .was-validated
+.wpcf7 textarea.is-valid, .wpcf7 .is-valid.wpcf7-validation-errors, #crm-container .crm-container textarea.is-valid, #crm-container .crm-public input.is-valid[type=text], .is-valid.form-control, .was-validated
 .custom-select:valid,
 .custom-select.is-valid {
   border-color: #28a745; }
-  .was-validated .form-control:valid:focus, .was-validated .wpcf7 input[type=text]:valid:focus, .wpcf7 .was-validated input[type=text]:valid:focus, .was-validated
+  .was-validated .wpcf7 input[type=text]:valid:focus, .wpcf7 .was-validated input[type=text]:valid:focus, .was-validated
   .wpcf7 input[type=search]:valid:focus,
   .wpcf7 .was-validated input[type=search]:valid:focus, .was-validated
   .wpcf7 input[type=url]:valid:focus,
@@ -1701,7 +1713,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   .wpcf7 select:valid:focus,
   .wpcf7 .was-validated select:valid:focus, .was-validated
   .wpcf7 textarea:valid:focus,
-  .wpcf7 .was-validated textarea:valid:focus, .was-validated .wpcf7 .wpcf7-validation-errors:valid:focus, .wpcf7 .was-validated .wpcf7-validation-errors:valid:focus, .form-control.is-valid:focus, .wpcf7 input.is-valid[type=text]:focus,
+  .wpcf7 .was-validated textarea:valid:focus, .was-validated .wpcf7 .wpcf7-validation-errors:valid:focus, .wpcf7 .was-validated .wpcf7-validation-errors:valid:focus, .was-validated #crm-container .crm-container textarea:valid:focus, #crm-container .crm-container .was-validated textarea:valid:focus, .was-validated #crm-container .crm-public input[type=text]:valid:focus, #crm-container .crm-public .was-validated input[type=text]:valid:focus, .was-validated .form-control:valid:focus, .wpcf7 input.is-valid[type=text]:focus,
   .wpcf7 input.is-valid[type=search]:focus,
   .wpcf7 input.is-valid[type=url]:focus,
   .wpcf7 input.is-valid[type=tel]:focus,
@@ -1718,12 +1730,12 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   .wpcf7 input.is-valid[type=file]:focus,
   .wpcf7 input.is-valid[type=submit]:focus,
   .wpcf7 select.is-valid:focus,
-  .wpcf7 textarea.is-valid:focus, .wpcf7 .is-valid.wpcf7-validation-errors:focus, .was-validated
+  .wpcf7 textarea.is-valid:focus, .wpcf7 .is-valid.wpcf7-validation-errors:focus, #crm-container .crm-container textarea.is-valid:focus, #crm-container .crm-public input.is-valid[type=text]:focus, .is-valid.form-control:focus, .was-validated
   .custom-select:valid:focus,
   .custom-select.is-valid:focus {
     border-color: #28a745;
     box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25); }
-  .was-validated .form-control:valid ~ .valid-feedback, .was-validated .wpcf7 input[type=text]:valid ~ .valid-feedback, .wpcf7 .was-validated input[type=text]:valid ~ .valid-feedback, .was-validated
+  .was-validated .wpcf7 input[type=text]:valid ~ .valid-feedback, .wpcf7 .was-validated input[type=text]:valid ~ .valid-feedback, .was-validated
   .wpcf7 input[type=search]:valid ~ .valid-feedback,
   .wpcf7 .was-validated input[type=search]:valid ~ .valid-feedback, .was-validated
   .wpcf7 input[type=url]:valid ~ .valid-feedback,
@@ -1757,8 +1769,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   .wpcf7 select:valid ~ .valid-feedback,
   .wpcf7 .was-validated select:valid ~ .valid-feedback, .was-validated
   .wpcf7 textarea:valid ~ .valid-feedback,
-  .wpcf7 .was-validated textarea:valid ~ .valid-feedback, .was-validated .wpcf7 .wpcf7-validation-errors:valid ~ .valid-feedback, .wpcf7 .was-validated .wpcf7-validation-errors:valid ~ .valid-feedback,
-  .was-validated .form-control:valid ~ .valid-tooltip,
+  .wpcf7 .was-validated textarea:valid ~ .valid-feedback, .was-validated .wpcf7 .wpcf7-validation-errors:valid ~ .valid-feedback, .wpcf7 .was-validated .wpcf7-validation-errors:valid ~ .valid-feedback, .was-validated #crm-container .crm-container textarea:valid ~ .valid-feedback, #crm-container .crm-container .was-validated textarea:valid ~ .valid-feedback, .was-validated #crm-container .crm-public input[type=text]:valid ~ .valid-feedback, #crm-container .crm-public .was-validated input[type=text]:valid ~ .valid-feedback, .was-validated .form-control:valid ~ .valid-feedback,
   .was-validated .wpcf7 input[type=text]:valid ~ .valid-tooltip, .wpcf7
   .was-validated input[type=text]:valid ~ .valid-tooltip,
   .was-validated
@@ -1830,7 +1841,12 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   .wpcf7
   .was-validated textarea:valid ~ .valid-tooltip,
   .was-validated .wpcf7 .wpcf7-validation-errors:valid ~ .valid-tooltip, .wpcf7
-  .was-validated .wpcf7-validation-errors:valid ~ .valid-tooltip, .form-control.is-valid ~ .valid-feedback, .wpcf7 input.is-valid[type=text] ~ .valid-feedback,
+  .was-validated .wpcf7-validation-errors:valid ~ .valid-tooltip,
+  .was-validated #crm-container .crm-container textarea:valid ~ .valid-tooltip, #crm-container .crm-container
+  .was-validated textarea:valid ~ .valid-tooltip,
+  .was-validated #crm-container .crm-public input[type=text]:valid ~ .valid-tooltip, #crm-container .crm-public
+  .was-validated input[type=text]:valid ~ .valid-tooltip,
+  .was-validated .form-control:valid ~ .valid-tooltip, .wpcf7 input.is-valid[type=text] ~ .valid-feedback,
   .wpcf7 input.is-valid[type=search] ~ .valid-feedback,
   .wpcf7 input.is-valid[type=url] ~ .valid-feedback,
   .wpcf7 input.is-valid[type=tel] ~ .valid-feedback,
@@ -1847,8 +1863,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   .wpcf7 input.is-valid[type=file] ~ .valid-feedback,
   .wpcf7 input.is-valid[type=submit] ~ .valid-feedback,
   .wpcf7 select.is-valid ~ .valid-feedback,
-  .wpcf7 textarea.is-valid ~ .valid-feedback, .wpcf7 .is-valid.wpcf7-validation-errors ~ .valid-feedback,
-  .form-control.is-valid ~ .valid-tooltip, .wpcf7 input.is-valid[type=text] ~ .valid-tooltip,
+  .wpcf7 textarea.is-valid ~ .valid-feedback, .wpcf7 .is-valid.wpcf7-validation-errors ~ .valid-feedback, #crm-container .crm-container textarea.is-valid ~ .valid-feedback, #crm-container .crm-public input.is-valid[type=text] ~ .valid-feedback, .is-valid.form-control ~ .valid-feedback, .wpcf7 input.is-valid[type=text] ~ .valid-tooltip,
   .wpcf7 input.is-valid[type=search] ~ .valid-tooltip,
   .wpcf7 input.is-valid[type=url] ~ .valid-tooltip,
   .wpcf7 input.is-valid[type=tel] ~ .valid-tooltip,
@@ -1865,7 +1880,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   .wpcf7 input.is-valid[type=file] ~ .valid-tooltip,
   .wpcf7 input.is-valid[type=submit] ~ .valid-tooltip,
   .wpcf7 select.is-valid ~ .valid-tooltip,
-  .wpcf7 textarea.is-valid ~ .valid-tooltip, .wpcf7 .is-valid.wpcf7-validation-errors ~ .valid-tooltip, .was-validated
+  .wpcf7 textarea.is-valid ~ .valid-tooltip, .wpcf7 .is-valid.wpcf7-validation-errors ~ .valid-tooltip, #crm-container .crm-container textarea.is-valid ~ .valid-tooltip, #crm-container .crm-public input.is-valid[type=text] ~ .valid-tooltip, .is-valid.form-control ~ .valid-tooltip, .was-validated
   .custom-select:valid ~ .valid-feedback,
   .was-validated
   .custom-select:valid ~ .valid-tooltip,
@@ -1931,7 +1946,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   background-color: rgba(220, 53, 69, 0.8);
   border-radius: .2rem; }
 
-.was-validated .form-control:invalid, .was-validated .wpcf7 input[type=text]:invalid, .wpcf7 .was-validated input[type=text]:invalid, .was-validated
+.was-validated .wpcf7 input[type=text]:invalid, .wpcf7 .was-validated input[type=text]:invalid, .was-validated
 .wpcf7 input[type=search]:invalid,
 .wpcf7 .was-validated input[type=search]:invalid, .was-validated
 .wpcf7 input[type=url]:invalid,
@@ -1965,7 +1980,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .wpcf7 select:invalid,
 .wpcf7 .was-validated select:invalid, .was-validated
 .wpcf7 textarea:invalid,
-.wpcf7 .was-validated textarea:invalid, .was-validated .wpcf7 .wpcf7-validation-errors:invalid, .wpcf7 .was-validated .wpcf7-validation-errors:invalid, .form-control.is-invalid, .wpcf7 input.is-invalid[type=text],
+.wpcf7 .was-validated textarea:invalid, .was-validated .wpcf7 .wpcf7-validation-errors:invalid, .wpcf7 .was-validated .wpcf7-validation-errors:invalid, .was-validated #crm-container .crm-container textarea:invalid, #crm-container .crm-container .was-validated textarea:invalid, .was-validated #crm-container .crm-public input[type=text]:invalid, #crm-container .crm-public .was-validated input[type=text]:invalid, .was-validated .form-control:invalid, .wpcf7 input.is-invalid[type=text],
 .wpcf7 input.is-invalid[type=search],
 .wpcf7 input.is-invalid[type=url],
 .wpcf7 input.is-invalid[type=tel],
@@ -1982,11 +1997,11 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .wpcf7 input.is-invalid[type=file],
 .wpcf7 input.is-invalid[type=submit],
 .wpcf7 select.is-invalid,
-.wpcf7 textarea.is-invalid, .wpcf7 .is-invalid.wpcf7-validation-errors, .was-validated
+.wpcf7 textarea.is-invalid, .wpcf7 .is-invalid.wpcf7-validation-errors, #crm-container .crm-container textarea.is-invalid, #crm-container .crm-public input.is-invalid[type=text], .is-invalid.form-control, .was-validated
 .custom-select:invalid,
 .custom-select.is-invalid {
   border-color: #dc3545; }
-  .was-validated .form-control:invalid:focus, .was-validated .wpcf7 input[type=text]:invalid:focus, .wpcf7 .was-validated input[type=text]:invalid:focus, .was-validated
+  .was-validated .wpcf7 input[type=text]:invalid:focus, .wpcf7 .was-validated input[type=text]:invalid:focus, .was-validated
   .wpcf7 input[type=search]:invalid:focus,
   .wpcf7 .was-validated input[type=search]:invalid:focus, .was-validated
   .wpcf7 input[type=url]:invalid:focus,
@@ -2020,7 +2035,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   .wpcf7 select:invalid:focus,
   .wpcf7 .was-validated select:invalid:focus, .was-validated
   .wpcf7 textarea:invalid:focus,
-  .wpcf7 .was-validated textarea:invalid:focus, .was-validated .wpcf7 .wpcf7-validation-errors:invalid:focus, .wpcf7 .was-validated .wpcf7-validation-errors:invalid:focus, .form-control.is-invalid:focus, .wpcf7 input.is-invalid[type=text]:focus,
+  .wpcf7 .was-validated textarea:invalid:focus, .was-validated .wpcf7 .wpcf7-validation-errors:invalid:focus, .wpcf7 .was-validated .wpcf7-validation-errors:invalid:focus, .was-validated #crm-container .crm-container textarea:invalid:focus, #crm-container .crm-container .was-validated textarea:invalid:focus, .was-validated #crm-container .crm-public input[type=text]:invalid:focus, #crm-container .crm-public .was-validated input[type=text]:invalid:focus, .was-validated .form-control:invalid:focus, .wpcf7 input.is-invalid[type=text]:focus,
   .wpcf7 input.is-invalid[type=search]:focus,
   .wpcf7 input.is-invalid[type=url]:focus,
   .wpcf7 input.is-invalid[type=tel]:focus,
@@ -2037,12 +2052,12 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   .wpcf7 input.is-invalid[type=file]:focus,
   .wpcf7 input.is-invalid[type=submit]:focus,
   .wpcf7 select.is-invalid:focus,
-  .wpcf7 textarea.is-invalid:focus, .wpcf7 .is-invalid.wpcf7-validation-errors:focus, .was-validated
+  .wpcf7 textarea.is-invalid:focus, .wpcf7 .is-invalid.wpcf7-validation-errors:focus, #crm-container .crm-container textarea.is-invalid:focus, #crm-container .crm-public input.is-invalid[type=text]:focus, .is-invalid.form-control:focus, .was-validated
   .custom-select:invalid:focus,
   .custom-select.is-invalid:focus {
     border-color: #dc3545;
     box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25); }
-  .was-validated .form-control:invalid ~ .invalid-feedback, .was-validated .wpcf7 input[type=text]:invalid ~ .invalid-feedback, .wpcf7 .was-validated input[type=text]:invalid ~ .invalid-feedback, .was-validated
+  .was-validated .wpcf7 input[type=text]:invalid ~ .invalid-feedback, .wpcf7 .was-validated input[type=text]:invalid ~ .invalid-feedback, .was-validated
   .wpcf7 input[type=search]:invalid ~ .invalid-feedback,
   .wpcf7 .was-validated input[type=search]:invalid ~ .invalid-feedback, .was-validated
   .wpcf7 input[type=url]:invalid ~ .invalid-feedback,
@@ -2076,8 +2091,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   .wpcf7 select:invalid ~ .invalid-feedback,
   .wpcf7 .was-validated select:invalid ~ .invalid-feedback, .was-validated
   .wpcf7 textarea:invalid ~ .invalid-feedback,
-  .wpcf7 .was-validated textarea:invalid ~ .invalid-feedback, .was-validated .wpcf7 .wpcf7-validation-errors:invalid ~ .invalid-feedback, .wpcf7 .was-validated .wpcf7-validation-errors:invalid ~ .invalid-feedback,
-  .was-validated .form-control:invalid ~ .invalid-tooltip,
+  .wpcf7 .was-validated textarea:invalid ~ .invalid-feedback, .was-validated .wpcf7 .wpcf7-validation-errors:invalid ~ .invalid-feedback, .wpcf7 .was-validated .wpcf7-validation-errors:invalid ~ .invalid-feedback, .was-validated #crm-container .crm-container textarea:invalid ~ .invalid-feedback, #crm-container .crm-container .was-validated textarea:invalid ~ .invalid-feedback, .was-validated #crm-container .crm-public input[type=text]:invalid ~ .invalid-feedback, #crm-container .crm-public .was-validated input[type=text]:invalid ~ .invalid-feedback, .was-validated .form-control:invalid ~ .invalid-feedback,
   .was-validated .wpcf7 input[type=text]:invalid ~ .invalid-tooltip, .wpcf7
   .was-validated input[type=text]:invalid ~ .invalid-tooltip,
   .was-validated
@@ -2149,7 +2163,12 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   .wpcf7
   .was-validated textarea:invalid ~ .invalid-tooltip,
   .was-validated .wpcf7 .wpcf7-validation-errors:invalid ~ .invalid-tooltip, .wpcf7
-  .was-validated .wpcf7-validation-errors:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback, .wpcf7 input.is-invalid[type=text] ~ .invalid-feedback,
+  .was-validated .wpcf7-validation-errors:invalid ~ .invalid-tooltip,
+  .was-validated #crm-container .crm-container textarea:invalid ~ .invalid-tooltip, #crm-container .crm-container
+  .was-validated textarea:invalid ~ .invalid-tooltip,
+  .was-validated #crm-container .crm-public input[type=text]:invalid ~ .invalid-tooltip, #crm-container .crm-public
+  .was-validated input[type=text]:invalid ~ .invalid-tooltip,
+  .was-validated .form-control:invalid ~ .invalid-tooltip, .wpcf7 input.is-invalid[type=text] ~ .invalid-feedback,
   .wpcf7 input.is-invalid[type=search] ~ .invalid-feedback,
   .wpcf7 input.is-invalid[type=url] ~ .invalid-feedback,
   .wpcf7 input.is-invalid[type=tel] ~ .invalid-feedback,
@@ -2166,8 +2185,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   .wpcf7 input.is-invalid[type=file] ~ .invalid-feedback,
   .wpcf7 input.is-invalid[type=submit] ~ .invalid-feedback,
   .wpcf7 select.is-invalid ~ .invalid-feedback,
-  .wpcf7 textarea.is-invalid ~ .invalid-feedback, .wpcf7 .is-invalid.wpcf7-validation-errors ~ .invalid-feedback,
-  .form-control.is-invalid ~ .invalid-tooltip, .wpcf7 input.is-invalid[type=text] ~ .invalid-tooltip,
+  .wpcf7 textarea.is-invalid ~ .invalid-feedback, .wpcf7 .is-invalid.wpcf7-validation-errors ~ .invalid-feedback, #crm-container .crm-container textarea.is-invalid ~ .invalid-feedback, #crm-container .crm-public input.is-invalid[type=text] ~ .invalid-feedback, .is-invalid.form-control ~ .invalid-feedback, .wpcf7 input.is-invalid[type=text] ~ .invalid-tooltip,
   .wpcf7 input.is-invalid[type=search] ~ .invalid-tooltip,
   .wpcf7 input.is-invalid[type=url] ~ .invalid-tooltip,
   .wpcf7 input.is-invalid[type=tel] ~ .invalid-tooltip,
@@ -2184,7 +2202,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   .wpcf7 input.is-invalid[type=file] ~ .invalid-tooltip,
   .wpcf7 input.is-invalid[type=submit] ~ .invalid-tooltip,
   .wpcf7 select.is-invalid ~ .invalid-tooltip,
-  .wpcf7 textarea.is-invalid ~ .invalid-tooltip, .wpcf7 .is-invalid.wpcf7-validation-errors ~ .invalid-tooltip, .was-validated
+  .wpcf7 textarea.is-invalid ~ .invalid-tooltip, .wpcf7 .is-invalid.wpcf7-validation-errors ~ .invalid-tooltip, #crm-container .crm-container textarea.is-invalid ~ .invalid-tooltip, #crm-container .crm-public input.is-invalid[type=text] ~ .invalid-tooltip, .is-invalid.form-control ~ .invalid-tooltip, .was-validated
   .custom-select:invalid ~ .invalid-feedback,
   .was-validated
   .custom-select:invalid ~ .invalid-tooltip,
@@ -2247,7 +2265,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
       flex-flow: row wrap;
       align-items: center;
       margin-bottom: 0; }
-    .form-inline .form-control, .form-inline .wpcf7 input[type=text], .wpcf7 .form-inline input[type=text], .form-inline
+    .form-inline .wpcf7 input[type=text], .wpcf7 .form-inline input[type=text], .form-inline
     .wpcf7 input[type=search],
     .wpcf7 .form-inline input[type=search], .form-inline
     .wpcf7 input[type=url],
@@ -2281,7 +2299,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     .wpcf7 select,
     .wpcf7 .form-inline select, .form-inline
     .wpcf7 textarea,
-    .wpcf7 .form-inline textarea, .form-inline .wpcf7 .wpcf7-validation-errors, .wpcf7 .form-inline .wpcf7-validation-errors {
+    .wpcf7 .form-inline textarea, .form-inline .wpcf7 .wpcf7-validation-errors, .wpcf7 .form-inline .wpcf7-validation-errors, .form-inline #crm-container .crm-container textarea, #crm-container .crm-container .form-inline textarea, .form-inline #crm-container .crm-public input[type=text], #crm-container .crm-public .form-inline input[type=text], .form-inline .form-control {
       display: inline-block;
       width: auto;
       vertical-align: middle; }
@@ -2306,7 +2324,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     .form-inline .custom-control-label {
       margin-bottom: 0; } }
 
-.btn, .wpcf7 input[type=submit] {
+.btn, .wpcf7 input[type=submit], .crm-container .crm-button {
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -2319,20 +2337,22 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   line-height: 1.5;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
-  .btn:hover, .wpcf7 input[type=submit]:hover, .btn:focus, .wpcf7 input[type=submit]:focus {
+  .btn:hover, .wpcf7 input[type=submit]:hover, .crm-container .crm-button:hover, .btn:focus, .wpcf7 input[type=submit]:focus, .crm-container .crm-button:focus {
     text-decoration: none; }
-  .btn:focus, .wpcf7 input[type=submit]:focus, .btn.focus, .wpcf7 input.focus[type=submit] {
+  .btn:focus, .wpcf7 input[type=submit]:focus, .crm-container .crm-button:focus, .btn.focus, .wpcf7 input.focus[type=submit], .crm-container .focus.crm-button {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(135, 83, 213, 0.25); }
-  .btn.disabled, .wpcf7 input.disabled[type=submit], .btn:disabled, .wpcf7 input[type=submit]:disabled {
+  .btn.disabled, .wpcf7 input.disabled[type=submit], .crm-container .disabled.crm-button, .btn:disabled, .wpcf7 input[type=submit]:disabled, .crm-container .crm-button:disabled {
     opacity: 0.65; }
-  .btn:not(:disabled):not(.disabled), .wpcf7 input[type=submit]:not(:disabled):not(.disabled) {
+  .btn:not(:disabled):not(.disabled), .wpcf7 input[type=submit]:not(:disabled):not(.disabled), .crm-container .crm-button:not(:disabled):not(.disabled) {
     cursor: pointer; }
-  .btn:not(:disabled):not(.disabled):active, .wpcf7 input[type=submit]:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active, .wpcf7 input[type=submit]:not(:disabled):not(.disabled).active {
+  .btn:not(:disabled):not(.disabled):active, .wpcf7 input[type=submit]:not(:disabled):not(.disabled):active, .crm-container .crm-button:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active, .wpcf7 input[type=submit]:not(:disabled):not(.disabled).active, .crm-container .crm-button:not(:disabled):not(.disabled).active {
     background-image: none; }
 
-a.btn.disabled,
-fieldset:disabled a.btn {
+a.btn.disabled, .crm-container a.disabled.crm-button,
+fieldset:disabled a.btn,
+fieldset:disabled .crm-container a.crm-button, .crm-container
+fieldset:disabled a.crm-button {
   pointer-events: none; }
 
 .btn-primary {
@@ -2721,13 +2741,13 @@ fieldset:disabled a.btn {
   .btn-link:disabled, .btn-link.disabled {
     color: #6c757d; }
 
-.btn-lg, .btn-group-lg > .btn, .wpcf7 .btn-group-lg > input[type=submit] {
+.btn-lg, .btn-group-lg > .btn, .wpcf7 .btn-group-lg > input[type=submit], .crm-container .btn-group-lg > .crm-button {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn, .wpcf7 .btn-group-sm > input[type=submit] {
+.btn-sm, .btn-group-sm > .btn, .wpcf7 .btn-group-sm > input[type=submit], .crm-container .btn-group-sm > .crm-button {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2922,44 +2942,71 @@ tbody.collapse.show {
   position: relative;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn, .wpcf7 .btn-group > input[type=submit],
+  .btn-group > .btn, .wpcf7 .btn-group > input[type=submit], .crm-container .btn-group > .crm-button,
   .btn-group-vertical > .btn, .wpcf7
-  .btn-group-vertical > input[type=submit] {
+  .btn-group-vertical > input[type=submit], .crm-container
+  .btn-group-vertical > .crm-button {
     position: relative;
     flex: 0 1 auto; }
-    .btn-group > .btn:hover, .wpcf7 .btn-group > input[type=submit]:hover,
+    .btn-group > .btn:hover, .wpcf7 .btn-group > input[type=submit]:hover, .crm-container .btn-group > .crm-button:hover,
     .btn-group-vertical > .btn:hover, .wpcf7
-    .btn-group-vertical > input[type=submit]:hover {
+    .btn-group-vertical > input[type=submit]:hover, .crm-container
+    .btn-group-vertical > .crm-button:hover {
       z-index: 1; }
-    .btn-group > .btn:focus, .wpcf7 .btn-group > input[type=submit]:focus, .btn-group > .btn:active, .wpcf7 .btn-group > input[type=submit]:active, .btn-group > .btn.active, .wpcf7 .btn-group > input.active[type=submit],
+    .btn-group > .btn:focus, .wpcf7 .btn-group > input[type=submit]:focus, .crm-container .btn-group > .crm-button:focus, .btn-group > .btn:active, .wpcf7 .btn-group > input[type=submit]:active, .crm-container .btn-group > .crm-button:active, .btn-group > .btn.active, .wpcf7 .btn-group > input.active[type=submit], .crm-container .btn-group > .active.crm-button,
     .btn-group-vertical > .btn:focus, .wpcf7
-    .btn-group-vertical > input[type=submit]:focus,
+    .btn-group-vertical > input[type=submit]:focus, .crm-container
+    .btn-group-vertical > .crm-button:focus,
     .btn-group-vertical > .btn:active, .wpcf7
-    .btn-group-vertical > input[type=submit]:active,
+    .btn-group-vertical > input[type=submit]:active, .crm-container
+    .btn-group-vertical > .crm-button:active,
     .btn-group-vertical > .btn.active, .wpcf7
-    .btn-group-vertical > input.active[type=submit] {
+    .btn-group-vertical > input.active[type=submit], .crm-container
+    .btn-group-vertical > .active.crm-button {
       z-index: 1; }
-  .btn-group .btn + .btn, .btn-group .wpcf7 input[type=submit] + .btn, .wpcf7 .btn-group input[type=submit] + .btn, .btn-group .wpcf7 .btn + input[type=submit], .wpcf7 .btn-group .btn + input[type=submit], .btn-group .wpcf7 input[type=submit] + input[type=submit], .wpcf7 .btn-group input[type=submit] + input[type=submit],
+  .btn-group .btn + .btn, .btn-group .wpcf7 input[type=submit] + .btn, .wpcf7 .btn-group input[type=submit] + .btn, .btn-group .crm-container .crm-button + .btn, .crm-container .btn-group .crm-button + .btn, .btn-group .wpcf7 .btn + input[type=submit], .wpcf7 .btn-group .btn + input[type=submit], .btn-group .wpcf7 input[type=submit] + input[type=submit], .wpcf7 .btn-group input[type=submit] + input[type=submit], .btn-group .crm-container .wpcf7 .crm-button + input[type=submit], .wpcf7 .btn-group .crm-container .crm-button + input[type=submit], .crm-container .btn-group .wpcf7 .crm-button + input[type=submit], .wpcf7 .crm-container .btn-group .crm-button + input[type=submit], .btn-group .crm-container .btn + .crm-button, .crm-container .btn-group .btn + .crm-button, .btn-group .wpcf7 .crm-container input[type=submit] + .crm-button, .crm-container .btn-group .wpcf7 input[type=submit] + .crm-button, .wpcf7 .btn-group .crm-container input[type=submit] + .crm-button, .crm-container .wpcf7 .btn-group input[type=submit] + .crm-button, .btn-group .crm-container .crm-button + .crm-button, .crm-container .btn-group .crm-button + .crm-button,
   .btn-group .btn + .btn-group,
   .btn-group .wpcf7 input[type=submit] + .btn-group, .wpcf7
   .btn-group input[type=submit] + .btn-group,
+  .btn-group .crm-container .crm-button + .btn-group, .crm-container
+  .btn-group .crm-button + .btn-group,
   .btn-group .btn-group + .btn,
   .btn-group .wpcf7 .btn-group + input[type=submit], .wpcf7
   .btn-group .btn-group + input[type=submit],
+  .btn-group .crm-container .btn-group + .crm-button, .crm-container
+  .btn-group .btn-group + .crm-button,
   .btn-group .btn-group + .btn-group,
   .btn-group-vertical .btn + .btn,
   .btn-group-vertical .wpcf7 input[type=submit] + .btn, .wpcf7
   .btn-group-vertical input[type=submit] + .btn,
+  .btn-group-vertical .crm-container .crm-button + .btn, .crm-container
+  .btn-group-vertical .crm-button + .btn,
   .btn-group-vertical .wpcf7 .btn + input[type=submit], .wpcf7
   .btn-group-vertical .btn + input[type=submit],
   .btn-group-vertical .wpcf7 input[type=submit] + input[type=submit], .wpcf7
   .btn-group-vertical input[type=submit] + input[type=submit],
+  .btn-group-vertical .crm-container .wpcf7 .crm-button + input[type=submit], .wpcf7
+  .btn-group-vertical .crm-container .crm-button + input[type=submit], .crm-container
+  .btn-group-vertical .wpcf7 .crm-button + input[type=submit], .wpcf7 .crm-container
+  .btn-group-vertical .crm-button + input[type=submit],
+  .btn-group-vertical .crm-container .btn + .crm-button, .crm-container
+  .btn-group-vertical .btn + .crm-button,
+  .btn-group-vertical .wpcf7 .crm-container input[type=submit] + .crm-button, .crm-container
+  .btn-group-vertical .wpcf7 input[type=submit] + .crm-button, .wpcf7
+  .btn-group-vertical .crm-container input[type=submit] + .crm-button, .crm-container .wpcf7
+  .btn-group-vertical input[type=submit] + .crm-button,
+  .btn-group-vertical .crm-container .crm-button + .crm-button, .crm-container
+  .btn-group-vertical .crm-button + .crm-button,
   .btn-group-vertical .btn + .btn-group,
   .btn-group-vertical .wpcf7 input[type=submit] + .btn-group, .wpcf7
   .btn-group-vertical input[type=submit] + .btn-group,
+  .btn-group-vertical .crm-container .crm-button + .btn-group, .crm-container
+  .btn-group-vertical .crm-button + .btn-group,
   .btn-group-vertical .btn-group + .btn,
   .btn-group-vertical .wpcf7 .btn-group + input[type=submit], .wpcf7
   .btn-group-vertical .btn-group + input[type=submit],
+  .btn-group-vertical .crm-container .btn-group + .crm-button, .crm-container
+  .btn-group-vertical .btn-group + .crm-button,
   .btn-group-vertical .btn-group + .btn-group {
     margin-left: -1px; }
 
@@ -2970,18 +3017,20 @@ tbody.collapse.show {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:first-child, .wpcf7 .btn-group > input[type=submit]:first-child {
+.btn-group > .btn:first-child, .wpcf7 .btn-group > input[type=submit]:first-child, .crm-container .btn-group > .crm-button:first-child {
   margin-left: 0; }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:not(:last-child):not(.dropdown-toggle), .crm-container .btn-group > .crm-button:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn, .wpcf7
-.btn-group > .btn-group:not(:last-child) > input[type=submit] {
+.btn-group > .btn-group:not(:last-child) > input[type=submit], .crm-container
+.btn-group > .btn-group:not(:last-child) > .crm-button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn:not(:first-child), .wpcf7 .btn-group > input[type=submit]:not(:first-child),
+.btn-group > .btn:not(:first-child), .wpcf7 .btn-group > input[type=submit]:not(:first-child), .crm-container .btn-group > .crm-button:not(:first-child),
 .btn-group > .btn-group:not(:first-child) > .btn, .wpcf7
-.btn-group > .btn-group:not(:first-child) > input[type=submit] {
+.btn-group > .btn-group:not(:first-child) > input[type=submit], .crm-container
+.btn-group > .btn-group:not(:first-child) > .crm-button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -2991,11 +3040,11 @@ tbody.collapse.show {
   .dropdown-toggle-split::after {
     margin-left: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-sm > input[type=submit] + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-sm > input[type=submit] + .dropdown-toggle-split, .crm-container .btn-group-sm > .crm-button + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-lg > input[type=submit] + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-lg > input[type=submit] + .dropdown-toggle-split, .crm-container .btn-group-lg > .crm-button + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -3003,39 +3052,47 @@ tbody.collapse.show {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center; }
-  .btn-group-vertical .btn, .btn-group-vertical .wpcf7 input[type=submit], .wpcf7 .btn-group-vertical input[type=submit],
+  .btn-group-vertical .btn, .btn-group-vertical .wpcf7 input[type=submit], .wpcf7 .btn-group-vertical input[type=submit], .btn-group-vertical .crm-container .crm-button, .crm-container .btn-group-vertical .crm-button,
   .btn-group-vertical .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn + .btn, .wpcf7 .btn-group-vertical > input[type=submit] + .btn, .wpcf7 .btn-group-vertical > .btn + input[type=submit], .wpcf7 .btn-group-vertical > input[type=submit] + input[type=submit],
+  .btn-group-vertical > .btn + .btn, .wpcf7 .btn-group-vertical > input[type=submit] + .btn, .crm-container .btn-group-vertical > .crm-button + .btn, .wpcf7 .btn-group-vertical > .btn + input[type=submit], .wpcf7 .btn-group-vertical > input[type=submit] + input[type=submit], .crm-container .wpcf7 .btn-group-vertical > .crm-button + input[type=submit], .wpcf7 .crm-container .btn-group-vertical > .crm-button + input[type=submit], .crm-container .btn-group-vertical > .btn + .crm-button, .wpcf7 .crm-container .btn-group-vertical > input[type=submit] + .crm-button, .crm-container .wpcf7 .btn-group-vertical > input[type=submit] + .crm-button, .crm-container .btn-group-vertical > .crm-button + .crm-button,
   .btn-group-vertical > .btn + .btn-group, .wpcf7
-  .btn-group-vertical > input[type=submit] + .btn-group,
+  .btn-group-vertical > input[type=submit] + .btn-group, .crm-container
+  .btn-group-vertical > .crm-button + .btn-group,
   .btn-group-vertical > .btn-group + .btn, .wpcf7
-  .btn-group-vertical > .btn-group + input[type=submit],
+  .btn-group-vertical > .btn-group + input[type=submit], .crm-container
+  .btn-group-vertical > .btn-group + .crm-button,
   .btn-group-vertical > .btn-group + .btn-group {
     margin-top: -1px;
     margin-left: 0; }
-  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group-vertical > input[type=submit]:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group-vertical > input[type=submit]:not(:last-child):not(.dropdown-toggle), .crm-container .btn-group-vertical > .crm-button:not(:last-child):not(.dropdown-toggle),
   .btn-group-vertical > .btn-group:not(:last-child) > .btn, .wpcf7
-  .btn-group-vertical > .btn-group:not(:last-child) > input[type=submit] {
+  .btn-group-vertical > .btn-group:not(:last-child) > input[type=submit], .crm-container
+  .btn-group-vertical > .btn-group:not(:last-child) > .crm-button {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .btn-group-vertical > .btn:not(:first-child), .wpcf7 .btn-group-vertical > input[type=submit]:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child), .wpcf7 .btn-group-vertical > input[type=submit]:not(:first-child), .crm-container .btn-group-vertical > .crm-button:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) > .btn, .wpcf7
-  .btn-group-vertical > .btn-group:not(:first-child) > input[type=submit] {
+  .btn-group-vertical > .btn-group:not(:first-child) > input[type=submit], .crm-container
+  .btn-group-vertical > .btn-group:not(:first-child) > .crm-button {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group-toggle > .btn, .wpcf7 .btn-group-toggle > input[type=submit],
+.btn-group-toggle > .btn, .wpcf7 .btn-group-toggle > input[type=submit], .crm-container .btn-group-toggle > .crm-button,
 .btn-group-toggle > .btn-group > .btn, .wpcf7
-.btn-group-toggle > .btn-group > input[type=submit] {
+.btn-group-toggle > .btn-group > input[type=submit], .crm-container
+.btn-group-toggle > .btn-group > .crm-button {
   margin-bottom: 0; }
-  .btn-group-toggle > .btn input[type="radio"], .wpcf7 .btn-group-toggle > input[type=submit] input[type="radio"],
+  .btn-group-toggle > .btn input[type="radio"], .wpcf7 .btn-group-toggle > input[type=submit] input[type="radio"], .crm-container .btn-group-toggle > .crm-button input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"], .wpcf7
-  .btn-group-toggle > input[type=submit] input[type="checkbox"],
+  .btn-group-toggle > input[type=submit] input[type="checkbox"], .crm-container
+  .btn-group-toggle > .crm-button input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"], .wpcf7
-  .btn-group-toggle > .btn-group > input[type=submit] input[type="radio"],
+  .btn-group-toggle > .btn-group > input[type=submit] input[type="radio"], .crm-container
+  .btn-group-toggle > .btn-group > .crm-button input[type="radio"],
   .btn-group-toggle > .btn-group > .btn input[type="checkbox"], .wpcf7
-  .btn-group-toggle > .btn-group > input[type=submit] input[type="checkbox"] {
+  .btn-group-toggle > .btn-group > input[type=submit] input[type="checkbox"], .crm-container
+  .btn-group-toggle > .btn-group > .crm-button input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none; }
@@ -3046,7 +3103,7 @@ tbody.collapse.show {
   flex-wrap: wrap;
   align-items: stretch;
   width: 100%; }
-  .input-group > .form-control, .wpcf7 .input-group > input[type=text],
+  .wpcf7 .input-group > input[type=text],
   .wpcf7 .input-group > input[type=search],
   .wpcf7 .input-group > input[type=url],
   .wpcf7 .input-group > input[type=tel],
@@ -3063,14 +3120,14 @@ tbody.collapse.show {
   .wpcf7 .input-group > input[type=file],
   .wpcf7 .input-group > input[type=submit],
   .wpcf7 .input-group > select,
-  .wpcf7 .input-group > textarea, .wpcf7 .input-group > .wpcf7-validation-errors,
+  .wpcf7 .input-group > textarea, .wpcf7 .input-group > .wpcf7-validation-errors, #crm-container .crm-container .input-group > textarea, #crm-container .crm-public .input-group > input[type=text], .input-group > .form-control,
   .input-group > .custom-select,
   .input-group > .custom-file {
     position: relative;
     flex: 1 1 auto;
     width: 1%;
     margin-bottom: 0; }
-    .input-group > .form-control:focus, .wpcf7 .input-group > input[type=text]:focus,
+    .wpcf7 .input-group > input[type=text]:focus,
     .wpcf7 .input-group > input[type=search]:focus,
     .wpcf7 .input-group > input[type=url]:focus,
     .wpcf7 .input-group > input[type=tel]:focus,
@@ -3087,7 +3144,7 @@ tbody.collapse.show {
     .wpcf7 .input-group > input[type=file]:focus,
     .wpcf7 .input-group > input[type=submit]:focus,
     .wpcf7 .input-group > select:focus,
-    .wpcf7 .input-group > textarea:focus, .wpcf7 .input-group > .wpcf7-validation-errors:focus,
+    .wpcf7 .input-group > textarea:focus, .wpcf7 .input-group > .wpcf7-validation-errors:focus, #crm-container .crm-container .input-group > textarea:focus, #crm-container .crm-public .input-group > input[type=text]:focus, .input-group > .form-control:focus,
     .input-group > .custom-select:focus,
     .input-group > .custom-file:focus {
       z-index: 3; }
@@ -3108,25 +3165,194 @@ tbody.collapse.show {
     .wpcf7 .input-group > input[type=file] + .form-control,
     .wpcf7 .input-group > input[type=submit] + .form-control,
     .wpcf7 .input-group > select + .form-control,
-    .wpcf7 .input-group > textarea + .form-control, .wpcf7 .input-group > .wpcf7-validation-errors + .form-control, .wpcf7 .input-group > .form-control + input[type=text], .wpcf7 .input-group > input[type=text] + input[type=text], .wpcf7 .input-group > input[type=search] + input[type=text], .wpcf7 .input-group > input[type=url] + input[type=text], .wpcf7 .input-group > input[type=tel] + input[type=text], .wpcf7 .input-group > input[type=number] + input[type=text], .wpcf7 .input-group > input[type=range] + input[type=text], .wpcf7 .input-group > input[type=date] + input[type=text], .wpcf7 .input-group > input[type=month] + input[type=text], .wpcf7 .input-group > input[type=week] + input[type=text], .wpcf7 .input-group > input[type=time] + input[type=text], .wpcf7 .input-group > input[type=datetime] + input[type=text], .wpcf7 .input-group > input[type=datetime-local] + input[type=text], .wpcf7 .input-group > input[type=color] + input[type=text], .wpcf7 .input-group > input[type=email] + input[type=text], .wpcf7 .input-group > input[type=file] + input[type=text], .wpcf7 .input-group > input[type=submit] + input[type=text], .wpcf7 .input-group > select + input[type=text], .wpcf7 .input-group > textarea + input[type=text], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=text],
-    .wpcf7 .input-group > .form-control + input[type=search], .wpcf7 .input-group > input[type=text] + input[type=search], .wpcf7 .input-group > input[type=search] + input[type=search], .wpcf7 .input-group > input[type=url] + input[type=search], .wpcf7 .input-group > input[type=tel] + input[type=search], .wpcf7 .input-group > input[type=number] + input[type=search], .wpcf7 .input-group > input[type=range] + input[type=search], .wpcf7 .input-group > input[type=date] + input[type=search], .wpcf7 .input-group > input[type=month] + input[type=search], .wpcf7 .input-group > input[type=week] + input[type=search], .wpcf7 .input-group > input[type=time] + input[type=search], .wpcf7 .input-group > input[type=datetime] + input[type=search], .wpcf7 .input-group > input[type=datetime-local] + input[type=search], .wpcf7 .input-group > input[type=color] + input[type=search], .wpcf7 .input-group > input[type=email] + input[type=search], .wpcf7 .input-group > input[type=file] + input[type=search], .wpcf7 .input-group > input[type=submit] + input[type=search], .wpcf7 .input-group > select + input[type=search], .wpcf7 .input-group > textarea + input[type=search], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=search],
-    .wpcf7 .input-group > .form-control + input[type=url], .wpcf7 .input-group > input[type=text] + input[type=url], .wpcf7 .input-group > input[type=search] + input[type=url], .wpcf7 .input-group > input[type=url] + input[type=url], .wpcf7 .input-group > input[type=tel] + input[type=url], .wpcf7 .input-group > input[type=number] + input[type=url], .wpcf7 .input-group > input[type=range] + input[type=url], .wpcf7 .input-group > input[type=date] + input[type=url], .wpcf7 .input-group > input[type=month] + input[type=url], .wpcf7 .input-group > input[type=week] + input[type=url], .wpcf7 .input-group > input[type=time] + input[type=url], .wpcf7 .input-group > input[type=datetime] + input[type=url], .wpcf7 .input-group > input[type=datetime-local] + input[type=url], .wpcf7 .input-group > input[type=color] + input[type=url], .wpcf7 .input-group > input[type=email] + input[type=url], .wpcf7 .input-group > input[type=file] + input[type=url], .wpcf7 .input-group > input[type=submit] + input[type=url], .wpcf7 .input-group > select + input[type=url], .wpcf7 .input-group > textarea + input[type=url], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=url],
-    .wpcf7 .input-group > .form-control + input[type=tel], .wpcf7 .input-group > input[type=text] + input[type=tel], .wpcf7 .input-group > input[type=search] + input[type=tel], .wpcf7 .input-group > input[type=url] + input[type=tel], .wpcf7 .input-group > input[type=tel] + input[type=tel], .wpcf7 .input-group > input[type=number] + input[type=tel], .wpcf7 .input-group > input[type=range] + input[type=tel], .wpcf7 .input-group > input[type=date] + input[type=tel], .wpcf7 .input-group > input[type=month] + input[type=tel], .wpcf7 .input-group > input[type=week] + input[type=tel], .wpcf7 .input-group > input[type=time] + input[type=tel], .wpcf7 .input-group > input[type=datetime] + input[type=tel], .wpcf7 .input-group > input[type=datetime-local] + input[type=tel], .wpcf7 .input-group > input[type=color] + input[type=tel], .wpcf7 .input-group > input[type=email] + input[type=tel], .wpcf7 .input-group > input[type=file] + input[type=tel], .wpcf7 .input-group > input[type=submit] + input[type=tel], .wpcf7 .input-group > select + input[type=tel], .wpcf7 .input-group > textarea + input[type=tel], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=tel],
-    .wpcf7 .input-group > .form-control + input[type=number], .wpcf7 .input-group > input[type=text] + input[type=number], .wpcf7 .input-group > input[type=search] + input[type=number], .wpcf7 .input-group > input[type=url] + input[type=number], .wpcf7 .input-group > input[type=tel] + input[type=number], .wpcf7 .input-group > input[type=number] + input[type=number], .wpcf7 .input-group > input[type=range] + input[type=number], .wpcf7 .input-group > input[type=date] + input[type=number], .wpcf7 .input-group > input[type=month] + input[type=number], .wpcf7 .input-group > input[type=week] + input[type=number], .wpcf7 .input-group > input[type=time] + input[type=number], .wpcf7 .input-group > input[type=datetime] + input[type=number], .wpcf7 .input-group > input[type=datetime-local] + input[type=number], .wpcf7 .input-group > input[type=color] + input[type=number], .wpcf7 .input-group > input[type=email] + input[type=number], .wpcf7 .input-group > input[type=file] + input[type=number], .wpcf7 .input-group > input[type=submit] + input[type=number], .wpcf7 .input-group > select + input[type=number], .wpcf7 .input-group > textarea + input[type=number], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=number],
-    .wpcf7 .input-group > .form-control + input[type=range], .wpcf7 .input-group > input[type=text] + input[type=range], .wpcf7 .input-group > input[type=search] + input[type=range], .wpcf7 .input-group > input[type=url] + input[type=range], .wpcf7 .input-group > input[type=tel] + input[type=range], .wpcf7 .input-group > input[type=number] + input[type=range], .wpcf7 .input-group > input[type=range] + input[type=range], .wpcf7 .input-group > input[type=date] + input[type=range], .wpcf7 .input-group > input[type=month] + input[type=range], .wpcf7 .input-group > input[type=week] + input[type=range], .wpcf7 .input-group > input[type=time] + input[type=range], .wpcf7 .input-group > input[type=datetime] + input[type=range], .wpcf7 .input-group > input[type=datetime-local] + input[type=range], .wpcf7 .input-group > input[type=color] + input[type=range], .wpcf7 .input-group > input[type=email] + input[type=range], .wpcf7 .input-group > input[type=file] + input[type=range], .wpcf7 .input-group > input[type=submit] + input[type=range], .wpcf7 .input-group > select + input[type=range], .wpcf7 .input-group > textarea + input[type=range], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=range],
-    .wpcf7 .input-group > .form-control + input[type=date], .wpcf7 .input-group > input[type=text] + input[type=date], .wpcf7 .input-group > input[type=search] + input[type=date], .wpcf7 .input-group > input[type=url] + input[type=date], .wpcf7 .input-group > input[type=tel] + input[type=date], .wpcf7 .input-group > input[type=number] + input[type=date], .wpcf7 .input-group > input[type=range] + input[type=date], .wpcf7 .input-group > input[type=date] + input[type=date], .wpcf7 .input-group > input[type=month] + input[type=date], .wpcf7 .input-group > input[type=week] + input[type=date], .wpcf7 .input-group > input[type=time] + input[type=date], .wpcf7 .input-group > input[type=datetime] + input[type=date], .wpcf7 .input-group > input[type=datetime-local] + input[type=date], .wpcf7 .input-group > input[type=color] + input[type=date], .wpcf7 .input-group > input[type=email] + input[type=date], .wpcf7 .input-group > input[type=file] + input[type=date], .wpcf7 .input-group > input[type=submit] + input[type=date], .wpcf7 .input-group > select + input[type=date], .wpcf7 .input-group > textarea + input[type=date], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=date],
-    .wpcf7 .input-group > .form-control + input[type=month], .wpcf7 .input-group > input[type=text] + input[type=month], .wpcf7 .input-group > input[type=search] + input[type=month], .wpcf7 .input-group > input[type=url] + input[type=month], .wpcf7 .input-group > input[type=tel] + input[type=month], .wpcf7 .input-group > input[type=number] + input[type=month], .wpcf7 .input-group > input[type=range] + input[type=month], .wpcf7 .input-group > input[type=date] + input[type=month], .wpcf7 .input-group > input[type=month] + input[type=month], .wpcf7 .input-group > input[type=week] + input[type=month], .wpcf7 .input-group > input[type=time] + input[type=month], .wpcf7 .input-group > input[type=datetime] + input[type=month], .wpcf7 .input-group > input[type=datetime-local] + input[type=month], .wpcf7 .input-group > input[type=color] + input[type=month], .wpcf7 .input-group > input[type=email] + input[type=month], .wpcf7 .input-group > input[type=file] + input[type=month], .wpcf7 .input-group > input[type=submit] + input[type=month], .wpcf7 .input-group > select + input[type=month], .wpcf7 .input-group > textarea + input[type=month], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=month],
-    .wpcf7 .input-group > .form-control + input[type=week], .wpcf7 .input-group > input[type=text] + input[type=week], .wpcf7 .input-group > input[type=search] + input[type=week], .wpcf7 .input-group > input[type=url] + input[type=week], .wpcf7 .input-group > input[type=tel] + input[type=week], .wpcf7 .input-group > input[type=number] + input[type=week], .wpcf7 .input-group > input[type=range] + input[type=week], .wpcf7 .input-group > input[type=date] + input[type=week], .wpcf7 .input-group > input[type=month] + input[type=week], .wpcf7 .input-group > input[type=week] + input[type=week], .wpcf7 .input-group > input[type=time] + input[type=week], .wpcf7 .input-group > input[type=datetime] + input[type=week], .wpcf7 .input-group > input[type=datetime-local] + input[type=week], .wpcf7 .input-group > input[type=color] + input[type=week], .wpcf7 .input-group > input[type=email] + input[type=week], .wpcf7 .input-group > input[type=file] + input[type=week], .wpcf7 .input-group > input[type=submit] + input[type=week], .wpcf7 .input-group > select + input[type=week], .wpcf7 .input-group > textarea + input[type=week], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=week],
-    .wpcf7 .input-group > .form-control + input[type=time], .wpcf7 .input-group > input[type=text] + input[type=time], .wpcf7 .input-group > input[type=search] + input[type=time], .wpcf7 .input-group > input[type=url] + input[type=time], .wpcf7 .input-group > input[type=tel] + input[type=time], .wpcf7 .input-group > input[type=number] + input[type=time], .wpcf7 .input-group > input[type=range] + input[type=time], .wpcf7 .input-group > input[type=date] + input[type=time], .wpcf7 .input-group > input[type=month] + input[type=time], .wpcf7 .input-group > input[type=week] + input[type=time], .wpcf7 .input-group > input[type=time] + input[type=time], .wpcf7 .input-group > input[type=datetime] + input[type=time], .wpcf7 .input-group > input[type=datetime-local] + input[type=time], .wpcf7 .input-group > input[type=color] + input[type=time], .wpcf7 .input-group > input[type=email] + input[type=time], .wpcf7 .input-group > input[type=file] + input[type=time], .wpcf7 .input-group > input[type=submit] + input[type=time], .wpcf7 .input-group > select + input[type=time], .wpcf7 .input-group > textarea + input[type=time], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=time],
-    .wpcf7 .input-group > .form-control + input[type=datetime], .wpcf7 .input-group > input[type=text] + input[type=datetime], .wpcf7 .input-group > input[type=search] + input[type=datetime], .wpcf7 .input-group > input[type=url] + input[type=datetime], .wpcf7 .input-group > input[type=tel] + input[type=datetime], .wpcf7 .input-group > input[type=number] + input[type=datetime], .wpcf7 .input-group > input[type=range] + input[type=datetime], .wpcf7 .input-group > input[type=date] + input[type=datetime], .wpcf7 .input-group > input[type=month] + input[type=datetime], .wpcf7 .input-group > input[type=week] + input[type=datetime], .wpcf7 .input-group > input[type=time] + input[type=datetime], .wpcf7 .input-group > input[type=datetime] + input[type=datetime], .wpcf7 .input-group > input[type=datetime-local] + input[type=datetime], .wpcf7 .input-group > input[type=color] + input[type=datetime], .wpcf7 .input-group > input[type=email] + input[type=datetime], .wpcf7 .input-group > input[type=file] + input[type=datetime], .wpcf7 .input-group > input[type=submit] + input[type=datetime], .wpcf7 .input-group > select + input[type=datetime], .wpcf7 .input-group > textarea + input[type=datetime], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=datetime],
-    .wpcf7 .input-group > .form-control + input[type=datetime-local], .wpcf7 .input-group > input[type=text] + input[type=datetime-local], .wpcf7 .input-group > input[type=search] + input[type=datetime-local], .wpcf7 .input-group > input[type=url] + input[type=datetime-local], .wpcf7 .input-group > input[type=tel] + input[type=datetime-local], .wpcf7 .input-group > input[type=number] + input[type=datetime-local], .wpcf7 .input-group > input[type=range] + input[type=datetime-local], .wpcf7 .input-group > input[type=date] + input[type=datetime-local], .wpcf7 .input-group > input[type=month] + input[type=datetime-local], .wpcf7 .input-group > input[type=week] + input[type=datetime-local], .wpcf7 .input-group > input[type=time] + input[type=datetime-local], .wpcf7 .input-group > input[type=datetime] + input[type=datetime-local], .wpcf7 .input-group > input[type=datetime-local] + input[type=datetime-local], .wpcf7 .input-group > input[type=color] + input[type=datetime-local], .wpcf7 .input-group > input[type=email] + input[type=datetime-local], .wpcf7 .input-group > input[type=file] + input[type=datetime-local], .wpcf7 .input-group > input[type=submit] + input[type=datetime-local], .wpcf7 .input-group > select + input[type=datetime-local], .wpcf7 .input-group > textarea + input[type=datetime-local], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=datetime-local],
-    .wpcf7 .input-group > .form-control + input[type=color], .wpcf7 .input-group > input[type=text] + input[type=color], .wpcf7 .input-group > input[type=search] + input[type=color], .wpcf7 .input-group > input[type=url] + input[type=color], .wpcf7 .input-group > input[type=tel] + input[type=color], .wpcf7 .input-group > input[type=number] + input[type=color], .wpcf7 .input-group > input[type=range] + input[type=color], .wpcf7 .input-group > input[type=date] + input[type=color], .wpcf7 .input-group > input[type=month] + input[type=color], .wpcf7 .input-group > input[type=week] + input[type=color], .wpcf7 .input-group > input[type=time] + input[type=color], .wpcf7 .input-group > input[type=datetime] + input[type=color], .wpcf7 .input-group > input[type=datetime-local] + input[type=color], .wpcf7 .input-group > input[type=color] + input[type=color], .wpcf7 .input-group > input[type=email] + input[type=color], .wpcf7 .input-group > input[type=file] + input[type=color], .wpcf7 .input-group > input[type=submit] + input[type=color], .wpcf7 .input-group > select + input[type=color], .wpcf7 .input-group > textarea + input[type=color], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=color],
-    .wpcf7 .input-group > .form-control + input[type=email], .wpcf7 .input-group > input[type=text] + input[type=email], .wpcf7 .input-group > input[type=search] + input[type=email], .wpcf7 .input-group > input[type=url] + input[type=email], .wpcf7 .input-group > input[type=tel] + input[type=email], .wpcf7 .input-group > input[type=number] + input[type=email], .wpcf7 .input-group > input[type=range] + input[type=email], .wpcf7 .input-group > input[type=date] + input[type=email], .wpcf7 .input-group > input[type=month] + input[type=email], .wpcf7 .input-group > input[type=week] + input[type=email], .wpcf7 .input-group > input[type=time] + input[type=email], .wpcf7 .input-group > input[type=datetime] + input[type=email], .wpcf7 .input-group > input[type=datetime-local] + input[type=email], .wpcf7 .input-group > input[type=color] + input[type=email], .wpcf7 .input-group > input[type=email] + input[type=email], .wpcf7 .input-group > input[type=file] + input[type=email], .wpcf7 .input-group > input[type=submit] + input[type=email], .wpcf7 .input-group > select + input[type=email], .wpcf7 .input-group > textarea + input[type=email], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=email],
-    .wpcf7 .input-group > .form-control + input[type=file], .wpcf7 .input-group > input[type=text] + input[type=file], .wpcf7 .input-group > input[type=search] + input[type=file], .wpcf7 .input-group > input[type=url] + input[type=file], .wpcf7 .input-group > input[type=tel] + input[type=file], .wpcf7 .input-group > input[type=number] + input[type=file], .wpcf7 .input-group > input[type=range] + input[type=file], .wpcf7 .input-group > input[type=date] + input[type=file], .wpcf7 .input-group > input[type=month] + input[type=file], .wpcf7 .input-group > input[type=week] + input[type=file], .wpcf7 .input-group > input[type=time] + input[type=file], .wpcf7 .input-group > input[type=datetime] + input[type=file], .wpcf7 .input-group > input[type=datetime-local] + input[type=file], .wpcf7 .input-group > input[type=color] + input[type=file], .wpcf7 .input-group > input[type=email] + input[type=file], .wpcf7 .input-group > input[type=file] + input[type=file], .wpcf7 .input-group > input[type=submit] + input[type=file], .wpcf7 .input-group > select + input[type=file], .wpcf7 .input-group > textarea + input[type=file], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=file],
-    .wpcf7 .input-group > .form-control + input[type=submit], .wpcf7 .input-group > input[type=text] + input[type=submit], .wpcf7 .input-group > input[type=search] + input[type=submit], .wpcf7 .input-group > input[type=url] + input[type=submit], .wpcf7 .input-group > input[type=tel] + input[type=submit], .wpcf7 .input-group > input[type=number] + input[type=submit], .wpcf7 .input-group > input[type=range] + input[type=submit], .wpcf7 .input-group > input[type=date] + input[type=submit], .wpcf7 .input-group > input[type=month] + input[type=submit], .wpcf7 .input-group > input[type=week] + input[type=submit], .wpcf7 .input-group > input[type=time] + input[type=submit], .wpcf7 .input-group > input[type=datetime] + input[type=submit], .wpcf7 .input-group > input[type=datetime-local] + input[type=submit], .wpcf7 .input-group > input[type=color] + input[type=submit], .wpcf7 .input-group > input[type=email] + input[type=submit], .wpcf7 .input-group > input[type=file] + input[type=submit], .wpcf7 .input-group > input[type=submit] + input[type=submit], .wpcf7 .input-group > select + input[type=submit], .wpcf7 .input-group > textarea + input[type=submit], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=submit],
-    .wpcf7 .input-group > .form-control + select, .wpcf7 .input-group > input[type=text] + select, .wpcf7 .input-group > input[type=search] + select, .wpcf7 .input-group > input[type=url] + select, .wpcf7 .input-group > input[type=tel] + select, .wpcf7 .input-group > input[type=number] + select, .wpcf7 .input-group > input[type=range] + select, .wpcf7 .input-group > input[type=date] + select, .wpcf7 .input-group > input[type=month] + select, .wpcf7 .input-group > input[type=week] + select, .wpcf7 .input-group > input[type=time] + select, .wpcf7 .input-group > input[type=datetime] + select, .wpcf7 .input-group > input[type=datetime-local] + select, .wpcf7 .input-group > input[type=color] + select, .wpcf7 .input-group > input[type=email] + select, .wpcf7 .input-group > input[type=file] + select, .wpcf7 .input-group > input[type=submit] + select, .wpcf7 .input-group > select + select, .wpcf7 .input-group > textarea + select, .wpcf7 .input-group > .wpcf7-validation-errors + select,
-    .wpcf7 .input-group > .form-control + textarea, .wpcf7 .input-group > input[type=text] + textarea, .wpcf7 .input-group > input[type=search] + textarea, .wpcf7 .input-group > input[type=url] + textarea, .wpcf7 .input-group > input[type=tel] + textarea, .wpcf7 .input-group > input[type=number] + textarea, .wpcf7 .input-group > input[type=range] + textarea, .wpcf7 .input-group > input[type=date] + textarea, .wpcf7 .input-group > input[type=month] + textarea, .wpcf7 .input-group > input[type=week] + textarea, .wpcf7 .input-group > input[type=time] + textarea, .wpcf7 .input-group > input[type=datetime] + textarea, .wpcf7 .input-group > input[type=datetime-local] + textarea, .wpcf7 .input-group > input[type=color] + textarea, .wpcf7 .input-group > input[type=email] + textarea, .wpcf7 .input-group > input[type=file] + textarea, .wpcf7 .input-group > input[type=submit] + textarea, .wpcf7 .input-group > select + textarea, .wpcf7 .input-group > textarea + textarea, .wpcf7 .input-group > .wpcf7-validation-errors + textarea, .wpcf7 .input-group > .form-control + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=text] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=search] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=url] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=tel] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=number] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=range] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=date] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=month] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=week] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=time] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=datetime] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=datetime-local] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=color] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=email] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=file] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=submit] + .wpcf7-validation-errors, .wpcf7 .input-group > select + .wpcf7-validation-errors, .wpcf7 .input-group > textarea + .wpcf7-validation-errors, .wpcf7 .input-group > .wpcf7-validation-errors + .wpcf7-validation-errors,
-    .input-group > .form-control + .custom-select, .wpcf7
+    .wpcf7 .input-group > textarea + .form-control, .wpcf7 .input-group > .wpcf7-validation-errors + .form-control, #crm-container .crm-container .input-group > textarea + .form-control, #crm-container .crm-public .input-group > input[type=text] + .form-control, .input-group > .form-control + .form-control, .wpcf7 .input-group > .form-control + input[type=text], .wpcf7 .input-group > input[type=text] + input[type=text], .wpcf7 .input-group > input[type=search] + input[type=text], .wpcf7 .input-group > input[type=url] + input[type=text], .wpcf7 .input-group > input[type=tel] + input[type=text], .wpcf7 .input-group > input[type=number] + input[type=text], .wpcf7 .input-group > input[type=range] + input[type=text], .wpcf7 .input-group > input[type=date] + input[type=text], .wpcf7 .input-group > input[type=month] + input[type=text], .wpcf7 .input-group > input[type=week] + input[type=text], .wpcf7 .input-group > input[type=time] + input[type=text], .wpcf7 .input-group > input[type=datetime] + input[type=text], .wpcf7 .input-group > input[type=datetime-local] + input[type=text], .wpcf7 .input-group > input[type=color] + input[type=text], .wpcf7 .input-group > input[type=email] + input[type=text], .wpcf7 .input-group > input[type=file] + input[type=text], .wpcf7 .input-group > input[type=submit] + input[type=text], .wpcf7 .input-group > select + input[type=text], .wpcf7 .input-group > textarea + input[type=text], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=text], #crm-container .crm-container .wpcf7 .input-group > textarea + input[type=text], .wpcf7 #crm-container .crm-container .input-group > textarea + input[type=text], #crm-container .crm-public .wpcf7 .input-group > input[type=text] + input[type=text], .wpcf7 #crm-container .crm-public .input-group > input[type=text] + input[type=text], .wpcf7 .input-group > .form-control + input[type=text],
+    .wpcf7 .input-group > .form-control + input[type=search], .wpcf7 .input-group > input[type=text] + input[type=search], .wpcf7 .input-group > input[type=search] + input[type=search], .wpcf7 .input-group > input[type=url] + input[type=search], .wpcf7 .input-group > input[type=tel] + input[type=search], .wpcf7 .input-group > input[type=number] + input[type=search], .wpcf7 .input-group > input[type=range] + input[type=search], .wpcf7 .input-group > input[type=date] + input[type=search], .wpcf7 .input-group > input[type=month] + input[type=search], .wpcf7 .input-group > input[type=week] + input[type=search], .wpcf7 .input-group > input[type=time] + input[type=search], .wpcf7 .input-group > input[type=datetime] + input[type=search], .wpcf7 .input-group > input[type=datetime-local] + input[type=search], .wpcf7 .input-group > input[type=color] + input[type=search], .wpcf7 .input-group > input[type=email] + input[type=search], .wpcf7 .input-group > input[type=file] + input[type=search], .wpcf7 .input-group > input[type=submit] + input[type=search], .wpcf7 .input-group > select + input[type=search], .wpcf7 .input-group > textarea + input[type=search], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=search], #crm-container .crm-container
+    .wpcf7 .input-group > textarea + input[type=search],
+    .wpcf7 #crm-container .crm-container .input-group > textarea + input[type=search], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=text] + input[type=search],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=text] + input[type=search],
+    .wpcf7 .input-group > .form-control + input[type=search],
+    .wpcf7 .input-group > .form-control + input[type=url], .wpcf7 .input-group > input[type=text] + input[type=url], .wpcf7 .input-group > input[type=search] + input[type=url], .wpcf7 .input-group > input[type=url] + input[type=url], .wpcf7 .input-group > input[type=tel] + input[type=url], .wpcf7 .input-group > input[type=number] + input[type=url], .wpcf7 .input-group > input[type=range] + input[type=url], .wpcf7 .input-group > input[type=date] + input[type=url], .wpcf7 .input-group > input[type=month] + input[type=url], .wpcf7 .input-group > input[type=week] + input[type=url], .wpcf7 .input-group > input[type=time] + input[type=url], .wpcf7 .input-group > input[type=datetime] + input[type=url], .wpcf7 .input-group > input[type=datetime-local] + input[type=url], .wpcf7 .input-group > input[type=color] + input[type=url], .wpcf7 .input-group > input[type=email] + input[type=url], .wpcf7 .input-group > input[type=file] + input[type=url], .wpcf7 .input-group > input[type=submit] + input[type=url], .wpcf7 .input-group > select + input[type=url], .wpcf7 .input-group > textarea + input[type=url], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=url], #crm-container .crm-container
+    .wpcf7 .input-group > textarea + input[type=url],
+    .wpcf7 #crm-container .crm-container .input-group > textarea + input[type=url], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=text] + input[type=url],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=text] + input[type=url],
+    .wpcf7 .input-group > .form-control + input[type=url],
+    .wpcf7 .input-group > .form-control + input[type=tel], .wpcf7 .input-group > input[type=text] + input[type=tel], .wpcf7 .input-group > input[type=search] + input[type=tel], .wpcf7 .input-group > input[type=url] + input[type=tel], .wpcf7 .input-group > input[type=tel] + input[type=tel], .wpcf7 .input-group > input[type=number] + input[type=tel], .wpcf7 .input-group > input[type=range] + input[type=tel], .wpcf7 .input-group > input[type=date] + input[type=tel], .wpcf7 .input-group > input[type=month] + input[type=tel], .wpcf7 .input-group > input[type=week] + input[type=tel], .wpcf7 .input-group > input[type=time] + input[type=tel], .wpcf7 .input-group > input[type=datetime] + input[type=tel], .wpcf7 .input-group > input[type=datetime-local] + input[type=tel], .wpcf7 .input-group > input[type=color] + input[type=tel], .wpcf7 .input-group > input[type=email] + input[type=tel], .wpcf7 .input-group > input[type=file] + input[type=tel], .wpcf7 .input-group > input[type=submit] + input[type=tel], .wpcf7 .input-group > select + input[type=tel], .wpcf7 .input-group > textarea + input[type=tel], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=tel], #crm-container .crm-container
+    .wpcf7 .input-group > textarea + input[type=tel],
+    .wpcf7 #crm-container .crm-container .input-group > textarea + input[type=tel], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=text] + input[type=tel],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=text] + input[type=tel],
+    .wpcf7 .input-group > .form-control + input[type=tel],
+    .wpcf7 .input-group > .form-control + input[type=number], .wpcf7 .input-group > input[type=text] + input[type=number], .wpcf7 .input-group > input[type=search] + input[type=number], .wpcf7 .input-group > input[type=url] + input[type=number], .wpcf7 .input-group > input[type=tel] + input[type=number], .wpcf7 .input-group > input[type=number] + input[type=number], .wpcf7 .input-group > input[type=range] + input[type=number], .wpcf7 .input-group > input[type=date] + input[type=number], .wpcf7 .input-group > input[type=month] + input[type=number], .wpcf7 .input-group > input[type=week] + input[type=number], .wpcf7 .input-group > input[type=time] + input[type=number], .wpcf7 .input-group > input[type=datetime] + input[type=number], .wpcf7 .input-group > input[type=datetime-local] + input[type=number], .wpcf7 .input-group > input[type=color] + input[type=number], .wpcf7 .input-group > input[type=email] + input[type=number], .wpcf7 .input-group > input[type=file] + input[type=number], .wpcf7 .input-group > input[type=submit] + input[type=number], .wpcf7 .input-group > select + input[type=number], .wpcf7 .input-group > textarea + input[type=number], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=number], #crm-container .crm-container
+    .wpcf7 .input-group > textarea + input[type=number],
+    .wpcf7 #crm-container .crm-container .input-group > textarea + input[type=number], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=text] + input[type=number],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=text] + input[type=number],
+    .wpcf7 .input-group > .form-control + input[type=number],
+    .wpcf7 .input-group > .form-control + input[type=range], .wpcf7 .input-group > input[type=text] + input[type=range], .wpcf7 .input-group > input[type=search] + input[type=range], .wpcf7 .input-group > input[type=url] + input[type=range], .wpcf7 .input-group > input[type=tel] + input[type=range], .wpcf7 .input-group > input[type=number] + input[type=range], .wpcf7 .input-group > input[type=range] + input[type=range], .wpcf7 .input-group > input[type=date] + input[type=range], .wpcf7 .input-group > input[type=month] + input[type=range], .wpcf7 .input-group > input[type=week] + input[type=range], .wpcf7 .input-group > input[type=time] + input[type=range], .wpcf7 .input-group > input[type=datetime] + input[type=range], .wpcf7 .input-group > input[type=datetime-local] + input[type=range], .wpcf7 .input-group > input[type=color] + input[type=range], .wpcf7 .input-group > input[type=email] + input[type=range], .wpcf7 .input-group > input[type=file] + input[type=range], .wpcf7 .input-group > input[type=submit] + input[type=range], .wpcf7 .input-group > select + input[type=range], .wpcf7 .input-group > textarea + input[type=range], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=range], #crm-container .crm-container
+    .wpcf7 .input-group > textarea + input[type=range],
+    .wpcf7 #crm-container .crm-container .input-group > textarea + input[type=range], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=text] + input[type=range],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=text] + input[type=range],
+    .wpcf7 .input-group > .form-control + input[type=range],
+    .wpcf7 .input-group > .form-control + input[type=date], .wpcf7 .input-group > input[type=text] + input[type=date], .wpcf7 .input-group > input[type=search] + input[type=date], .wpcf7 .input-group > input[type=url] + input[type=date], .wpcf7 .input-group > input[type=tel] + input[type=date], .wpcf7 .input-group > input[type=number] + input[type=date], .wpcf7 .input-group > input[type=range] + input[type=date], .wpcf7 .input-group > input[type=date] + input[type=date], .wpcf7 .input-group > input[type=month] + input[type=date], .wpcf7 .input-group > input[type=week] + input[type=date], .wpcf7 .input-group > input[type=time] + input[type=date], .wpcf7 .input-group > input[type=datetime] + input[type=date], .wpcf7 .input-group > input[type=datetime-local] + input[type=date], .wpcf7 .input-group > input[type=color] + input[type=date], .wpcf7 .input-group > input[type=email] + input[type=date], .wpcf7 .input-group > input[type=file] + input[type=date], .wpcf7 .input-group > input[type=submit] + input[type=date], .wpcf7 .input-group > select + input[type=date], .wpcf7 .input-group > textarea + input[type=date], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=date], #crm-container .crm-container
+    .wpcf7 .input-group > textarea + input[type=date],
+    .wpcf7 #crm-container .crm-container .input-group > textarea + input[type=date], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=text] + input[type=date],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=text] + input[type=date],
+    .wpcf7 .input-group > .form-control + input[type=date],
+    .wpcf7 .input-group > .form-control + input[type=month], .wpcf7 .input-group > input[type=text] + input[type=month], .wpcf7 .input-group > input[type=search] + input[type=month], .wpcf7 .input-group > input[type=url] + input[type=month], .wpcf7 .input-group > input[type=tel] + input[type=month], .wpcf7 .input-group > input[type=number] + input[type=month], .wpcf7 .input-group > input[type=range] + input[type=month], .wpcf7 .input-group > input[type=date] + input[type=month], .wpcf7 .input-group > input[type=month] + input[type=month], .wpcf7 .input-group > input[type=week] + input[type=month], .wpcf7 .input-group > input[type=time] + input[type=month], .wpcf7 .input-group > input[type=datetime] + input[type=month], .wpcf7 .input-group > input[type=datetime-local] + input[type=month], .wpcf7 .input-group > input[type=color] + input[type=month], .wpcf7 .input-group > input[type=email] + input[type=month], .wpcf7 .input-group > input[type=file] + input[type=month], .wpcf7 .input-group > input[type=submit] + input[type=month], .wpcf7 .input-group > select + input[type=month], .wpcf7 .input-group > textarea + input[type=month], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=month], #crm-container .crm-container
+    .wpcf7 .input-group > textarea + input[type=month],
+    .wpcf7 #crm-container .crm-container .input-group > textarea + input[type=month], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=text] + input[type=month],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=text] + input[type=month],
+    .wpcf7 .input-group > .form-control + input[type=month],
+    .wpcf7 .input-group > .form-control + input[type=week], .wpcf7 .input-group > input[type=text] + input[type=week], .wpcf7 .input-group > input[type=search] + input[type=week], .wpcf7 .input-group > input[type=url] + input[type=week], .wpcf7 .input-group > input[type=tel] + input[type=week], .wpcf7 .input-group > input[type=number] + input[type=week], .wpcf7 .input-group > input[type=range] + input[type=week], .wpcf7 .input-group > input[type=date] + input[type=week], .wpcf7 .input-group > input[type=month] + input[type=week], .wpcf7 .input-group > input[type=week] + input[type=week], .wpcf7 .input-group > input[type=time] + input[type=week], .wpcf7 .input-group > input[type=datetime] + input[type=week], .wpcf7 .input-group > input[type=datetime-local] + input[type=week], .wpcf7 .input-group > input[type=color] + input[type=week], .wpcf7 .input-group > input[type=email] + input[type=week], .wpcf7 .input-group > input[type=file] + input[type=week], .wpcf7 .input-group > input[type=submit] + input[type=week], .wpcf7 .input-group > select + input[type=week], .wpcf7 .input-group > textarea + input[type=week], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=week], #crm-container .crm-container
+    .wpcf7 .input-group > textarea + input[type=week],
+    .wpcf7 #crm-container .crm-container .input-group > textarea + input[type=week], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=text] + input[type=week],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=text] + input[type=week],
+    .wpcf7 .input-group > .form-control + input[type=week],
+    .wpcf7 .input-group > .form-control + input[type=time], .wpcf7 .input-group > input[type=text] + input[type=time], .wpcf7 .input-group > input[type=search] + input[type=time], .wpcf7 .input-group > input[type=url] + input[type=time], .wpcf7 .input-group > input[type=tel] + input[type=time], .wpcf7 .input-group > input[type=number] + input[type=time], .wpcf7 .input-group > input[type=range] + input[type=time], .wpcf7 .input-group > input[type=date] + input[type=time], .wpcf7 .input-group > input[type=month] + input[type=time], .wpcf7 .input-group > input[type=week] + input[type=time], .wpcf7 .input-group > input[type=time] + input[type=time], .wpcf7 .input-group > input[type=datetime] + input[type=time], .wpcf7 .input-group > input[type=datetime-local] + input[type=time], .wpcf7 .input-group > input[type=color] + input[type=time], .wpcf7 .input-group > input[type=email] + input[type=time], .wpcf7 .input-group > input[type=file] + input[type=time], .wpcf7 .input-group > input[type=submit] + input[type=time], .wpcf7 .input-group > select + input[type=time], .wpcf7 .input-group > textarea + input[type=time], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=time], #crm-container .crm-container
+    .wpcf7 .input-group > textarea + input[type=time],
+    .wpcf7 #crm-container .crm-container .input-group > textarea + input[type=time], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=text] + input[type=time],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=text] + input[type=time],
+    .wpcf7 .input-group > .form-control + input[type=time],
+    .wpcf7 .input-group > .form-control + input[type=datetime], .wpcf7 .input-group > input[type=text] + input[type=datetime], .wpcf7 .input-group > input[type=search] + input[type=datetime], .wpcf7 .input-group > input[type=url] + input[type=datetime], .wpcf7 .input-group > input[type=tel] + input[type=datetime], .wpcf7 .input-group > input[type=number] + input[type=datetime], .wpcf7 .input-group > input[type=range] + input[type=datetime], .wpcf7 .input-group > input[type=date] + input[type=datetime], .wpcf7 .input-group > input[type=month] + input[type=datetime], .wpcf7 .input-group > input[type=week] + input[type=datetime], .wpcf7 .input-group > input[type=time] + input[type=datetime], .wpcf7 .input-group > input[type=datetime] + input[type=datetime], .wpcf7 .input-group > input[type=datetime-local] + input[type=datetime], .wpcf7 .input-group > input[type=color] + input[type=datetime], .wpcf7 .input-group > input[type=email] + input[type=datetime], .wpcf7 .input-group > input[type=file] + input[type=datetime], .wpcf7 .input-group > input[type=submit] + input[type=datetime], .wpcf7 .input-group > select + input[type=datetime], .wpcf7 .input-group > textarea + input[type=datetime], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=datetime], #crm-container .crm-container
+    .wpcf7 .input-group > textarea + input[type=datetime],
+    .wpcf7 #crm-container .crm-container .input-group > textarea + input[type=datetime], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=text] + input[type=datetime],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=text] + input[type=datetime],
+    .wpcf7 .input-group > .form-control + input[type=datetime],
+    .wpcf7 .input-group > .form-control + input[type=datetime-local], .wpcf7 .input-group > input[type=text] + input[type=datetime-local], .wpcf7 .input-group > input[type=search] + input[type=datetime-local], .wpcf7 .input-group > input[type=url] + input[type=datetime-local], .wpcf7 .input-group > input[type=tel] + input[type=datetime-local], .wpcf7 .input-group > input[type=number] + input[type=datetime-local], .wpcf7 .input-group > input[type=range] + input[type=datetime-local], .wpcf7 .input-group > input[type=date] + input[type=datetime-local], .wpcf7 .input-group > input[type=month] + input[type=datetime-local], .wpcf7 .input-group > input[type=week] + input[type=datetime-local], .wpcf7 .input-group > input[type=time] + input[type=datetime-local], .wpcf7 .input-group > input[type=datetime] + input[type=datetime-local], .wpcf7 .input-group > input[type=datetime-local] + input[type=datetime-local], .wpcf7 .input-group > input[type=color] + input[type=datetime-local], .wpcf7 .input-group > input[type=email] + input[type=datetime-local], .wpcf7 .input-group > input[type=file] + input[type=datetime-local], .wpcf7 .input-group > input[type=submit] + input[type=datetime-local], .wpcf7 .input-group > select + input[type=datetime-local], .wpcf7 .input-group > textarea + input[type=datetime-local], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=datetime-local], #crm-container .crm-container
+    .wpcf7 .input-group > textarea + input[type=datetime-local],
+    .wpcf7 #crm-container .crm-container .input-group > textarea + input[type=datetime-local], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=text] + input[type=datetime-local],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=text] + input[type=datetime-local],
+    .wpcf7 .input-group > .form-control + input[type=datetime-local],
+    .wpcf7 .input-group > .form-control + input[type=color], .wpcf7 .input-group > input[type=text] + input[type=color], .wpcf7 .input-group > input[type=search] + input[type=color], .wpcf7 .input-group > input[type=url] + input[type=color], .wpcf7 .input-group > input[type=tel] + input[type=color], .wpcf7 .input-group > input[type=number] + input[type=color], .wpcf7 .input-group > input[type=range] + input[type=color], .wpcf7 .input-group > input[type=date] + input[type=color], .wpcf7 .input-group > input[type=month] + input[type=color], .wpcf7 .input-group > input[type=week] + input[type=color], .wpcf7 .input-group > input[type=time] + input[type=color], .wpcf7 .input-group > input[type=datetime] + input[type=color], .wpcf7 .input-group > input[type=datetime-local] + input[type=color], .wpcf7 .input-group > input[type=color] + input[type=color], .wpcf7 .input-group > input[type=email] + input[type=color], .wpcf7 .input-group > input[type=file] + input[type=color], .wpcf7 .input-group > input[type=submit] + input[type=color], .wpcf7 .input-group > select + input[type=color], .wpcf7 .input-group > textarea + input[type=color], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=color], #crm-container .crm-container
+    .wpcf7 .input-group > textarea + input[type=color],
+    .wpcf7 #crm-container .crm-container .input-group > textarea + input[type=color], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=text] + input[type=color],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=text] + input[type=color],
+    .wpcf7 .input-group > .form-control + input[type=color],
+    .wpcf7 .input-group > .form-control + input[type=email], .wpcf7 .input-group > input[type=text] + input[type=email], .wpcf7 .input-group > input[type=search] + input[type=email], .wpcf7 .input-group > input[type=url] + input[type=email], .wpcf7 .input-group > input[type=tel] + input[type=email], .wpcf7 .input-group > input[type=number] + input[type=email], .wpcf7 .input-group > input[type=range] + input[type=email], .wpcf7 .input-group > input[type=date] + input[type=email], .wpcf7 .input-group > input[type=month] + input[type=email], .wpcf7 .input-group > input[type=week] + input[type=email], .wpcf7 .input-group > input[type=time] + input[type=email], .wpcf7 .input-group > input[type=datetime] + input[type=email], .wpcf7 .input-group > input[type=datetime-local] + input[type=email], .wpcf7 .input-group > input[type=color] + input[type=email], .wpcf7 .input-group > input[type=email] + input[type=email], .wpcf7 .input-group > input[type=file] + input[type=email], .wpcf7 .input-group > input[type=submit] + input[type=email], .wpcf7 .input-group > select + input[type=email], .wpcf7 .input-group > textarea + input[type=email], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=email], #crm-container .crm-container
+    .wpcf7 .input-group > textarea + input[type=email],
+    .wpcf7 #crm-container .crm-container .input-group > textarea + input[type=email], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=text] + input[type=email],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=text] + input[type=email],
+    .wpcf7 .input-group > .form-control + input[type=email],
+    .wpcf7 .input-group > .form-control + input[type=file], .wpcf7 .input-group > input[type=text] + input[type=file], .wpcf7 .input-group > input[type=search] + input[type=file], .wpcf7 .input-group > input[type=url] + input[type=file], .wpcf7 .input-group > input[type=tel] + input[type=file], .wpcf7 .input-group > input[type=number] + input[type=file], .wpcf7 .input-group > input[type=range] + input[type=file], .wpcf7 .input-group > input[type=date] + input[type=file], .wpcf7 .input-group > input[type=month] + input[type=file], .wpcf7 .input-group > input[type=week] + input[type=file], .wpcf7 .input-group > input[type=time] + input[type=file], .wpcf7 .input-group > input[type=datetime] + input[type=file], .wpcf7 .input-group > input[type=datetime-local] + input[type=file], .wpcf7 .input-group > input[type=color] + input[type=file], .wpcf7 .input-group > input[type=email] + input[type=file], .wpcf7 .input-group > input[type=file] + input[type=file], .wpcf7 .input-group > input[type=submit] + input[type=file], .wpcf7 .input-group > select + input[type=file], .wpcf7 .input-group > textarea + input[type=file], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=file], #crm-container .crm-container
+    .wpcf7 .input-group > textarea + input[type=file],
+    .wpcf7 #crm-container .crm-container .input-group > textarea + input[type=file], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=text] + input[type=file],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=text] + input[type=file],
+    .wpcf7 .input-group > .form-control + input[type=file],
+    .wpcf7 .input-group > .form-control + input[type=submit], .wpcf7 .input-group > input[type=text] + input[type=submit], .wpcf7 .input-group > input[type=search] + input[type=submit], .wpcf7 .input-group > input[type=url] + input[type=submit], .wpcf7 .input-group > input[type=tel] + input[type=submit], .wpcf7 .input-group > input[type=number] + input[type=submit], .wpcf7 .input-group > input[type=range] + input[type=submit], .wpcf7 .input-group > input[type=date] + input[type=submit], .wpcf7 .input-group > input[type=month] + input[type=submit], .wpcf7 .input-group > input[type=week] + input[type=submit], .wpcf7 .input-group > input[type=time] + input[type=submit], .wpcf7 .input-group > input[type=datetime] + input[type=submit], .wpcf7 .input-group > input[type=datetime-local] + input[type=submit], .wpcf7 .input-group > input[type=color] + input[type=submit], .wpcf7 .input-group > input[type=email] + input[type=submit], .wpcf7 .input-group > input[type=file] + input[type=submit], .wpcf7 .input-group > input[type=submit] + input[type=submit], .wpcf7 .input-group > select + input[type=submit], .wpcf7 .input-group > textarea + input[type=submit], .wpcf7 .input-group > .wpcf7-validation-errors + input[type=submit], #crm-container .crm-container
+    .wpcf7 .input-group > textarea + input[type=submit],
+    .wpcf7 #crm-container .crm-container .input-group > textarea + input[type=submit], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=text] + input[type=submit],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=text] + input[type=submit],
+    .wpcf7 .input-group > .form-control + input[type=submit],
+    .wpcf7 .input-group > .form-control + select, .wpcf7 .input-group > input[type=text] + select, .wpcf7 .input-group > input[type=search] + select, .wpcf7 .input-group > input[type=url] + select, .wpcf7 .input-group > input[type=tel] + select, .wpcf7 .input-group > input[type=number] + select, .wpcf7 .input-group > input[type=range] + select, .wpcf7 .input-group > input[type=date] + select, .wpcf7 .input-group > input[type=month] + select, .wpcf7 .input-group > input[type=week] + select, .wpcf7 .input-group > input[type=time] + select, .wpcf7 .input-group > input[type=datetime] + select, .wpcf7 .input-group > input[type=datetime-local] + select, .wpcf7 .input-group > input[type=color] + select, .wpcf7 .input-group > input[type=email] + select, .wpcf7 .input-group > input[type=file] + select, .wpcf7 .input-group > input[type=submit] + select, .wpcf7 .input-group > select + select, .wpcf7 .input-group > textarea + select, .wpcf7 .input-group > .wpcf7-validation-errors + select, #crm-container .crm-container
+    .wpcf7 .input-group > textarea + select,
+    .wpcf7 #crm-container .crm-container .input-group > textarea + select, #crm-container .crm-public
+    .wpcf7 .input-group > input[type=text] + select,
+    .wpcf7 #crm-container .crm-public .input-group > input[type=text] + select,
+    .wpcf7 .input-group > .form-control + select,
+    .wpcf7 .input-group > .form-control + textarea, .wpcf7 .input-group > input[type=text] + textarea, .wpcf7 .input-group > input[type=search] + textarea, .wpcf7 .input-group > input[type=url] + textarea, .wpcf7 .input-group > input[type=tel] + textarea, .wpcf7 .input-group > input[type=number] + textarea, .wpcf7 .input-group > input[type=range] + textarea, .wpcf7 .input-group > input[type=date] + textarea, .wpcf7 .input-group > input[type=month] + textarea, .wpcf7 .input-group > input[type=week] + textarea, .wpcf7 .input-group > input[type=time] + textarea, .wpcf7 .input-group > input[type=datetime] + textarea, .wpcf7 .input-group > input[type=datetime-local] + textarea, .wpcf7 .input-group > input[type=color] + textarea, .wpcf7 .input-group > input[type=email] + textarea, .wpcf7 .input-group > input[type=file] + textarea, .wpcf7 .input-group > input[type=submit] + textarea, .wpcf7 .input-group > select + textarea, .wpcf7 .input-group > textarea + textarea, .wpcf7 .input-group > .wpcf7-validation-errors + textarea, #crm-container .crm-container
+    .wpcf7 .input-group > textarea + textarea,
+    .wpcf7 #crm-container .crm-container .input-group > textarea + textarea, #crm-container .crm-public
+    .wpcf7 .input-group > input[type=text] + textarea,
+    .wpcf7 #crm-container .crm-public .input-group > input[type=text] + textarea,
+    .wpcf7 .input-group > .form-control + textarea, .wpcf7 .input-group > .form-control + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=text] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=search] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=url] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=tel] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=number] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=range] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=date] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=month] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=week] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=time] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=datetime] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=datetime-local] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=color] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=email] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=file] + .wpcf7-validation-errors, .wpcf7 .input-group > input[type=submit] + .wpcf7-validation-errors, .wpcf7 .input-group > select + .wpcf7-validation-errors, .wpcf7 .input-group > textarea + .wpcf7-validation-errors, .wpcf7 .input-group > .wpcf7-validation-errors + .wpcf7-validation-errors, #crm-container .crm-container .wpcf7 .input-group > textarea + .wpcf7-validation-errors, .wpcf7 #crm-container .crm-container .input-group > textarea + .wpcf7-validation-errors, #crm-container .crm-public .wpcf7 .input-group > input[type=text] + .wpcf7-validation-errors, .wpcf7 #crm-container .crm-public .input-group > input[type=text] + .wpcf7-validation-errors, .wpcf7 .input-group > .form-control + .wpcf7-validation-errors, #crm-container .crm-container .input-group > .form-control + textarea, .wpcf7 #crm-container .crm-container .input-group > input[type=text] + textarea, #crm-container .crm-container .wpcf7 .input-group > input[type=text] + textarea,
+    .wpcf7 #crm-container .crm-container .input-group > input[type=search] + textarea, #crm-container .crm-container
+    .wpcf7 .input-group > input[type=search] + textarea,
+    .wpcf7 #crm-container .crm-container .input-group > input[type=url] + textarea, #crm-container .crm-container
+    .wpcf7 .input-group > input[type=url] + textarea,
+    .wpcf7 #crm-container .crm-container .input-group > input[type=tel] + textarea, #crm-container .crm-container
+    .wpcf7 .input-group > input[type=tel] + textarea,
+    .wpcf7 #crm-container .crm-container .input-group > input[type=number] + textarea, #crm-container .crm-container
+    .wpcf7 .input-group > input[type=number] + textarea,
+    .wpcf7 #crm-container .crm-container .input-group > input[type=range] + textarea, #crm-container .crm-container
+    .wpcf7 .input-group > input[type=range] + textarea,
+    .wpcf7 #crm-container .crm-container .input-group > input[type=date] + textarea, #crm-container .crm-container
+    .wpcf7 .input-group > input[type=date] + textarea,
+    .wpcf7 #crm-container .crm-container .input-group > input[type=month] + textarea, #crm-container .crm-container
+    .wpcf7 .input-group > input[type=month] + textarea,
+    .wpcf7 #crm-container .crm-container .input-group > input[type=week] + textarea, #crm-container .crm-container
+    .wpcf7 .input-group > input[type=week] + textarea,
+    .wpcf7 #crm-container .crm-container .input-group > input[type=time] + textarea, #crm-container .crm-container
+    .wpcf7 .input-group > input[type=time] + textarea,
+    .wpcf7 #crm-container .crm-container .input-group > input[type=datetime] + textarea, #crm-container .crm-container
+    .wpcf7 .input-group > input[type=datetime] + textarea,
+    .wpcf7 #crm-container .crm-container .input-group > input[type=datetime-local] + textarea, #crm-container .crm-container
+    .wpcf7 .input-group > input[type=datetime-local] + textarea,
+    .wpcf7 #crm-container .crm-container .input-group > input[type=color] + textarea, #crm-container .crm-container
+    .wpcf7 .input-group > input[type=color] + textarea,
+    .wpcf7 #crm-container .crm-container .input-group > input[type=email] + textarea, #crm-container .crm-container
+    .wpcf7 .input-group > input[type=email] + textarea,
+    .wpcf7 #crm-container .crm-container .input-group > input[type=file] + textarea, #crm-container .crm-container
+    .wpcf7 .input-group > input[type=file] + textarea,
+    .wpcf7 #crm-container .crm-container .input-group > input[type=submit] + textarea, #crm-container .crm-container
+    .wpcf7 .input-group > input[type=submit] + textarea,
+    .wpcf7 #crm-container .crm-container .input-group > select + textarea, #crm-container .crm-container
+    .wpcf7 .input-group > select + textarea,
+    .wpcf7 #crm-container .crm-container .input-group > textarea + textarea, #crm-container .crm-container
+    .wpcf7 .input-group > textarea + textarea, .wpcf7 #crm-container .crm-container .input-group > .wpcf7-validation-errors + textarea, #crm-container .crm-container .wpcf7 .input-group > .wpcf7-validation-errors + textarea, #crm-container .crm-container .input-group > textarea + textarea, #crm-container .crm-public .crm-container .input-group > input[type=text] + textarea, #crm-container .crm-container .crm-public .input-group > input[type=text] + textarea, #crm-container .crm-container .input-group > .form-control + textarea, #crm-container .crm-public .input-group > .form-control + input[type=text], .wpcf7 #crm-container .crm-public .input-group > input[type=text] + input[type=text], #crm-container .crm-public .wpcf7 .input-group > input[type=text] + input[type=text],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=search] + input[type=text], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=search] + input[type=text],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=url] + input[type=text], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=url] + input[type=text],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=tel] + input[type=text], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=tel] + input[type=text],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=number] + input[type=text], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=number] + input[type=text],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=range] + input[type=text], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=range] + input[type=text],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=date] + input[type=text], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=date] + input[type=text],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=month] + input[type=text], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=month] + input[type=text],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=week] + input[type=text], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=week] + input[type=text],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=time] + input[type=text], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=time] + input[type=text],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=datetime] + input[type=text], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=datetime] + input[type=text],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=datetime-local] + input[type=text], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=datetime-local] + input[type=text],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=color] + input[type=text], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=color] + input[type=text],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=email] + input[type=text], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=email] + input[type=text],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=file] + input[type=text], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=file] + input[type=text],
+    .wpcf7 #crm-container .crm-public .input-group > input[type=submit] + input[type=text], #crm-container .crm-public
+    .wpcf7 .input-group > input[type=submit] + input[type=text],
+    .wpcf7 #crm-container .crm-public .input-group > select + input[type=text], #crm-container .crm-public
+    .wpcf7 .input-group > select + input[type=text],
+    .wpcf7 #crm-container .crm-public .input-group > textarea + input[type=text], #crm-container .crm-public
+    .wpcf7 .input-group > textarea + input[type=text], .wpcf7 #crm-container .crm-public .input-group > .wpcf7-validation-errors + input[type=text], #crm-container .crm-public .wpcf7 .input-group > .wpcf7-validation-errors + input[type=text], #crm-container .crm-container .crm-public .input-group > textarea + input[type=text], #crm-container .crm-public .crm-container .input-group > textarea + input[type=text], #crm-container .crm-public .input-group > input[type=text] + input[type=text], #crm-container .crm-public .input-group > .form-control + input[type=text], .input-group > .form-control + .form-control, .wpcf7 .input-group > input[type=text] + .form-control,
+    .wpcf7 .input-group > input[type=search] + .form-control,
+    .wpcf7 .input-group > input[type=url] + .form-control,
+    .wpcf7 .input-group > input[type=tel] + .form-control,
+    .wpcf7 .input-group > input[type=number] + .form-control,
+    .wpcf7 .input-group > input[type=range] + .form-control,
+    .wpcf7 .input-group > input[type=date] + .form-control,
+    .wpcf7 .input-group > input[type=month] + .form-control,
+    .wpcf7 .input-group > input[type=week] + .form-control,
+    .wpcf7 .input-group > input[type=time] + .form-control,
+    .wpcf7 .input-group > input[type=datetime] + .form-control,
+    .wpcf7 .input-group > input[type=datetime-local] + .form-control,
+    .wpcf7 .input-group > input[type=color] + .form-control,
+    .wpcf7 .input-group > input[type=email] + .form-control,
+    .wpcf7 .input-group > input[type=file] + .form-control,
+    .wpcf7 .input-group > input[type=submit] + .form-control,
+    .wpcf7 .input-group > select + .form-control,
+    .wpcf7 .input-group > textarea + .form-control, .wpcf7 .input-group > .wpcf7-validation-errors + .form-control, #crm-container .crm-container .input-group > textarea + .form-control, #crm-container .crm-public .input-group > input[type=text] + .form-control, .input-group > .form-control + .form-control, .wpcf7
     .input-group > input[type=text] + .custom-select,
     .wpcf7
     .input-group > input[type=search] + .custom-select,
@@ -3162,8 +3388,10 @@ tbody.collapse.show {
     .input-group > select + .custom-select,
     .wpcf7
     .input-group > textarea + .custom-select, .wpcf7
-    .input-group > .wpcf7-validation-errors + .custom-select,
-    .input-group > .form-control + .custom-file, .wpcf7
+    .input-group > .wpcf7-validation-errors + .custom-select, #crm-container .crm-container
+    .input-group > textarea + .custom-select, #crm-container .crm-public
+    .input-group > input[type=text] + .custom-select,
+    .input-group > .form-control + .custom-select, .wpcf7
     .input-group > input[type=text] + .custom-file,
     .wpcf7
     .input-group > input[type=search] + .custom-file,
@@ -3199,8 +3427,10 @@ tbody.collapse.show {
     .input-group > select + .custom-file,
     .wpcf7
     .input-group > textarea + .custom-file, .wpcf7
-    .input-group > .wpcf7-validation-errors + .custom-file,
-    .input-group > .custom-select + .form-control, .wpcf7
+    .input-group > .wpcf7-validation-errors + .custom-file, #crm-container .crm-container
+    .input-group > textarea + .custom-file, #crm-container .crm-public
+    .input-group > input[type=text] + .custom-file,
+    .input-group > .form-control + .custom-file, .wpcf7
     .input-group > .custom-select + input[type=text],
     .wpcf7
     .input-group > .custom-select + input[type=search],
@@ -3236,10 +3466,12 @@ tbody.collapse.show {
     .input-group > .custom-select + select,
     .wpcf7
     .input-group > .custom-select + textarea, .wpcf7
-    .input-group > .custom-select + .wpcf7-validation-errors,
+    .input-group > .custom-select + .wpcf7-validation-errors, #crm-container .crm-container
+    .input-group > .custom-select + textarea, #crm-container .crm-public
+    .input-group > .custom-select + input[type=text],
+    .input-group > .custom-select + .form-control,
     .input-group > .custom-select + .custom-select,
-    .input-group > .custom-select + .custom-file,
-    .input-group > .custom-file + .form-control, .wpcf7
+    .input-group > .custom-select + .custom-file, .wpcf7
     .input-group > .custom-file + input[type=text],
     .wpcf7
     .input-group > .custom-file + input[type=search],
@@ -3275,11 +3507,14 @@ tbody.collapse.show {
     .input-group > .custom-file + select,
     .wpcf7
     .input-group > .custom-file + textarea, .wpcf7
-    .input-group > .custom-file + .wpcf7-validation-errors,
+    .input-group > .custom-file + .wpcf7-validation-errors, #crm-container .crm-container
+    .input-group > .custom-file + textarea, #crm-container .crm-public
+    .input-group > .custom-file + input[type=text],
+    .input-group > .custom-file + .form-control,
     .input-group > .custom-file + .custom-select,
     .input-group > .custom-file + .custom-file {
       margin-left: -1px; }
-  .input-group > .form-control:not(:last-child), .wpcf7 .input-group > input[type=text]:not(:last-child),
+  .wpcf7 .input-group > input[type=text]:not(:last-child),
   .wpcf7 .input-group > input[type=search]:not(:last-child),
   .wpcf7 .input-group > input[type=url]:not(:last-child),
   .wpcf7 .input-group > input[type=tel]:not(:last-child),
@@ -3296,11 +3531,11 @@ tbody.collapse.show {
   .wpcf7 .input-group > input[type=file]:not(:last-child),
   .wpcf7 .input-group > input[type=submit]:not(:last-child),
   .wpcf7 .input-group > select:not(:last-child),
-  .wpcf7 .input-group > textarea:not(:last-child), .wpcf7 .input-group > .wpcf7-validation-errors:not(:last-child),
+  .wpcf7 .input-group > textarea:not(:last-child), .wpcf7 .input-group > .wpcf7-validation-errors:not(:last-child), #crm-container .crm-container .input-group > textarea:not(:last-child), #crm-container .crm-public .input-group > input[type=text]:not(:last-child), .input-group > .form-control:not(:last-child),
   .input-group > .custom-select:not(:last-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0; }
-  .input-group > .form-control:not(:first-child), .wpcf7 .input-group > input[type=text]:not(:first-child),
+  .wpcf7 .input-group > input[type=text]:not(:first-child),
   .wpcf7 .input-group > input[type=search]:not(:first-child),
   .wpcf7 .input-group > input[type=url]:not(:first-child),
   .wpcf7 .input-group > input[type=tel]:not(:first-child),
@@ -3317,7 +3552,7 @@ tbody.collapse.show {
   .wpcf7 .input-group > input[type=file]:not(:first-child),
   .wpcf7 .input-group > input[type=submit]:not(:first-child),
   .wpcf7 .input-group > select:not(:first-child),
-  .wpcf7 .input-group > textarea:not(:first-child), .wpcf7 .input-group > .wpcf7-validation-errors:not(:first-child),
+  .wpcf7 .input-group > textarea:not(:first-child), .wpcf7 .input-group > .wpcf7-validation-errors:not(:first-child), #crm-container .crm-container .input-group > textarea:not(:first-child), #crm-container .crm-public .input-group > input[type=text]:not(:first-child), .input-group > .form-control:not(:first-child),
   .input-group > .custom-select:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0; }
@@ -3336,34 +3571,58 @@ tbody.collapse.show {
 .input-group-prepend,
 .input-group-append {
   display: flex; }
-  .input-group-prepend .btn, .input-group-prepend .wpcf7 input[type=submit], .wpcf7 .input-group-prepend input[type=submit],
+  .input-group-prepend .btn, .input-group-prepend .wpcf7 input[type=submit], .wpcf7 .input-group-prepend input[type=submit], .input-group-prepend .crm-container .crm-button, .crm-container .input-group-prepend .crm-button,
   .input-group-append .btn,
   .input-group-append .wpcf7 input[type=submit], .wpcf7
-  .input-group-append input[type=submit] {
+  .input-group-append input[type=submit],
+  .input-group-append .crm-container .crm-button, .crm-container
+  .input-group-append .crm-button {
     position: relative;
     z-index: 2; }
-  .input-group-prepend .btn + .btn, .input-group-prepend .wpcf7 input[type=submit] + .btn, .wpcf7 .input-group-prepend input[type=submit] + .btn, .input-group-prepend .wpcf7 .btn + input[type=submit], .wpcf7 .input-group-prepend .btn + input[type=submit], .input-group-prepend .wpcf7 input[type=submit] + input[type=submit], .wpcf7 .input-group-prepend input[type=submit] + input[type=submit],
+  .input-group-prepend .btn + .btn, .input-group-prepend .wpcf7 input[type=submit] + .btn, .wpcf7 .input-group-prepend input[type=submit] + .btn, .input-group-prepend .crm-container .crm-button + .btn, .crm-container .input-group-prepend .crm-button + .btn, .input-group-prepend .wpcf7 .btn + input[type=submit], .wpcf7 .input-group-prepend .btn + input[type=submit], .input-group-prepend .wpcf7 input[type=submit] + input[type=submit], .wpcf7 .input-group-prepend input[type=submit] + input[type=submit], .input-group-prepend .crm-container .wpcf7 .crm-button + input[type=submit], .wpcf7 .input-group-prepend .crm-container .crm-button + input[type=submit], .crm-container .input-group-prepend .wpcf7 .crm-button + input[type=submit], .wpcf7 .crm-container .input-group-prepend .crm-button + input[type=submit], .input-group-prepend .crm-container .btn + .crm-button, .crm-container .input-group-prepend .btn + .crm-button, .input-group-prepend .wpcf7 .crm-container input[type=submit] + .crm-button, .crm-container .input-group-prepend .wpcf7 input[type=submit] + .crm-button, .wpcf7 .input-group-prepend .crm-container input[type=submit] + .crm-button, .crm-container .wpcf7 .input-group-prepend input[type=submit] + .crm-button, .input-group-prepend .crm-container .crm-button + .crm-button, .crm-container .input-group-prepend .crm-button + .crm-button,
   .input-group-prepend .btn + .input-group-text,
   .input-group-prepend .wpcf7 input[type=submit] + .input-group-text, .wpcf7
   .input-group-prepend input[type=submit] + .input-group-text,
+  .input-group-prepend .crm-container .crm-button + .input-group-text, .crm-container
+  .input-group-prepend .crm-button + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
   .input-group-prepend .wpcf7 .input-group-text + input[type=submit], .wpcf7
   .input-group-prepend .input-group-text + input[type=submit],
+  .input-group-prepend .crm-container .input-group-text + .crm-button, .crm-container
+  .input-group-prepend .input-group-text + .crm-button,
   .input-group-append .btn + .btn,
   .input-group-append .wpcf7 input[type=submit] + .btn, .wpcf7
   .input-group-append input[type=submit] + .btn,
+  .input-group-append .crm-container .crm-button + .btn, .crm-container
+  .input-group-append .crm-button + .btn,
   .input-group-append .wpcf7 .btn + input[type=submit], .wpcf7
   .input-group-append .btn + input[type=submit],
   .input-group-append .wpcf7 input[type=submit] + input[type=submit], .wpcf7
   .input-group-append input[type=submit] + input[type=submit],
+  .input-group-append .crm-container .wpcf7 .crm-button + input[type=submit], .wpcf7
+  .input-group-append .crm-container .crm-button + input[type=submit], .crm-container
+  .input-group-append .wpcf7 .crm-button + input[type=submit], .wpcf7 .crm-container
+  .input-group-append .crm-button + input[type=submit],
+  .input-group-append .crm-container .btn + .crm-button, .crm-container
+  .input-group-append .btn + .crm-button,
+  .input-group-append .wpcf7 .crm-container input[type=submit] + .crm-button, .crm-container
+  .input-group-append .wpcf7 input[type=submit] + .crm-button, .wpcf7
+  .input-group-append .crm-container input[type=submit] + .crm-button, .crm-container .wpcf7
+  .input-group-append input[type=submit] + .crm-button,
+  .input-group-append .crm-container .crm-button + .crm-button, .crm-container
+  .input-group-append .crm-button + .crm-button,
   .input-group-append .btn + .input-group-text,
   .input-group-append .wpcf7 input[type=submit] + .input-group-text, .wpcf7
   .input-group-append input[type=submit] + .input-group-text,
+  .input-group-append .crm-container .crm-button + .input-group-text, .crm-container
+  .input-group-append .crm-button + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
   .input-group-append .input-group-text + .btn,
   .input-group-append .wpcf7 .input-group-text + input[type=submit], .wpcf7
-  .input-group-append .input-group-text + input[type=submit] {
+  .input-group-append .input-group-text + input[type=submit],
+  .input-group-append .crm-container .input-group-text + .crm-button, .crm-container
+  .input-group-append .input-group-text + .crm-button {
     margin-left: -1px; }
 
 .input-group-prepend {
@@ -3390,24 +3649,28 @@ tbody.collapse.show {
   .input-group-text input[type="checkbox"] {
     margin-top: 0; }
 
-.input-group > .input-group-prepend > .btn, .wpcf7 .input-group > .input-group-prepend > input[type=submit],
+.input-group > .input-group-prepend > .btn, .wpcf7 .input-group > .input-group-prepend > input[type=submit], .crm-container .input-group > .input-group-prepend > .crm-button,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn, .wpcf7
-.input-group > .input-group-append:not(:last-child) > input[type=submit],
+.input-group > .input-group-append:not(:last-child) > input[type=submit], .crm-container
+.input-group > .input-group-append:not(:last-child) > .crm-button,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle), .wpcf7
-.input-group > .input-group-append:last-child > input[type=submit]:not(:last-child):not(.dropdown-toggle),
+.input-group > .input-group-append:last-child > input[type=submit]:not(:last-child):not(.dropdown-toggle), .crm-container
+.input-group > .input-group-append:last-child > .crm-button:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.input-group > .input-group-append > .btn, .wpcf7 .input-group > .input-group-append > input[type=submit],
+.input-group > .input-group-append > .btn, .wpcf7 .input-group > .input-group-append > input[type=submit], .crm-container .input-group > .input-group-append > .crm-button,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn, .wpcf7
-.input-group > .input-group-prepend:not(:first-child) > input[type=submit],
+.input-group > .input-group-prepend:not(:first-child) > input[type=submit], .crm-container
+.input-group > .input-group-prepend:not(:first-child) > .crm-button,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child), .wpcf7
-.input-group > .input-group-prepend:first-child > input[type=submit]:not(:first-child),
+.input-group > .input-group-prepend:first-child > input[type=submit]:not(:first-child), .crm-container
+.input-group > .input-group-prepend:first-child > .crm-button:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -4223,7 +4486,7 @@ tbody.collapse.show {
   .badge:empty {
     display: none; }
 
-.btn .badge, .wpcf7 input[type=submit] .badge {
+.btn .badge, .wpcf7 input[type=submit] .badge, .crm-container .crm-button .badge {
   position: relative;
   top: -1px; }
 
@@ -6985,7 +7248,7 @@ a.text-dark:hover, a.text-dark:focus {
   *::after {
     text-shadow: none !important;
     box-shadow: none !important; }
-  a:not(.btn):not(.wpcf7 input[type=submit]) {
+  a:not(.btn):not(.wpcf7 input[type=submit]):not(.crm-container .crm-button) {
     text-decoration: underline; }
   abbr[title]::after {
     content: " (" attr(title) ")"; }
@@ -9591,7 +9854,7 @@ a.meta.yellow:hover {
 .active a.meta.yellow:hover {
   color: rgba(255, 255, 255, 0.8) !important; }
 
-.btn, .wpcf7 input[type=submit] {
+.btn, .wpcf7 input[type=submit], .crm-container .crm-button {
   display: inline-block;
   border-radius: 0;
   border: 1px solid #2d2a26;
@@ -9601,52 +9864,52 @@ a.meta.yellow:hover {
   letter-spacing: 1.5px;
   padding: 12px 24px;
   margin-bottom: 5px; }
-  .btn:hover, .wpcf7 input[type=submit]:hover {
+  .btn:hover, .wpcf7 input[type=submit]:hover, .crm-container .crm-button:hover {
     background: #eee;
     border: 1px solid rgba(45, 42, 38, 0.3); }
-  .btn:focus, .wpcf7 input[type=submit]:focus {
+  .btn:focus, .wpcf7 input[type=submit]:focus, .crm-container .crm-button:focus {
     box-shadow: 0 0 0 1px rgba(255, 209, 0, 0.3); }
-  .btn.btn-primary, .wpcf7 input.btn-primary[type=submit], .btn.btn-pink, .wpcf7 input.btn-pink[type=submit] {
+  .btn.btn-primary, .wpcf7 input.btn-primary[type=submit], .crm-container .btn-primary.crm-button, .btn.btn-pink, .wpcf7 input.btn-pink[type=submit], .crm-container .btn-pink.crm-button {
     background: #c114a2;
     border-color: #c114a2;
     color: #fff;
     font-weight: 400; }
-    .btn.btn-primary:hover, .wpcf7 input.btn-primary[type=submit]:hover, .btn.btn-pink:hover, .wpcf7 input.btn-pink[type=submit]:hover {
+    .btn.btn-primary:hover, .wpcf7 input.btn-primary[type=submit]:hover, .crm-container .btn-primary.crm-button:hover, .btn.btn-pink:hover, .wpcf7 input.btn-pink[type=submit]:hover, .crm-container .btn-pink.crm-button:hover {
       background: #aa128f; }
-  .btn.btn-secondary, .wpcf7 input.btn-secondary[type=submit] {
+  .btn.btn-secondary, .wpcf7 input.btn-secondary[type=submit], .crm-container .btn-secondary.crm-button {
     background: #524f4b;
     border-color: #524f4b;
     color: #fff;
     font-weight: 400; }
-    .btn.btn-secondary:hover, .wpcf7 input.btn-secondary[type=submit]:hover {
+    .btn.btn-secondary:hover, .wpcf7 input.btn-secondary[type=submit]:hover, .crm-container .btn-secondary.crm-button:hover {
       background: #45423f; }
-  .btn.btn-special, .wpcf7 input.btn-special[type=submit] {
+  .btn.btn-special, .wpcf7 input.btn-special[type=submit], .crm-container .btn-special.crm-button {
     background: #2d2a26;
     border-color: #2d2a26;
     color: #ffd100;
     font-weight: 400; }
-    .btn.btn-special:hover, .wpcf7 input.btn-special[type=submit]:hover {
+    .btn.btn-special:hover, .wpcf7 input.btn-special[type=submit]:hover, .crm-container .btn-special.crm-button:hover {
       background: #1f1d1a; }
-  .btn.btn-success, .wpcf7 input.btn-success[type=submit] {
+  .btn.btn-success, .wpcf7 input.btn-success[type=submit], .crm-container .btn-success.crm-button {
     background: #3f9e42;
     border-color: #3f9e42;
     color: white;
     font-weight: 400; }
-    .btn.btn-success:hover, .wpcf7 input.btn-success[type=submit]:hover {
+    .btn.btn-success:hover, .wpcf7 input.btn-success[type=submit]:hover, .crm-container .btn-success.crm-button:hover {
       background: #388c3a; }
-  .btn.btn-warning, .wpcf7 input.btn-warning[type=submit] {
+  .btn.btn-warning, .wpcf7 input.btn-warning[type=submit], .crm-container .btn-warning.crm-button {
     background: #ffd100;
     border-color: #ffd100;
     color: #2d2a26;
     font-weight: 500; }
-    .btn.btn-warning:hover, .wpcf7 input.btn-warning[type=submit]:hover {
+    .btn.btn-warning:hover, .wpcf7 input.btn-warning[type=submit]:hover, .crm-container .btn-warning.crm-button:hover {
       background: #e6bc00; }
-  .btn.btn-danger, .wpcf7 input.btn-danger[type=submit] {
+  .btn.btn-danger, .wpcf7 input.btn-danger[type=submit], .crm-container .btn-danger.crm-button {
     background: #bf1919;
     border-color: #bf1919;
     color: white;
     font-weight: 400; }
-    .btn.btn-danger:hover, .wpcf7 input.btn-danger[type=submit]:hover {
+    .btn.btn-danger:hover, .wpcf7 input.btn-danger[type=submit]:hover, .crm-container .btn-danger.crm-button:hover {
       background: #a81616; }
 
 .form-heading {
@@ -9685,7 +9948,7 @@ a.meta.yellow:hover {
     border-bottom: 17px solid transparent;
     border-left: 17px solid #ffd100; }
 
-.form-control, .wpcf7 input[type=text],
+.wpcf7 input[type=text],
 .wpcf7 input[type=search],
 .wpcf7 input[type=url],
 .wpcf7 input[type=tel],
@@ -9702,12 +9965,12 @@ a.meta.yellow:hover {
 .wpcf7 input[type=file],
 .wpcf7 input[type=submit],
 .wpcf7 select,
-.wpcf7 textarea, .wpcf7 .wpcf7-validation-errors {
+.wpcf7 textarea, .wpcf7 .wpcf7-validation-errors, #crm-container .crm-container textarea, #crm-container .crm-public input[type=text], .form-control {
   border-radius: 0;
   margin-bottom: 5px; }
-  fieldset.form-control, .wpcf7 fieldset.wpcf7-validation-errors {
+  .wpcf7 fieldset.wpcf7-validation-errors, fieldset.form-control {
     border: none; }
-  .form-control:focus, .wpcf7 input[type=text]:focus,
+  .wpcf7 input[type=text]:focus,
   .wpcf7 input[type=search]:focus,
   .wpcf7 input[type=url]:focus,
   .wpcf7 input[type=tel]:focus,
@@ -9724,10 +9987,10 @@ a.meta.yellow:hover {
   .wpcf7 input[type=file]:focus,
   .wpcf7 input[type=submit]:focus,
   .wpcf7 select:focus,
-  .wpcf7 textarea:focus, .wpcf7 .wpcf7-validation-errors:focus {
+  .wpcf7 textarea:focus, .wpcf7 .wpcf7-validation-errors:focus, #crm-container .crm-container textarea:focus, #crm-container .crm-public input[type=text]:focus, .form-control:focus {
     border-color: #ffd100;
     box-shadow: 0 0 0 1px rgba(255, 209, 0, 0.3); }
-  .form-control::placeholder, .wpcf7 input[type=text]::placeholder,
+  .wpcf7 input[type=text]::placeholder,
   .wpcf7 input[type=search]::placeholder,
   .wpcf7 input[type=url]::placeholder,
   .wpcf7 input[type=tel]::placeholder,
@@ -9744,9 +10007,9 @@ a.meta.yellow:hover {
   .wpcf7 input[type=file]::placeholder,
   .wpcf7 input[type=submit]::placeholder,
   .wpcf7 select::placeholder,
-  .wpcf7 textarea::placeholder, .wpcf7 .wpcf7-validation-errors::placeholder {
+  .wpcf7 textarea::placeholder, .wpcf7 .wpcf7-validation-errors::placeholder, #crm-container .crm-container textarea::placeholder, #crm-container .crm-public input[type=text]::placeholder, .form-control::placeholder {
     color: #d0cecc; }
-  .form-control:-ms-input-placeholder, .wpcf7 input[type=text]:-ms-input-placeholder,
+  .wpcf7 input[type=text]:-ms-input-placeholder,
   .wpcf7 input[type=search]:-ms-input-placeholder,
   .wpcf7 input[type=url]:-ms-input-placeholder,
   .wpcf7 input[type=tel]:-ms-input-placeholder,
@@ -9763,9 +10026,9 @@ a.meta.yellow:hover {
   .wpcf7 input[type=file]:-ms-input-placeholder,
   .wpcf7 input[type=submit]:-ms-input-placeholder,
   .wpcf7 select:-ms-input-placeholder,
-  .wpcf7 textarea:-ms-input-placeholder, .wpcf7 .wpcf7-validation-errors:-ms-input-placeholder {
+  .wpcf7 textarea:-ms-input-placeholder, .wpcf7 .wpcf7-validation-errors:-ms-input-placeholder, #crm-container .crm-container textarea:-ms-input-placeholder, #crm-container .crm-public input[type=text]:-ms-input-placeholder, .form-control:-ms-input-placeholder {
     color: #d0cecc; }
-  .form-control::-ms-input-placeholder, .wpcf7 input[type=text]::-ms-input-placeholder,
+  .wpcf7 input[type=text]::-ms-input-placeholder,
   .wpcf7 input[type=search]::-ms-input-placeholder,
   .wpcf7 input[type=url]::-ms-input-placeholder,
   .wpcf7 input[type=tel]::-ms-input-placeholder,
@@ -9782,9 +10045,9 @@ a.meta.yellow:hover {
   .wpcf7 input[type=file]::-ms-input-placeholder,
   .wpcf7 input[type=submit]::-ms-input-placeholder,
   .wpcf7 select::-ms-input-placeholder,
-  .wpcf7 textarea::-ms-input-placeholder, .wpcf7 .wpcf7-validation-errors::-ms-input-placeholder {
+  .wpcf7 textarea::-ms-input-placeholder, .wpcf7 .wpcf7-validation-errors::-ms-input-placeholder, #crm-container .crm-container textarea::-ms-input-placeholder, #crm-container .crm-public input[type=text]::-ms-input-placeholder, .form-control::-ms-input-placeholder {
     color: #d0cecc; }
-  .form-control.is-valid, .wpcf7 input.is-valid[type=text],
+  .wpcf7 input.is-valid[type=text],
   .wpcf7 input.is-valid[type=search],
   .wpcf7 input.is-valid[type=url],
   .wpcf7 input.is-valid[type=tel],
@@ -9801,11 +10064,11 @@ a.meta.yellow:hover {
   .wpcf7 input.is-valid[type=file],
   .wpcf7 input.is-valid[type=submit],
   .wpcf7 select.is-valid,
-  .wpcf7 textarea.is-valid, .wpcf7 .is-valid.wpcf7-validation-errors {
+  .wpcf7 textarea.is-valid, .wpcf7 .is-valid.wpcf7-validation-errors, #crm-container .crm-container textarea.is-valid, #crm-container .crm-public input.is-valid[type=text], .is-valid.form-control {
     color: #3f9e42;
     border-color: #3f9e42;
     box-shadow: 0 0 0 1px rgba(63, 158, 66, 0.3); }
-  .form-control.is-invalid, .wpcf7 input.is-invalid[type=text],
+  .wpcf7 input.is-invalid[type=text],
   .wpcf7 input.is-invalid[type=search],
   .wpcf7 input.is-invalid[type=url],
   .wpcf7 input.is-invalid[type=tel],
@@ -9822,7 +10085,7 @@ a.meta.yellow:hover {
   .wpcf7 input.is-invalid[type=file],
   .wpcf7 input.is-invalid[type=submit],
   .wpcf7 select.is-invalid,
-  .wpcf7 textarea.is-invalid, .wpcf7 .is-invalid.wpcf7-validation-errors {
+  .wpcf7 textarea.is-invalid, .wpcf7 .is-invalid.wpcf7-validation-errors, #crm-container .crm-container textarea.is-invalid, #crm-container .crm-public input.is-invalid[type=text], .is-invalid.form-control {
     color: #bf1919;
     border-color: #bf1919;
     box-shadow: 0 0 0 1px rgba(191, 25, 25, 0.3); }
@@ -9835,6 +10098,9 @@ label {
     color: #3f9e42; }
   label.is-invalid {
     color: #bf1919; }
+
+div.crm-container label {
+  font-weight: 700 !important; }
 
 .valid-feedback {
   color: #3f9e42;
@@ -9850,17 +10116,41 @@ label {
 .invalid {
   color: #bf1919; }
 
-#crm-container .crm-public input[type="text"], #crm-container .crm-container textarea {
-  background: #534f4c;
-  width: 80%;
-  border: none;
-  border-radius: 0px !important; }
+#crm-container .crm-container textarea, #crm-container .crm-public input[type=text], .wpcf7 input[type=text],
+.wpcf7 input[type=search],
+.wpcf7 input[type=url],
+.wpcf7 input[type=tel],
+.wpcf7 input[type=number],
+.wpcf7 input[type=range],
+.wpcf7 input[type=date],
+.wpcf7 input[type=month],
+.wpcf7 input[type=week],
+.wpcf7 input[type=time],
+.wpcf7 input[type=datetime],
+.wpcf7 input[type=datetime-local],
+.wpcf7 input[type=color],
+.wpcf7 input[type=email],
+.wpcf7 input[type=file],
+.wpcf7 input[type=submit],
+.wpcf7 select,
+.wpcf7 textarea, .wpcf7 .wpcf7-validation-errors, #crm-container .crm-container textarea, #crm-container .crm-public input[type=text], .form-control, .wpcf7 .wpcf7-validation-errors, .wpcf7 input[type=color], .wpcf7 input[type=date], .wpcf7 input[type=datetime-local], .wpcf7 input[type=datetime], .wpcf7 input[type=email], .wpcf7 input[type=file], .wpcf7 input[type=month], .wpcf7 input[type=number], .wpcf7 input[type=range], .wpcf7 input[type=search], .wpcf7 input[type=submit], .wpcf7 input[type=tel], .wpcf7 input[type=text], .wpcf7 input[type=time], .wpcf7 input[type=url], .wpcf7 input[type=week], .wpcf7 select, .wpcf7 textarea {
+  background: none;
+  border-radius: 0 !important;
+  padding: .375rem .75rem !important; }
 
-#crm-container .crm-public .label {
-  /*  visibility: hidden;*/
-  position: absolute;
-  color: white;
-  padding-top: 11px !important; }
+.crm-container .crm-error,
+.crm-container .crm-inline-error {
+  background: none !important;
+  color: #2d2a26 !important; }
+
+.crm-container .crm-error:not(.crm-error-label) {
+  color: #bf1919 !important; }
+  .crm-container .crm-error:not(.crm-error-label):before {
+    content: "* "; }
+
+.crm-container input.error, .crm-container textarea.error {
+  border-color: #bf1919 !important;
+  box-shadow: 0 0 0 1px rgba(191, 25, 25, 0.3); }
 
 .crm-container textarea {
   width: 102% !important;
@@ -9873,9 +10163,6 @@ label {
   visibility: hidden;
   position: absolute; }
 
-.crm-container .required {
-  color: white !important; }
-
 .crm-container .crm-marker, .crm-container .crm-i-button > .crm-i {
   visibility: hidden; }
 
@@ -9885,27 +10172,25 @@ label {
 .crm-container .crm-button {
   border-radius: 0px !important;
   text-shadow: none !important;
-  background: #534f4c !important;
-  border: none !important;
+  background: white !important;
+  color: #2d2a26 !important;
   text-align: center !important; }
+  .crm-container .crm-button:hover {
+    background: #eee !important; }
 
 .crm-container .crm-button.crm-i-button input.crm-form-submit {
   padding: 5px 32px !important;
-  font-size: 15px !important; }
-
-#editrow-last_name .label label {
-  padding-left: 7px; }
-
-div.crm-container label {
-  display: table !important;
-  padding-left: 8px; }
+  font-size: 15px !important;
+  margin-bottom: 0;
+  text-shadow: none !important;
+  color: #2d2a26 !important; }
 
 .crm-submit-buttons {
-  margin-top: 50px !important; }
+  margin-top: 15px !important; }
 
 .alpaca-field-object {
   padding: 0px; }
-  .alpaca-field-object .form-control:focus, .alpaca-field-object .wpcf7 input[type=text]:focus, .wpcf7 .alpaca-field-object input[type=text]:focus, .alpaca-field-object
+  .alpaca-field-object .wpcf7 input[type=text]:focus, .wpcf7 .alpaca-field-object input[type=text]:focus, .alpaca-field-object
   .wpcf7 input[type=search]:focus,
   .wpcf7 .alpaca-field-object input[type=search]:focus, .alpaca-field-object
   .wpcf7 input[type=url]:focus,
@@ -9939,7 +10224,7 @@ div.crm-container label {
   .wpcf7 select:focus,
   .wpcf7 .alpaca-field-object select:focus, .alpaca-field-object
   .wpcf7 textarea:focus,
-  .wpcf7 .alpaca-field-object textarea:focus, .alpaca-field-object .wpcf7 .wpcf7-validation-errors:focus, .wpcf7 .alpaca-field-object .wpcf7-validation-errors:focus {
+  .wpcf7 .alpaca-field-object textarea:focus, .alpaca-field-object .wpcf7 .wpcf7-validation-errors:focus, .wpcf7 .alpaca-field-object .wpcf7-validation-errors:focus, .alpaca-field-object #crm-container .crm-container textarea:focus, #crm-container .crm-container .alpaca-field-object textarea:focus, .alpaca-field-object #crm-container .crm-public input[type=text]:focus, #crm-container .crm-public .alpaca-field-object input[type=text]:focus, .alpaca-field-object .form-control:focus {
     border-color: #c114a2; }
 
 .alpaca-container-label {
@@ -10356,8 +10641,7 @@ span.yellow {
   align-self: flex-start; }
 
 .vinyl_sm {
-  transform: rotate(90deg);
-  width: 25%; }
+  width: 100%; }
 
 @media (max-width: 575px) {
   .vinyl_img {
