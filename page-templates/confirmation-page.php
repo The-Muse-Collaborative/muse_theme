@@ -16,19 +16,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="<?php echo esc_attr( $container ); ?>" id="content">
 
 		<div class="row">
-					
-			
-
-			<div class="col-lg-6 col-md-6 align-self-center col-sm-6 col-xs-12 mobile_text_center">
-				<h2 class="entry-title ">THANKS FOR CONTACTING US</h2>
-				<p class="">WE WILL BE IN TOUCH WITH YOU SHORTLY!</p>
+			<div class="col-sm justify-content-end align-items-center d-flex">
+				<div>
+					<h2 class="entry-title">Thanks for Contacting Us</h2>
+					<p class="">We will be in touch with you shortly!</p>
+        </div>
+			</div>
+			<div class="col-sm d-sm-flex justify-content-start ">
+				<img class="vinyl_img align-self-start" style="max-height: 663px; width: auto; transform: scaleX(-1)" src="<?php echo get_template_directory_uri() . '/images/contact_vinyl.svg'; ?>)">
 			</div>
 
-			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-
-				<img class="vinyl_img confirmation" style="max-height: 584px; transform: scaleX(-1);" src="<?php echo get_template_directory_uri() . '/images/contact_vinyl.svg'; ?>)">
-				
-			</div>
 
 		</div><!-- .row end -->
 
