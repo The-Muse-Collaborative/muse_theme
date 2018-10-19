@@ -83,12 +83,4 @@
   &.navbar-dark .navbar-nav .nav-link:hover { color: transparentize($yellow, .7)}
   .dropdown:hover .dropdown-menu { display: block; }
 }
-// Josh's caret fix
-// @media (max-width: 767px) {
-//   .menu-item-has-children a {
-//     background: url('../images/yellow_dropdown.png');
-//     background-repeat: no-repeat;
-//     background-position: center;
-//   }
-// }
 
