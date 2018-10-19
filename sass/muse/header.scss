@@ -66,6 +66,12 @@
     .nav-link:hover {
       background: $black !important;
     }
+    @media (max-width: 768px) {
+      text-align: right;
+      &:before {
+        display: none;
+      }
+    }
   }
   .nav-link.meta.yellow:hover { color: transparentize($yellow, .2) !important;}
   .current_page_parent.nav-item > .nav-link.meta.yellow { color: white !important}

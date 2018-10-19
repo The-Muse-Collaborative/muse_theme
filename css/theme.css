@@ -10308,6 +10308,11 @@ div.crm-container label {
       color: #2d2a26 !important; }
     .mc-header__submenu .nav-link:hover {
       background: #2d2a26 !important; }
+    @media (max-width: 768px) {
+      .mc-header__submenu {
+        text-align: right; }
+        .mc-header__submenu:before {
+          display: none; } }
   .mc-header .nav-link.meta.yellow:hover {
     color: rgba(255, 209, 0, 0.8) !important; }
   .mc-header .current_page_parent.nav-item > .nav-link.meta.yellow {
