@@ -36,6 +36,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?= do_shortcode( '[civicrm component="profile" gid="16" mode="create" hijack="1"]' ); ?>
 				</div>
 
+				<div class="sm-text mt-4">
+					<p><i>Fields marked with * are mandatory</i></p>
+				</div>
 
 				<!-- Message Confirmation lives here...
 				https://themusecollaborative.org/contact/message-confirmation/ -->
