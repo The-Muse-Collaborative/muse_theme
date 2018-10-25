@@ -37,19 +37,19 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<footer class="mc-footer mc-bottom-footer">
 			<div class="<?php echo esc_attr( $container ); ?>">
-			<div class="row justify-content-between align-items-center">
-				<div class="col-2">
+			<div class="row justify-content-between align-items-center mc-bottom-footer-content">
+				<div class="col-sm-2 mc-footer-hosting">
 					<p class="sm-text" style="text-align: center">Hosting provided by</p>
 					<a href="https://linode.com">
-						<img src="<?php echo get_template_directory_uri() . '/images/linode_icon.svg'; ?>"/>
+						<img class="mc-footer-linode-logo" src="<?php echo get_template_directory_uri() . '/images/linode_icon.svg'; ?>"/>
 					</a>
 				</div>
-				<div class="col-4">
+				<div class="col-sm-4">
 					<!-- Hide this logo on mobile -->
 					<img class="d-none d-sm-block" src="<?php echo get_template_directory_uri() . '/images/bottom-footer-logo.svg'; ?>"/>
 					<!-- Show this logo on mobile -->
-					<img class="d-block d-sm-none" src="<?php echo get_template_directory_uri() . '/images/bottom-footer-logo-mobile.svg'; ?>"/>
-					<div class="row pull-right" style="margin-top: 20px">
+					<img class="d-block d-sm-none text-center mc-footer-logo-mobile" src="<?php echo get_template_directory_uri() . '/images/bottom-footer-logo-mobile.svg'; ?>"/>
+					<div class="pull-right mc-footer-social" style="margin-top: 20px">
 						<!-- <div class="col-3"> -->
 							<a href="https://twitter.com/cmdmuse" target="blank">
 								<img class="socials" src="<?php echo get_template_directory_uri() . '/images/twitter-icon.svg'; ?>"/>
@@ -72,7 +72,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 						<!-- </div> -->
 					<div class="row clear-both">
-						<div class="col-12 text-right">
+						<div class="col-12 text-center text-sm-right">
 							<p class="sm-text" style="margin-top: 20px">
 								&copy; Copyright <?php echo date('Y')?> All Rights Reserved
 							</p>

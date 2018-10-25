@@ -10279,7 +10279,6 @@ div.crm-container label {
     @media (max-width: 768px) {
       .mc-header__menu {
         height: auto;
-        text-align: right;
         padding-top: 11px; } }
     @media screen and (max-width: 991px) and (min-width: 767px) {
       .mc-header__menu {
@@ -10308,6 +10307,11 @@ div.crm-container label {
       color: #2d2a26 !important; }
     .mc-header__submenu .nav-link:hover {
       background: #2d2a26 !important; }
+    @media (max-width: 768px) {
+      .mc-header__submenu {
+        text-align: left; }
+        .mc-header__submenu:before {
+          display: none; } }
   .mc-header .nav-link.meta.yellow:hover {
     color: rgba(255, 209, 0, 0.8) !important; }
   .mc-header .current_page_parent.nav-item > .nav-link.meta.yellow {
@@ -10323,6 +10327,33 @@ div.crm-container label {
     color: rgba(255, 209, 0, 0.3); }
   .mc-header .dropdown:hover .dropdown-menu {
     display: block; }
+  @media (max-width: 768px) {
+    .mc-header .nav-link:focus + .dropdown-menu {
+      display: block; }
+    .mc-header .dropdown-menu.focus {
+      display: block; }
+    .mc-header .nav-link {
+      display: flex;
+      align-items: center; }
+    .mc-header .menu-item .caret {
+      position: relative;
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      margin-left: 30px; }
+      .mc-header .menu-item .caret:before {
+        position: absolute;
+        content: " ";
+        height: 5px;
+        width: 5px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #ffd100;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0; } }
 
 .mc-banner-image {
   min-height: 500px;
@@ -10359,6 +10390,23 @@ div.crm-container label {
       height: 100%;
       right: 100%;
       top: 0; }
+    @media screen and (max-width: 576px) {
+      .mc-top-footer--right {
+        text-align: center;
+        background-image: none;
+        background: rgba(193, 20, 162, 0.8) !important; }
+        .mc-top-footer--right::after {
+          content: " ";
+          position: absolute;
+          border-top: 20px solid rgba(193, 20, 162, 0.8);
+          border-left: 20px solid transparent;
+          border-right: 20px solid transparent;
+          width: 20px;
+          height: 20px;
+          margin: auto;
+          left: 0;
+          right: 0;
+          bottom: -20px; } }
   .mc-top-footer--item {
     position: relative;
     padding-left: 15px; }
@@ -10372,12 +10420,41 @@ div.crm-container label {
       border-left: #fff 7px solid;
       border-top: transparent 7px solid;
       border-bottom: transparent 7px solid; }
+    @media screen and (max-width: 576px) {
+      .mc-top-footer--item {
+        padding-left: 0; }
+        .mc-top-footer--item::before {
+          display: none; } }
 
 .mc-bottom-footer {
   background: #2d2a26;
   color: #eee;
   padding-top: 40px;
   padding-bottom: 40px; }
+  @media screen and (max-width: 576px) {
+    .mc-bottom-footer-content {
+      flex-direction: column-reverse; } }
+
+.mc-footer-logo-mobile {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto; }
+
+@media screen and (max-width: 576px) {
+  .mc-footer-hosting {
+    margin-top: 40px; } }
+
+@media screen and (max-width: 576px) {
+  .mc-footer-linode-logo {
+    max-width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block; } }
+
+@media screen and (max-width: 576px) {
+  .mc-footer-social {
+    float: none;
+    text-align: center; } }
 
 .contact_bg {
   background-size: cover;

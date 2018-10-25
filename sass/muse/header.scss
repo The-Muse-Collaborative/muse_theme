@@ -35,7 +35,7 @@
     height: 50px;
     @media (max-width: 768px) {
       height: auto;
-      text-align: right;
+      //text-align: right;
       padding-top: 11px;
     }
     justify-content: flex-end;
@@ -66,6 +66,12 @@
     .nav-link:hover {
       background: $black !important;
     }
+    @media (max-width: 768px) {
+      text-align: left;
+      &:before {
+        display: none;
+      }
+    }
   }
   .nav-link.meta.yellow:hover { color: transparentize($yellow, .2) !important;}
   .current_page_parent.nav-item > .nav-link.meta.yellow { color: white !important}
@@ -76,13 +82,32 @@
   &.navbar-dark .navbar-nav .dropdown-menu .nav-link:hover { color: $yellow !important;}
   &.navbar-dark .navbar-nav .nav-link:hover { color: transparentize($yellow, .7)}
   .dropdown:hover .dropdown-menu { display: block; }
+
+
+  @media (max-width: 768px) {
+    .nav-link:focus + .dropdown-menu { display: block; }
+    .dropdown-menu.focus { display: block; }
+    .nav-link { display: flex; align-items: center; }
+    .menu-item .caret {
+      position: relative;
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      margin-left: 30px;
+      &:before {
+        position: absolute;
+        content: " ";
+        height: 5px;
+        width: 5px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid $yellow;
+        margin: auto;
+        top: 0; right: 0; bottom: 0; left: 0;
+      }
+    }
+  }
 }
-// Josh's caret fix
-// @media (max-width: 767px) {
-//   .menu-item-has-children a {
-//     background: url('../images/yellow_dropdown.png');
-//     background-repeat: no-repeat;
-//     background-position: center;
-//   }
-// }
+
+
 
