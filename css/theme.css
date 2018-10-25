@@ -10390,6 +10390,23 @@ div.crm-container label {
       height: 100%;
       right: 100%;
       top: 0; }
+    @media screen and (max-width: 576px) {
+      .mc-top-footer--right {
+        text-align: center;
+        background-image: none;
+        background: rgba(193, 20, 162, 0.8) !important; }
+        .mc-top-footer--right::after {
+          content: " ";
+          position: absolute;
+          border-top: 20px solid rgba(193, 20, 162, 0.8);
+          border-left: 20px solid transparent;
+          border-right: 20px solid transparent;
+          width: 20px;
+          height: 20px;
+          margin: auto;
+          left: 0;
+          right: 0;
+          bottom: -20px; } }
   .mc-top-footer--item {
     position: relative;
     padding-left: 15px; }
@@ -10403,12 +10420,41 @@ div.crm-container label {
       border-left: #fff 7px solid;
       border-top: transparent 7px solid;
       border-bottom: transparent 7px solid; }
+    @media screen and (max-width: 576px) {
+      .mc-top-footer--item {
+        padding-left: 0; }
+        .mc-top-footer--item::before {
+          display: none; } }
 
 .mc-bottom-footer {
   background: #2d2a26;
   color: #eee;
   padding-top: 40px;
   padding-bottom: 40px; }
+  @media screen and (max-width: 576px) {
+    .mc-bottom-footer-content {
+      flex-direction: column-reverse; } }
+
+.mc-footer-logo-mobile {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto; }
+
+@media screen and (max-width: 576px) {
+  .mc-footer-hosting {
+    margin-top: 40px; } }
+
+@media screen and (max-width: 576px) {
+  .mc-footer-linode-logo {
+    max-width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block; } }
+
+@media screen and (max-width: 576px) {
+  .mc-footer-social {
+    float: none;
+    text-align: center; } }
 
 .contact_bg {
   background-size: cover;
