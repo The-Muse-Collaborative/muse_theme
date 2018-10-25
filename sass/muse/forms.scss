@@ -165,7 +165,7 @@ div.crm-container label {   font-weight: 700 !important; }
   padding: 0px;
 
   .form-control:focus {
-    border-color: #c114a2;
+    border-color: $yellow;
   }
 }
 .alpaca-container-label {
@@ -186,14 +186,45 @@ div.crm-container label {   font-weight: 700 !important; }
 //   border-bottom: transparent 7px solid;
 // }
 .alpaca-field input, .alpaca-field select, .StripeElement {
-  background-color: #ECECEC !important;
-  color: black;
-  border-radius: inherit !important;
+  @extend .form-control;
 }
+
 .radio {
-  // border: 1px #F7CF2F solid;
+  position: relative;
+  z-index: 2;
+  display: inline-block;
   margin: 5px 0;
-  padding: 9px 0 3px 12px;
-  // width: 60%;
-  background: url('../images/radio_button2.png') no-repeat;
+  border: 3px solid $yellow;
+  border-right: none;
+  margin-left: 23.5px;
+  label {
+    margin-bottom: 0;
+    padding: 10px;
+    input { display: none; }
+    &:checked { background: $yellow; }
+  }
+  &::after {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 4px;
+    right: -17px;
+    background: white;
+    border-top: 3px solid $yellow;
+    border-right: 3px solid $yellow;
+    height: 33px;
+    width: 33px;
+    transform: rotate(45deg);
+  }
+  &::before {
+    content: " ";
+    position: absolute;
+    z-index: -2;
+    top: -3px;
+    right: 100%;
+    background:$yellow;
+    border-left: 23.5px solid white;
+    border-top: 23.5px solid transparent;
+    border-bottom: 23.5px solid transparent;
+  }
 }
