@@ -16,8 +16,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="<?php echo esc_attr( $container ); ?>" id="content">
 
 		<div class="row">
-			<div class="col-sm justify-content-end align-items-center d-flex">
-				<div>
+			<div class="col-sm justify-content-sm-end justify-content-center align-items-center d-flex">
+				<div class="text-sm-left text-center">
 					<h2 class="entry-title">Thanks for Contacting Us</h2>
 					<p class="">We will be in touch with you shortly!</p>
         </div>
