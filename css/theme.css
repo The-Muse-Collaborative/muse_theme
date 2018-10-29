@@ -9912,6 +9912,13 @@ a.meta.yellow:hover {
     .btn.btn-danger:hover, .wpcf7 input.btn-danger[type=submit]:hover, .crm-container .btn-danger.crm-button:hover {
       background: #a81616; }
 
+.page-item.active .page-link {
+  background-color: #c114a2;
+  border-color: #c114a2; }
+
+.page-link, .fa-step-forward:before, .fa-step-backward:before {
+  color: #c114a2; }
+
 .form-heading {
   position: relative;
   display: block;
@@ -10616,19 +10623,19 @@ img.socials {
   z-index: 2;
   color: white;
   min-height: 480px;
-  background: url("../images/event_blck_bg_down2.png");
+  background: url("../images/event-background-vertical.png");
   background-size: cover;
   background-position: bottom center;
   height: fit-content; }
   @media (min-width: 576px) {
     .event_black {
-      background: url("../images/event_blck_bg_down2.png");
+      background: url("../images/event-background-vertical.png");
       background-size: cover;
       background-position: bottom center;
       height: fit-content; } }
   @media (min-width: 768px) {
     .event_black {
-      background: url("../images/black_event_bg2.png");
+      background: url("../images/event-background-horizontal.png");
       background-size: cover;
       background-position: right 0px center;
       height: fit-content; } }

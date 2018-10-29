@@ -23,7 +23,7 @@ $container = get_theme_mod( 'understrap_container_type' );
         </div>
 			</div>
 			<div class="col-sm d-sm-flex justify-content-start ">
-				<img class="vinyl_img align-self-start d-none d-sm-block" style="max-height: 663px; width: auto; transform: scaleX(-1)" src="<?php echo get_template_directory_uri() . '/images/contact_vinyl.svg'; ?>)">
+				<img class="vinyl_img align-self-start d-none d-sm-block" style="max-height: 663px; width: auto; transform: scaleX(-1)" src="<?php echo get_template_directory_uri() . '/images/contact-vinyl.svg'; ?>)">
 				<img class="vinyl_sm mb-5 d-sm-none d-block" style="transform: scaleY(-1)" src="<?php echo get_template_directory_uri() . '/images/vinyl_0padding.png'; ?>)">
 			</div>
 
