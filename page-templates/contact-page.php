@@ -19,7 +19,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<div class="col-sm d-sm-flex justify-content-end d-none">
 
-				<img class="vinyl_img align-self-start" style="max-height: 663px; width: auto;" src="<?php echo get_template_directory_uri() . '/images/contact_vinyl.svg'; ?>)">
+				<img class="vinyl_img align-self-start" style="max-height: 663px; width: auto;" src="<?php echo get_template_directory_uri() . '/images/contact-vinyl.svg'; ?>)">
 
 			</div>
 
