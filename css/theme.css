@@ -10289,7 +10289,8 @@ div.crm-container label {
         padding-top: 11px; } }
     @media screen and (max-width: 991px) and (min-width: 767px) {
       .mc-header__menu {
-        width: 100%; } }
+        width: 100%;
+        justify-content: center; } }
   .mc-header__submenu {
     background: #ffd100;
     color: #2d2a26;

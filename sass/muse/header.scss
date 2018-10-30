@@ -23,7 +23,7 @@
       }
     }
     @media screen and (min-width: 992px) { width: 300px; margin-bottom: -67px;  }
-    @media screen and (max-width:991px) and (min-width: 767px) {
+    @media screen and (max-width: 991px) and (min-width: 767px) {
       width: 150px;
       height:auto;
       display:block;
@@ -39,8 +39,9 @@
       padding-top: 11px;
     }
     justify-content: flex-end;
-    @media screen and (max-width:991px) and (min-width: 767px) {
+    @media screen and (max-width: 991px) and (min-width: 767px) {
       width: 100%;
+      justify-content: center;
     }
   }
   &__submenu {
