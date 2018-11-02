@@ -32,7 +32,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 							<div class="page-content">
 
-							<p><?php esc_html_e( 'We can&rsquo;t find that page.  Please check your URL, search for what you need, or contact us directly.', 'understrap' ); ?></p>
+							<p><?php esc_html_e( 'We can&rsquo;t find that page. If you don&rsquo;t find what you&rsquo;re looking for, please contact us.', 'understrap' ); ?></p>
 
   						<?php get_search_form(); ?>
 
