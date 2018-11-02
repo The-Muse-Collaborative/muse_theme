@@ -18,13 +18,16 @@
 				<?php if ( 'articles' == get_post_type() ) : ?>
 
 					<div class="entry-meta">
+
 						<?php understrap_posted_on(); ?>
+
 					</div><!-- .entry-meta -->
 
 				<?php endif; ?>
 
 			</header><!-- .entry-header -->
 		</div>
+
 		<div class="col-md-8">
 
 			<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>

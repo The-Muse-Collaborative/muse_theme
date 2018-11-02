@@ -118,7 +118,7 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 	 */
 	function understrap_all_excerpts_get_more_link( $post_excerpt ) {
 
-		return $post_excerpt . ' [...]<p><a class="btn btn-special understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() )) . '">' . __( 'Full article',
+		return $post_excerpt . ' [...]<p><a class="btn btn-special understrap-read-more-link" href="' . esc_url( get_permalink( get_the_ID() )) . '">' . __( 'Keep Reading',
 		'understrap' ) . '</a></p>';
 	}
 }
