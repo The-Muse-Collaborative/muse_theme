@@ -24,10 +24,14 @@
 				<?php endif; ?>
 
 			</header><!-- .entry-header -->
+
+			<div class="mt-3 mb-4">
+				<?php echo get_the_post_thumbnail(); ?>
+			</div>
+
 		</div>
 		<div class="col-md-8">
 			<div class="entry-content mc-news-content">
-				<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
 					<?php the_content(); ?>
 
