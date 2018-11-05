@@ -9842,6 +9842,12 @@ h6 {
 .sm-text {
   font-size: 12px; }
 
+.caption-text {
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+  color: #a5a1a1; }
+
 a, .pink {
   color: #c114a2; }
 

@@ -66,6 +66,13 @@ h6 {
 
 .sm-text { font-size: 12px; }
 
+.caption-text {
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+  color: $gray-medium;
+}
+
 a, .pink{ color: $pink; }
 
 a.meta.yellow:hover { color: transparentize($yellow, .2) !important;}
