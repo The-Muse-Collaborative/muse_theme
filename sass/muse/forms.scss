@@ -168,6 +168,20 @@ div.crm-container label {   font-weight: 700 !important; }
     border-color: $yellow;
   }
 }
+
+.alpaca-required-indicator {
+  display: inline-block;
+  margin-left: 5px;
+  & + & { display: none;}
+}
+
+.has-error {
+  input, label, .help-block  { color: $red; }
+  input {
+    border-color: $red;
+    box-shadow: 0 0 0 1px transparentize($red, .7)
+  }
+}
 .alpaca-container-label {
   @extend .form-heading;
 }

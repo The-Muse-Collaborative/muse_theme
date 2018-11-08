@@ -10419,6 +10419,19 @@ div.crm-container label {
   .wpcf7 .alpaca-field-object textarea:focus, .alpaca-field-object .wpcf7 .wpcf7-validation-errors:focus, .wpcf7 .alpaca-field-object .wpcf7-validation-errors:focus, .alpaca-field-object #crm-container .crm-container textarea:focus, #crm-container .crm-container .alpaca-field-object textarea:focus, .alpaca-field-object #crm-container .crm-public input[type=text]:focus, #crm-container .crm-public .alpaca-field-object input[type=text]:focus, .alpaca-field-object .form-control:focus, .alpaca-field-object .alpaca-field input:focus, .alpaca-field .alpaca-field-object input:focus, .alpaca-field-object .alpaca-field select:focus, .alpaca-field .alpaca-field-object select:focus, .alpaca-field-object .StripeElement:focus {
     border-color: #ffd100; }
 
+.alpaca-required-indicator {
+  display: inline-block;
+  margin-left: 5px; }
+  .alpaca-required-indicator + .alpaca-required-indicator {
+    display: none; }
+
+.has-error input, .has-error label, .has-error .help-block {
+  color: #bf1919; }
+
+.has-error input {
+  border-color: #bf1919;
+  box-shadow: 0 0 0 1px rgba(191, 25, 25, 0.3); }
+
 .alpaca-field-radio > label {
   display: block; }
 
