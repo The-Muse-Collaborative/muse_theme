@@ -5,7 +5,7 @@
   display: block;
   background: $yellow;
   color: $black;
-  padding: 5px;
+  padding: 2px;
   padding-left: 40px;
   padding-right: 30px;
   margin-right: 17px;
@@ -165,35 +165,84 @@ div.crm-container label {   font-weight: 700 !important; }
   padding: 0px;
 
   .form-control:focus {
-    border-color: #c114a2;
+    border-color: $yellow;
+  }
+}
+
+.alpaca-required-indicator {
+  display: inline-block;
+  margin-left: 5px;
+  & + & { display: none;}
+}
+
+.has-error {
+  input, label, .help-block  { color: $red; }
+  input {
+    border-color: $red;
+    box-shadow: 0 0 0 1px transparentize($red, .7)
   }
 }
 .alpaca-container-label {
-  padding: 2px 0 4px 32px;
-  font-size: 1em;
-  text-transform: uppercase;
-  background: url('../images/donation_legend.png') no-repeat;
+  @extend .form-heading;
 }
-// .alpaca-container-label:before {
-//   content: " ";
-//   position: absolute;
-//   top: 8px;
-//   left: 29px;
-//   height: 0px;
-//   width: 35px;
-//   border-left: #000 7px solid;
-//   border-top: transparent 7px solid;
-//   border-bottom: transparent 7px solid;
-// }
+
 .alpaca-field input, .alpaca-field select, .StripeElement {
-  background-color: #ECECEC !important;
-  color: black;
-  border-radius: inherit !important;
+  @extend .form-control;
 }
+
+//Reverse order to get z-index right...
+.alpaca-field-radio > label  { display: block; }
+
 .radio {
-  // border: 1px #F7CF2F solid;
+  position: relative;
+  z-index: 2;
+  display: inline-flex !important;
   margin: 5px 0;
-  padding: 9px 0 3px 12px;
-  // width: 60%;
-  background: url('../images/radio_button2.png') no-repeat;
+  padding-left: 20px;
+  border: 3px solid $yellow;
+  border-right: none;
+  margin-left: -4px;
+
+  label {
+    margin-bottom: 0;
+    padding: 10px;
+    input { display: inline-flex; }
+  }
+  &.checked {
+    background: $yellow;
+    &::after {
+      background: $yellow;
+    }
+  }
+  &::after {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 4px;
+    right: -17px;
+    background: white;
+    border-top: 3px solid $yellow;
+    border-right: 3px solid $yellow;
+    height: 33px;
+    width: 33px;
+    transform: rotate(45deg);
+  }
+  // &::before {
+  //   content: " ";
+  //   position: absolute;
+  //   z-index: -2;
+  //   top: -3px;
+  //   right: 100%;
+  //   background:$white;
+  //   border-left: 23.5px solid white;
+  //   border-top: 23.5px solid transparent;
+  //   border-bottom: 23.5px solid transparent;
+  // }
+  //Some funky z-index rules to account for the buttons. -Joel
+  &:nth-of-type(1) { z-index: 10; padding-left: 10px;}
+  &:nth-of-type(2) { z-index: 9; }
+  &:nth-of-type(3) { z-index: 8; }
+  &:nth-of-type(4) { z-index: 7; }
+  &:nth-of-type(5) { z-index: 6; }
+  &:nth-of-type(6) { z-index: 5; }
 }
