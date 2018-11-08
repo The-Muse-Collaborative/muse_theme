@@ -72,8 +72,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 <!-- I don't feel great about loading this script right here because, network latency, etc.
 could cause the next script to fail. Maybe set a better checker there? -->
 <script src="https://js.stripe.com/v3/"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-<script type="text/javascript" src="//code.cloudcms.com/alpaca/1.5.24/bootstrap/alpaca.min.js"></script>
 
 <script type="text/javascript">
 	window.$ = jQuery.noConflict();
