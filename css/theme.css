@@ -10104,17 +10104,17 @@ a.meta.yellow:hover {
     .btn.btn-danger:hover, .wpcf7 input.btn-danger[type=submit]:hover, .crm-container .btn-danger.crm-button:hover {
       background: #a81616; }
 
-.form-heading {
+.form-heading, .alpaca-container-label {
   position: relative;
   display: block;
   background: #ffd100;
   color: #2d2a26;
-  padding: 5px;
+  padding: 2px;
   padding-left: 40px;
   padding-right: 30px;
   margin-right: 17px;
   font-size: 20px; }
-  .form-heading:before {
+  .form-heading:before, .alpaca-container-label:before {
     content: ' ';
     position: absolute;
     z-index: 1;
@@ -10128,7 +10128,7 @@ a.meta.yellow:hover {
     border-top: 7px solid transparent;
     border-bottom: 7px solid transparent;
     border-left: 7px solid #2d2a26; }
-  .form-heading:after {
+  .form-heading:after, .alpaca-container-label:after {
     content: ' ';
     position: absolute;
     right: -17px;
@@ -10419,26 +10419,26 @@ div.crm-container label {
   .wpcf7 .alpaca-field-object textarea:focus, .alpaca-field-object .wpcf7 .wpcf7-validation-errors:focus, .wpcf7 .alpaca-field-object .wpcf7-validation-errors:focus, .alpaca-field-object #crm-container .crm-container textarea:focus, #crm-container .crm-container .alpaca-field-object textarea:focus, .alpaca-field-object #crm-container .crm-public input[type=text]:focus, #crm-container .crm-public .alpaca-field-object input[type=text]:focus, .alpaca-field-object .form-control:focus, .alpaca-field-object .alpaca-field input:focus, .alpaca-field .alpaca-field-object input:focus, .alpaca-field-object .alpaca-field select:focus, .alpaca-field .alpaca-field-object select:focus, .alpaca-field-object .StripeElement:focus {
     border-color: #ffd100; }
 
-.alpaca-container-label {
-  padding: 2px 0 4px 32px;
-  font-size: 1em;
-  text-transform: uppercase;
-  background: url("../images/donation_legend.png") no-repeat; }
+.alpaca-field-radio > label {
+  display: block; }
 
 .radio {
   position: relative;
   z-index: 2;
-  display: inline-block;
+  display: inline-flex !important;
   margin: 5px 0;
+  padding-left: 20px;
   border: 3px solid #ffd100;
   border-right: none;
-  margin-left: 23.5px; }
+  margin-left: -4px; }
   .radio label {
     margin-bottom: 0;
     padding: 10px; }
     .radio label input {
-      display: none; }
-    .radio label:checked {
+      display: inline-flex; }
+  .radio.checked {
+    background: #ffd100; }
+    .radio.checked::after {
       background: #ffd100; }
   .radio::after {
     content: " ";
@@ -10452,16 +10452,19 @@ div.crm-container label {
     height: 33px;
     width: 33px;
     transform: rotate(45deg); }
-  .radio::before {
-    content: " ";
-    position: absolute;
-    z-index: -2;
-    top: -3px;
-    right: 100%;
-    background: #ffd100;
-    border-left: 23.5px solid white;
-    border-top: 23.5px solid transparent;
-    border-bottom: 23.5px solid transparent; }
+  .radio:nth-of-type(1) {
+    z-index: 10;
+    padding-left: 10px; }
+  .radio:nth-of-type(2) {
+    z-index: 9; }
+  .radio:nth-of-type(3) {
+    z-index: 8; }
+  .radio:nth-of-type(4) {
+    z-index: 7; }
+  .radio:nth-of-type(5) {
+    z-index: 6; }
+  .radio:nth-of-type(6) {
+    z-index: 5; }
 
 .mc-header {
   margin-bottom: 76px;
