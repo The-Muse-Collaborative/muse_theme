@@ -26,19 +26,19 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 						<header class="page-header">
 
-							<h2 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.',
-							'understrap' ); ?></h2>
+							<h2 class="page-title"><?php esc_html_e( 'Oh $#&@! – Something went wrong', 'understrap' ); ?></h2>
 
-						</header><!-- .page-header -->
+							</header><!-- .page-header -->
 
-						<div class="page-content">
+							<div class="page-content">
 
-							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?',
-							'understrap' ); ?></p>
+							<p><?php esc_html_e( 'We can&rsquo;t find that page. If you don&rsquo;t find what you&rsquo;re looking for, please contact us.', 'understrap' ); ?></p>
 
   						<?php get_search_form(); ?>
 
-							<a href="https://themusecollaborative.org/contact/">Contact form link</a>
+							<div class="mt-5 mb-4">
+								<a class="btn btn-special" role="button" href="/contact">Contact Us</a>
+							</div>
 
 						</div><!-- .page-content -->
 

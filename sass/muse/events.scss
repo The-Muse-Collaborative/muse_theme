@@ -3,19 +3,19 @@
     color: white;
     min-height: 480px;
     @include media-breakpoint-up(sm) {
-    	background: url('../images/event_blck_bg_down2.png');
+    	background: url('../images/event-background-vertical.png');
     	background-size: cover;
     	background-position: bottom center;
     	height: fit-content;
     }
     @include media-breakpoint-up(md) {
-    	background: url('../images/black_event_bg2.png');
+    	background: url('../images/event-background-horizontal.png');
     	background-size: cover;
 	    background-position: right 0px center;
 	    height: fit-content;
     }
     @include media-breakpoint-up(xs) {
-    	background: url('../images/event_blck_bg_down2.png');
+    	background: url('../images/event-background-vertical.png');
     	background-size: cover;
     	background-position: bottom center;
     	height: fit-content;

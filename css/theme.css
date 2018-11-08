@@ -10034,6 +10034,12 @@ h6 {
 .sm-text {
   font-size: 12px; }
 
+.caption-text {
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+  color: #a5a1a1; }
+
 a, .pink {
   color: #c114a2; }
 
@@ -10103,6 +10109,13 @@ a.meta.yellow:hover {
     font-weight: 400; }
     .btn.btn-danger:hover, .wpcf7 input.btn-danger[type=submit]:hover, .crm-container .btn-danger.crm-button:hover {
       background: #a81616; }
+
+.page-item.active .page-link {
+  background-color: #c114a2;
+  border-color: #c114a2; }
+
+.page-link, .fa-step-forward:before, .fa-step-backward:before {
+  color: #c114a2; }
 
 .form-heading, .alpaca-container-label {
   position: relative;
@@ -10518,7 +10531,8 @@ div.crm-container label {
         padding-top: 11px; } }
     @media screen and (max-width: 991px) and (min-width: 767px) {
       .mc-header__menu {
-        width: 100%; } }
+        width: 100%;
+        justify-content: center; } }
   .mc-header__submenu {
     background: #ffd100;
     color: #2d2a26;
@@ -10626,7 +10640,7 @@ div.crm-container label {
       height: 100%;
       right: 100%;
       top: 0; }
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 991.98px) {
       .mc-top-footer--right {
         text-align: center;
         background-image: none;
@@ -10656,7 +10670,7 @@ div.crm-container label {
       border-left: #fff 7px solid;
       border-top: transparent 7px solid;
       border-bottom: transparent 7px solid; }
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 991.98px) {
       .mc-top-footer--item {
         padding-left: 0; }
         .mc-top-footer--item::before {
@@ -10667,7 +10681,7 @@ div.crm-container label {
   color: #eee;
   padding-top: 40px;
   padding-bottom: 40px; }
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 991.98px) {
     .mc-bottom-footer-content {
       flex-direction: column-reverse; } }
 
@@ -10676,18 +10690,18 @@ div.crm-container label {
   margin-left: auto;
   margin-right: auto; }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 991.98px) {
   .mc-footer-hosting {
     margin-top: 40px; } }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 991.98px) {
   .mc-footer-linode-logo {
     max-width: 150px;
     margin-left: auto;
     margin-right: auto;
     display: block; } }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 991.98px) {
   .mc-footer-social {
     float: none;
     text-align: center; } }
@@ -10695,7 +10709,7 @@ div.crm-container label {
 .contact_bg {
   background-size: cover;
   background-position: right 0px center; }
-  @media (max-width: 460px) {
+  @media (max-width: 991.98px) {
     .contact_bg {
       text-align: center; } }
 
@@ -10852,19 +10866,19 @@ img.socials {
   z-index: 2;
   color: white;
   min-height: 480px;
-  background: url("../images/event_blck_bg_down2.png");
+  background: url("../images/event-background-vertical.png");
   background-size: cover;
   background-position: bottom center;
   height: fit-content; }
   @media (min-width: 576px) {
     .event_black {
-      background: url("../images/event_blck_bg_down2.png");
+      background: url("../images/event-background-vertical.png");
       background-size: cover;
       background-position: bottom center;
       height: fit-content; } }
   @media (min-width: 768px) {
     .event_black {
-      background: url("../images/black_event_bg2.png");
+      background: url("../images/event-background-horizontal.png");
       background-size: cover;
       background-position: right 0px center;
       height: fit-content; } }

@@ -56,11 +56,13 @@ require get_template_directory() . '/inc/admin-bar.php';
 /** Load author url changes **/
 require get_template_directory() . '/inc/author-urls.php';
 
-/** Load author url changes **/
+/** Load excerpt changes **/
 require get_template_directory() . '/inc/excerpts.php';
+
+/** Load search function changes **/
+require get_template_directory() . '/inc/search.php';
 
 /** CURRENTLY INACTIVE FUNCTIONS **/
 
 /** Load custom file-types for media folder. **/
 //require get_template_directory() . '/inc/custom-media-files.php';
-

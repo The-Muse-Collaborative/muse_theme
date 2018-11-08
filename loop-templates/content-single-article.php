@@ -23,11 +23,17 @@
 
 				<?php endif ?>
 
+				<div class="mt-3 mb-4">
+					<?php echo get_the_post_thumbnail(); ?>
+				</div>
+				<div class="mb-4 caption-text">
+					<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
+				</div>
+
 			</header><!-- .entry-header -->
+
 		</div>
 		<div class="col-md-8">
-
-			<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
 			<div class="entry-content mc-news-content">
 

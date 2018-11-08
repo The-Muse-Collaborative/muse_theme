@@ -28,10 +28,14 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 							<h2 class="page-title"><?php printf(
 							/* translators:*/
-							 esc_html__( 'Search Results for: %s', 'understrap' ),
+							 esc_html__( 'Results for — %s', 'understrap' ),
 								'<span>' . get_search_query() . '</span>' ); ?></h2>
 
 					</header><!-- .page-header -->
+
+					<div class="col-12 mt-4 mb-4">
+						<?php get_search_form(); ?>
+					</div>
 
 					<?php /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>

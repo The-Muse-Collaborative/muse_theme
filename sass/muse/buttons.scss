@@ -58,3 +58,12 @@
     &:hover { background: darken($red, 5%)}
   }
 }
+
+// Pagination items
+.page-item.active .page-link {
+  background-color: $pink;
+  border-color: $pink;
+}
+.page-link, .fa-step-forward:before, .fa-step-backward:before {
+  color: $pink;
+}

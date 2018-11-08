@@ -20,7 +20,7 @@
       right: 100%;
       top: 0;
     }
-    @media screen and (max-width: 576px){
+    @media screen and (max-width: 991.98px){
       text-align: center;
       background-image: none;
       background: transparentize($pink, .2) !important;
@@ -53,7 +53,7 @@
       border-top: transparent 7px solid;
       border-bottom: transparent 7px solid;
     }
-    @media screen and (max-width: 576px){
+    @media screen and (max-width: 991.98px){
       padding-left: 0;
       &::before { display: none; }
     }
@@ -66,7 +66,7 @@
   padding-top: 40px;
   padding-bottom: 40px;
   &-content {
-    @media screen and (max-width: 576px){
+    @media screen and (max-width: 991.98px){
       flex-direction: column-reverse;
     }
   }
@@ -79,13 +79,13 @@
 }
 
 .mc-footer-hosting {
-  @media screen and (max-width: 576px){
+  @media screen and (max-width: 991.98px){
     margin-top: 40px;
   }
 }
 
 .mc-footer-linode-logo {
-  @media screen and (max-width: 576px){
+  @media screen and (max-width: 991.98px){
     max-width: 150px;
     margin-left: auto;
     margin-right: auto;
@@ -94,7 +94,7 @@
 }
 
 .mc-footer-social {
-  @media screen and (max-width: 576px){
+  @media screen and (max-width: 991.98px){
     float: none;
     text-align: center;
   }
@@ -104,7 +104,7 @@
   background-size: cover;
   background-position: right 0px center;
 
-  @media (max-width: 460px) {
+  @media (max-width: 991.98px) {
     text-align: center;
   }
 }
