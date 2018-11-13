@@ -3,6 +3,9 @@
   background-color: $gray-dark;
   background-position: center center;
   background-size: cover;
+  @include media-breakpoint-down(md) {
+    .container { max-width: 100% !important; }
+  }
   &--right {
     position: relative;
     color: $white;
@@ -20,7 +23,7 @@
       right: 100%;
       top: 0;
     }
-    @media screen and (max-width: 991.98px){
+    @include media-breakpoint-down(md) {
       text-align: center;
       background-image: none;
       background: transparentize($pink, .2) !important;
@@ -116,7 +119,7 @@ img.socials {
       padding-top: 4px;
     }
     @media (min-width: 460px) {
-      padding-left: 25px;
+      padding-left: 0px;
     }
     @media (min-width: 469px) {
       padding-left: 0px;

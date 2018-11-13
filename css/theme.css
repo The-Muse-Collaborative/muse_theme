@@ -10626,6 +10626,9 @@ div.crm-container label {
   background-color: #524f4b;
   background-position: center center;
   background-size: cover; }
+  @media (max-width: 991.98px) {
+    .mc-top-footer .container {
+      max-width: 100% !important; } }
   .mc-top-footer--right {
     position: relative;
     color: #fff;
@@ -10643,7 +10646,7 @@ div.crm-container label {
       height: 100%;
       right: 100%;
       top: 0; }
-    @media screen and (max-width: 991.98px) {
+    @media (max-width: 991.98px) {
       .mc-top-footer--right {
         text-align: center;
         background-image: none;
@@ -10724,7 +10727,7 @@ img.socials {
       padding-top: 4px; } }
   @media (min-width: 460px) {
     img.socials {
-      padding-left: 25px; } }
+      padding-left: 0px; } }
   @media (min-width: 469px) {
     img.socials {
       padding-left: 0px;
