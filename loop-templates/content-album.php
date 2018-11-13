@@ -11,27 +11,25 @@
 			<div class="col-md-7">
         <div>
           <h2><?php the_field('album_name'); ?></h2>
+            <div class="mt-3 mc-news-header">
+            </div>
           <h3><?php the_field('album_artist'); ?></h3>
-          <h3><?php the_field('release_year'); ?></h3>
-          <h3><?php the_field('play_time'); ?></h3>
+          <h5>Release Year: <?php the_field('release_year'); ?></h5>
+          <h5>Length: <?php the_field('play_time'); ?> min</h5>
           <p style="text-align:justify"><?php the_field('album_description'); ?></p>
        </div>
       </div>
 
       <div class="col-md-5">
         <?php
-
         $images = get_field('album_art');
-        $size = 'medium'; // (thumbnail, medium, large, full or custom size)
 
         if( $images ): ?>
-            <ul>
-                <?php foreach( $images as $image ): ?>
-                    <li>
-                    	<?php echo wp_get_attachment_image( $image['ID'], $size = 'full' ); ?>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
+          <?php foreach( $images as $image ): ?>
+            <a href="<?php echo $image['url']; ?>" data-toggle="lightbox" >
+              <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php the_title(); ?>" class="img-fluid" />
+            </a>
+          <?php endforeach; ?>
         <?php endif; ?>
       </div>
     </div>
