@@ -78,6 +78,7 @@ function remove_dashboard_meta() {
 		remove_meta_box( 'dashboard_primary', 'dashboard', 'normal' ); //wordpress news
 		remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' ); //quick draft
 		remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' ); //at a glance
+    remove_meta_box( 'dashboard_activity', 'dashboard', 'normal' ); //activity
   endif;
 }
 add_action( 'admin_init', 'remove_dashboard_meta' );
