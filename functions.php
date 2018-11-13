@@ -65,6 +65,9 @@ require get_template_directory() . '/inc/search.php';
 /** Load search function changes **/
 require get_template_directory() . '/inc/dashboard.php';
 
+/** Load wordpress login function changes **/
+require get_template_directory() . '/inc/login.php';
+
 /** CURRENTLY INACTIVE FUNCTIONS **/
 
 /** Load custom file-types for media folder. **/
