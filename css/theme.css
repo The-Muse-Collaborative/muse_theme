@@ -10604,6 +10604,9 @@ div.crm-container label {
         right: 0;
         bottom: 0;
         left: 0; } }
+  @media (max-width: 767.98px) {
+    .mc-header {
+      margin-bottom: 0; } }
 
 .mc-banner-image {
   min-height: 500px;
