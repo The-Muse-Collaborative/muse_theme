@@ -10839,6 +10839,35 @@ img.socials {
     .bio-single:nth-child(2n-1) .image::after,
     .display-posts-bios .listing-item:nth-child(2n-1) .image::after {
       border-right: solid #2d2a26 20px; }
+  @media (max-width: 767.98px) {
+    .bio-single .image,
+    .bio-single .title,
+    .bio-single .content,
+    .display-posts-bios .listing-item .image,
+    .display-posts-bios .listing-item .title,
+    .display-posts-bios .listing-item .content {
+      display: block;
+      float: none;
+      width: 100%; }
+    .bio-single .image img,
+    .display-posts-bios .listing-item .image img {
+      width: 100%;
+      height: auto; }
+    .bio-single .image::after,
+    .display-posts-bios .listing-item .image::after {
+      top: initial;
+      bottom: 0px;
+      right: 0px;
+      left: 0;
+      margin: auto;
+      border-top: none;
+      border-left: solid transparent 20px;
+      border-right: solid transparent 20px;
+      border-bottom: solid #fff 20px; }
+    .bio-single:nth-child(2n-1) .image::after,
+    .display-posts-bios .listing-item:nth-child(2n-1) .image::after {
+      border-right: solid transparent 20px;
+      border-bottom: solid #2d2a26 20px; } }
 
 .mc-news-header,
 .mc-news-content {
