@@ -44,35 +44,27 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<img class="mc-footer-linode-logo" src="<?php echo get_template_directory_uri() . '/images/linode_icon.svg'; ?>"/>
 					</a>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-lg-4 col-md-6">
 					<!-- Hide this logo on mobile -->
 					<img class="d-none d-md-block" src="<?php echo get_template_directory_uri() . '/images/bottom-footer-logo.svg'; ?>"/>
 					<!-- Show this logo on mobile -->
 					<img class="d-block d-md-none text-center mc-footer-logo-mobile" src="<?php echo get_template_directory_uri() . '/images/bottom-footer-logo-mobile.svg'; ?>"/>
 					<div class="pull-right mc-footer-social" style="margin-top: 20px">
-						<!-- <div class="col-3"> -->
 							<a href="https://twitter.com/cmdmuse" target="blank">
 								<img class="socials" src="<?php echo get_template_directory_uri() . '/images/twitter-icon.svg'; ?>"/>
 							</a>
-						<!-- </div> -->
-						<!-- <div class="col-3"> -->
 							<a href="https://instagram.com/cmdmuse" target="blank">
 								<img class="socials" src="<?php echo get_template_directory_uri() . '/images/instagram-icon.svg'; ?>"/>
 							</a>
-						<!-- </div> -->
-						<!-- <div class="col-3"> -->
 							<a href="https://facebook.com/cmdmuse" target="blank">
 								<img class="socials" src="<?php echo get_template_directory_uri() . '/images/facebook-icon.svg'; ?>"/>
 							</a>
-						<!-- </div> -->
-						<!-- <div class="col-3"> -->
 							<a href="https://plus.google.com/+ThemusecollaborativeOrg1" target="blank">
 								<img class="socials" src="<?php echo get_template_directory_uri() . '/images/googleplus-icon.svg'; ?>"/>
 							</a>
 					</div>
-						<!-- </div> -->
 					<div class="row clear-both">
-						<div class="col-12 text-center text-sm-right">
+						<div class="col-12 text-center text-lg-right">
 							<p class="sm-text" style="margin-top: 20px">
 								&copy; Copyright <?php echo date('Y')?> All Rights Reserved
 							</p>

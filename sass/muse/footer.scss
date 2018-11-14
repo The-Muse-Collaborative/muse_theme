@@ -56,7 +56,7 @@
       border-top: transparent 7px solid;
       border-bottom: transparent 7px solid;
     }
-    @media screen and (max-width: 991.98px){
+    @include media-breakpoint-down(md) {
       padding-left: 0;
       &::before { display: none; }
     }
@@ -69,7 +69,7 @@
   padding-top: 40px;
   padding-bottom: 40px;
   &-content {
-    @media screen and (max-width: 991.98px){
+    @include media-breakpoint-down(md) {
       flex-direction: column-reverse;
     }
   }
@@ -82,13 +82,13 @@
 }
 
 .mc-footer-hosting {
-  @media screen and (max-width: 991.98px){
+  @include media-breakpoint-down(md) {
     margin-top: 40px;
   }
 }
 
 .mc-footer-linode-logo {
-  @media screen and (max-width: 991.98px){
+  @include media-breakpoint-down(md) {
     max-width: 150px;
     margin-left: auto;
     margin-right: auto;
@@ -97,39 +97,27 @@
 }
 
 .mc-footer-social {
-  @media screen and (max-width: 991.98px){
+  @include media-breakpoint-down(md) {
     float: none;
     text-align: center;
+    > a + a { margin-left: 15px; }
   }
+
 }
 
 .contact_bg {
   background-size: cover;
   background-position: right 0px center;
 
-  @media (max-width: 991.98px) {
+  @include media-breakpoint-down(md) {
     text-align: center;
   }
 }
 img.socials {
     height: 35px;
-
-    @media (min-width: 100px) {
-      padding-left: 20px;
-      padding-top: 4px;
-    }
-    @media (min-width: 460px) {
-      padding-left: 0px;
-    }
-    @media (min-width: 469px) {
+    @include media-breakpoint-down(md) {
       padding-left: 0px;
       padding-top: 0px;
-      padding-right: 4px;
-    }
-    @media (min-width: 769px) {
-      padding-left: 0px;
-      padding-top: 0px;
-      padding-right: 14px;
     }
 }
 .clear-both {
