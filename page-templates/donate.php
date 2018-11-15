@@ -78,7 +78,6 @@ could cause the next script to fail. Maybe set a better checker there? -->
 
 	(function(){
 		// This needs to be moved to a secret if possible.
-		console.log("I'm starting up...")
 		var stripe = Stripe('pk_test_ngn8Hld7TMTDi4jPc48D20HU');
 		var elements = stripe.elements();
 		var card = elements.create('card', {
@@ -127,7 +126,6 @@ could cause the next script to fail. Maybe set a better checker there? -->
 
 		// Self invoking function to stub out JSON call.
 		var schema =  window.schemaTest;
-		console.log(schema);
 		var now = new Date();
 		schema.options.fields.donation_info.fields.first_charge = {
 			"picker": {
@@ -160,19 +158,15 @@ could cause the next script to fail. Maybe set a better checker there? -->
 		};
 
 		schema.postRender = function(control) {
-			console.log(control);
 			$('#donation-form button[type=submit]').addClass('ladda-button')
 				.addClass('btn-primary')
 				.removeClass('btn-default')
 				.attr('data-style', 'expand-left');
 			if ($("#card-element").length) {
 				card.mount('#card-element');
-			} else {
-				console.log("Couldn't find it . . .")
 			}
 			addRadioHandlers();
 		};
-		console.log(schema);
 
 		$("#donation-form").alpaca(schema);
 		//}); //When going live. Remove self-invoking part.
@@ -180,7 +174,6 @@ could cause the next script to fail. Maybe set a better checker there? -->
 		//Function to add yellow BG to inputs when selected;
 		function addRadioHandlers(){
 			var $radios = $("#donation-form").find(".alpaca-field-radio");
-			console.log("Radios", $radios);
 
 			$radios.find('input[type="radio"]').hide();
 
@@ -203,7 +196,6 @@ could cause the next script to fail. Maybe set a better checker there? -->
 				state: $('#donation-form select[name=billing_address_state]').val(),
 				zip_code: $('#donation-form input[name=billing_address_zip_code]').val(),
 			};
-			console.log(address);
 			$.ajax({
 				type: 'POST',
 				url: '/usps/validate',
@@ -223,7 +215,6 @@ could cause the next script to fail. Maybe set a better checker there? -->
 		// TODO: Remove from global scope.
 		var address;
 		function process_validated_address(data) {
-			console.log("Successfully ran processor.")
 			if (!($('#donation-form input[name=billing_address_address_line_1]').val() != data['address_line_1'] ||
 				$('#donation-form input[name=billing_address_address_line_2]').val() != data['address_line_2'] ||
 				$('#donation-form input[name=billing_address_city]').val() != data['city'] ||

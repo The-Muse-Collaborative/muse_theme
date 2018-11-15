@@ -22,6 +22,7 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 		wp_enqueue_script( 'bootstrap-date-picker', get_template_directory_uri() . '/js/bootstrap-date-picker.js', array(), true );
 		wp_enqueue_script( 'handlebars', get_template_directory_uri() . '/js/handlebars.js', array(), true );
 		wp_enqueue_script( 'alpaca', get_template_directory_uri() . '/js/alpaca.js', array(), true );
+		wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/js/lightbox.js', array(), true );
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}

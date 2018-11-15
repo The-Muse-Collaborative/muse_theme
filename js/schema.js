@@ -21,7 +21,7 @@ var schemaTest = {
             "amount": {
               "title": "Donation Amount",
               "type": "number",
-              "enum": [5.00, 10.00, 25.00, 0.00]
+              "enum": [10.00, 25.00, 50.00, 0.00]
             },
             "custom_amount": {
               "title": "Custom Donation Amount",
@@ -250,9 +250,9 @@ var schemaTest = {
               "hideNone": true,
               "type": "radio",
               "optionLabels": [
-                "$5.00",
                 "$10.00",
                 "$25.00",
+                "$50.00",
                 "Custom Amount"
               ]
             },
