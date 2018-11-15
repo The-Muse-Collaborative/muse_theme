@@ -2,12 +2,64 @@ var schemaTest = {
     "schema": {
       "type": "object",
       "required": [
+        "donation_info",
         "personal_info",
-        "billing_address",
-        "donation_info"
+        "billing_address"
       ],
       "additionalProperties": false,
       "properties": {
+        "donation_info": {
+          "title": "Donation Details",
+          "type": "object",
+          "required": [
+            "amount",
+            "recurring",
+            "stripe_token"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "amount": {
+              "title": "Donation Amount",
+              "type": "number",
+              "enum": [5.00, 10.00, 25.00, 0.00]
+            },
+            "custom_amount": {
+              "title": "Custom Donation Amount",
+              "type": "number",
+              "minimum": 1,
+              "maximum": 999999.99,
+              "multipleOf": 0.01
+            },
+            "recurring": {
+              "type": "boolean"
+            },
+            "frequency": {
+              "title": "Donation Frequency",
+              "type": "string",
+              "default": "monthly",
+              "enum": [
+                "monthly",
+                "bimonthly",
+                "annually"
+              ]
+            },
+            "first_charge": {
+              "title": "First Donation Date",
+              "type": "string",
+              "format": "date"
+            },
+            "stripe_token": {
+              "title": "Credit/Debit Card",
+              "type": "string",
+              "pattern": "^tok_[a-zA-Z0-9]{24}$"
+            }
+          },
+          "dependencies": {
+            "custom_amount": ["amount"],
+            "frequency": ["recurring"],
+            "first_charge": ["recurring"]
+          }
+        },
         "personal_info": {
           "title": "Personal Information",
           "type": "object",
@@ -142,58 +194,6 @@ var schemaTest = {
               "pattern": "^[0-9]{5}(\\-[0-9]{4})?$"
             }
           }
-        },
-        "donation_info": {
-          "title": "Donation Details",
-          "type": "object",
-          "required": [
-            "amount",
-            "recurring",
-            "stripe_token"
-          ],
-          "additionalProperties": false,
-          "properties": {
-            "amount": {
-              "title": "Donation Amount",
-              "type": "number",
-              "enum": [5.00, 10.00, 25.00, 0.00]
-            },
-            "custom_amount": {
-              "title": "Custom Donation Amount",
-              "type": "number",
-              "minimum": 1,
-              "maximum": 999999.99,
-              "multipleOf": 0.01
-            },
-            "recurring": {
-              "type": "boolean"
-            },
-            "frequency": {
-              "title": "Donation Frequency",
-              "type": "string",
-              "default": "monthly",
-              "enum": [
-                "monthly",
-                "bimonthly",
-                "annually"
-              ]
-            },
-            "first_charge": {
-              "title": "First Donation Date",
-              "type": "string",
-              "format": "date"
-            },
-            "stripe_token": {
-              "title": "Credit/Debit Card",
-              "type": "string",
-              "pattern": "^tok_[a-zA-Z0-9]{24}$"
-            }
-          },
-          "dependencies": {
-            "custom_amount": ["amount"],
-            "frequency": ["recurring"],
-            "first_charge": ["recurring"]
-          }
         }
       }
     },
@@ -227,6 +227,46 @@ var schemaTest = {
         }
       },
       "fields": {
+        "donation_info": {
+          "showMessages": false,
+          "fields": {
+            "recurring": {
+              "rightLabel": "Make this a recurring donation"
+            },
+            "frequency": {
+              "sort": false,
+              "hideNone": true,
+              "optionLabels": [
+                "Monthly",
+                "Bi-Monthly",
+                "Annually"
+              ]
+            },
+            "first_charge": {
+              "type": "date"
+            },
+            "amount": {
+              "sort": false,
+              "hideNone": true,
+              "type": "radio",
+              "optionLabels": [
+                "$5.00",
+                "$10.00",
+                "$25.00",
+                "Custom Amount"
+              ]
+            },
+            "custom_amount": {
+              "dependencies": {
+                "amount": 0.00
+              },
+              "type": "currency"
+            },
+            "stripe_token": {
+              "showMessages": false
+            }
+          }
+        },
         "personal_info": {
           "showMessages": false,
           "fields": {
@@ -326,46 +366,6 @@ var schemaTest = {
             },
             "zip_code": {
               "maxMessages": 1
-            }
-          }
-        },
-        "donation_info": {
-          "showMessages": false,
-          "fields": {
-            "recurring": {
-              "rightLabel": "Make this a recurring donation"
-            },
-            "frequency": {
-              "sort": false,
-              "hideNone": true,
-              "optionLabels": [
-                "Monthly",
-                "Bi-Monthly",
-                "Annually"
-              ]
-            },
-            "first_charge": {
-              "type": "date"
-            },
-            "amount": {
-              "sort": false,
-              "hideNone": true,
-              "type": "radio",
-              "optionLabels": [
-                "$5.00",
-                "$10.00",
-                "$25.00",
-                "Custom Amount"
-              ]
-            },
-            "custom_amount": {
-              "dependencies": {
-                "amount": 0.00
-              },
-              "type": "currency"
-            },
-            "stripe_token": {
-              "showMessages": false
             }
           }
         }

@@ -8,7 +8,6 @@
 	margin: 0 30px 10px 0;
 }
 .bio-single,
-
 .display-posts-bios .listing-item{
 	display: block;
 	clear: both;
@@ -62,15 +61,20 @@
 		}
 	}
 	@include media-breakpoint-down(sm) {
+		max-width: 308px;
+		margin-left: auto;
+		margin-right: auto;
+
 		.image,
 		.title,
 		.content {
 			display: block;
 			float: none;
 			width: 100%;
+			min-width: 0;
 		}
 		.image {
-			img { width: 100%; height: auto; }
+			img { width: 100%; max-width: 308px; height: auto; }
 			&::after {
 				top: initial;
 				bottom: 0px;

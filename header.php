@@ -44,9 +44,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<?php if(get_field('root_page_banner')) : ?>
 					<a href="/" class="mc-header__logo-link">
 						<!-- Hide this logo on mobile -->
-						<img src="<?php echo get_template_directory_uri() . '/images/logo.svg'; ?>" class="d-none d-sm-block mc-header__logo" alt="The Muse Collaborative"/>
+						<img src="<?php echo get_template_directory_uri() . '/images/logo.svg'; ?>" class="d-none d-lg-block mc-header__logo" alt="The Muse Collaborative"/>
 						<!-- Show this logo on mobile -->
-						<img src="<?php echo get_template_directory_uri() . '/images/logo-mobile.svg'; ?>" class="d-block d-sm-none mc-header__logo" alt="The Muse Collaborative"/>
+						<img src="<?php echo get_template_directory_uri() . '/images/logo-mobile.svg'; ?>" class="d-block d-lg-none mc-header__logo" alt="The Muse Collaborative"/>
 					</a>
 
 				<?php else:  ?>

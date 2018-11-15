@@ -5,7 +5,7 @@
   display: block;
   background: $yellow;
   color: $black;
-  padding: 2px;
+  padding: 5px;
   padding-left: 40px;
   padding-right: 30px;
   margin-right: 17px;
@@ -36,6 +36,9 @@
     border-top: 17px solid transparent;
     border-bottom: 17px solid transparent;
     border-left: 17px solid $yellow;
+  }
+  @include media-breakpoint-down(xs) {
+    &:after{display:none;}
   }
 }
 
@@ -184,6 +187,7 @@ div.crm-container label {   font-weight: 700 !important; }
 }
 .alpaca-container-label {
   @extend .form-heading;
+  @extend h4;
 }
 
 .alpaca-field input, .alpaca-field select, .StripeElement {
@@ -204,9 +208,16 @@ div.crm-container label {   font-weight: 700 !important; }
   margin-left: -4px;
 
   label {
+    cursor: pointer;
     margin-bottom: 0;
     padding: 10px;
     input { display: inline-flex; }
+  }
+  &:hover {
+    background: lighten($yellow, 20%);
+    &::after {
+      background: lighten($yellow, 20%);
+    }
   }
   &.checked {
     background: $yellow;
@@ -245,4 +256,8 @@ div.crm-container label {   font-weight: 700 !important; }
   &:nth-of-type(4) { z-index: 7; }
   &:nth-of-type(5) { z-index: 6; }
   &:nth-of-type(6) { z-index: 5; }
+}
+input[type=checkbox] {
+  width: initial;
+  display: inline-block;
 }

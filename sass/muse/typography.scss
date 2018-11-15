@@ -78,3 +78,9 @@ a, .pink{ color: $pink; }
 a.meta.yellow:hover { color: transparentize($yellow, .2) !important;}
 .active a.meta.yellow { color: white !important;}
 .active a.meta.yellow:hover { color:transparentize($white, .2) !important;}
+
+hr {
+  background: transparentize($pink, .75);
+  height: 2px;
+  border-top: none;
+}
