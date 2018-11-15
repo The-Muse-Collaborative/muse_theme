@@ -1,5 +1,6 @@
 <?php
 
+//changes style of wordpress login page
 function my_login_logo() { ?>
     <style type="text/css">
         #login h1 a, .login h1 a {

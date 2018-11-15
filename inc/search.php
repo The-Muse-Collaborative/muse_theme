@@ -4,6 +4,7 @@
  * @package understrap
  */
 
+//removes the following pages from search results
  function jp_search_filter( $query ) {
    if ( ! $query->is_admin && $query->is_search && $query->is_main_query() ) {
      //array includes the page/post id for excluded items

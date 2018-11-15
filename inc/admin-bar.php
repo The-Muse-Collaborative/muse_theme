@@ -5,7 +5,7 @@
  * @package understrap
  */
 
-//determines order of left admin bar icons
+//determines order of left admin bar icons in wordpress dashboard
 function custom_menu_order($menu_ord) {
   if (!$menu_ord) return true;
 
@@ -29,19 +29,16 @@ function custom_menu_order($menu_ord) {
          'separator-last',             // Last separator
      );
  }
- add_filter('custom_menu_order', 'custom_menu_order'); // Activate custom_menu_order
+ add_filter('custom_menu_order', 'custom_menu_order');
  add_filter('menu_order', 'custom_menu_order');
 
-////// ALL USER REMOVALS //////
-
-//removes items from left admin bar
+//removes items from left admin bar for ALL USERS
 function remove_left_menus() {
 remove_menu_page( 'edit-comments.php' );          // Comments
-//remove_menu_page( 'themes.php' );               // Appearance
 }
 add_action( 'admin_menu', 'remove_left_menus' );
 
-//removes items from top admin bar
+//removes items from top admin bar for ALL USERS
 function remove_top_menus() {
   global $wp_admin_bar;
   $wp_admin_bar->remove_menu('comments');       // Comments
@@ -49,9 +46,7 @@ function remove_top_menus() {
  }
  add_action( 'wp_before_admin_bar_render', 'remove_top_menus' );
 
-////// SPECIFIC USER REMOVALS //////
-
-//removes items from left admin bar for non-admins
+//removes items from left admin bar for NON-ADMINS
 function remove_left_menu_items() {
   if( !current_user_can( 'administrator' ) ):
     remove_menu_page( 'edit.php?post_type=bios' );
@@ -62,7 +57,7 @@ function remove_left_menu_items() {
 }
 add_action( 'admin_menu', 'remove_left_menu_items' );
 
-//removes items from top admin bar for non-admins
+//removes items from top admin bar for NON-ADMINS
 function remove_top_menu_items() {
   global $wp_admin_bar;
   if( !current_user_can( 'administrator' ) ):
@@ -72,7 +67,7 @@ function remove_top_menu_items() {
 }
 add_action( 'wp_before_admin_bar_render', 'remove_top_menu_items' );
 
-//remove dashboard widgets for non-admins
+//remove dashboard widgets for NON-ADMINS
 function remove_dashboard_meta() {
 	if( !current_user_can( 'administrator' ) ):
 		remove_meta_box( 'dashboard_primary', 'dashboard', 'normal' ); //wordpress news

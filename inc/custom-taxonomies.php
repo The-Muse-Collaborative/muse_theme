@@ -31,7 +31,6 @@ function bios_init() {
 	register_taxonomy('bio', array( 'bios' ), $args);
 }
 
-// Runs custom taxonomy for bios
 add_action( 'init', 'bios_init' );
 
 // Creates custom taxonomy for articles
@@ -98,7 +97,6 @@ function articles_init() {
 	register_taxonomy('tag', array( 'articles' ), $args);
 }
 
-// Runs custom taxonomy for articles
 add_action( 'init', 'articles_init', 0 );
 
 // Creates custom taxonomy for albums
@@ -131,5 +129,4 @@ function albums_init() {
 	register_taxonomy('album', array( 'albums' ), $args);
 }
 
-// Runs custom taxonomy for albums
 add_action( 'init', 'albums_init' );
