@@ -1,26 +1,27 @@
 <?php
 
 /* Adds widgets to the wordpress dashboard */
-function mc_dashboard_widgets() {
 
+function mc_dashboard_widgets() {
 	wp_add_dashboard_widget(
-                 'welcome',                                // Widget slug.
-                 'Authors: Getting Started',               // Title.
-                 'welcome_dashboard_widget'                // Display function.
-        );
+    'welcome',                                // Widget slug.
+    'Authors: Getting Started',               // Title.
+    'welcome_dashboard_widget'                // Display function.
+  );
   wp_add_dashboard_widget(
-                 'current-contributors',                   // Widget slug.
-                 'Current Contributors',                   // Title.
-                 'current_contributors_dashboard_widget'   // Display function.
-        );
+    'current-contributors',                   // Widget slug.
+    'Current Contributors',                   // Title.
+    'current_contributors_dashboard_widget'   // Display function.
+  );
 }
 add_action( 'wp_dashboard_setup', 'mc_dashboard_widgets' );
 
 // Author Welcome Widget
 function welcome_dashboard_widget() {
-  echo "Welcome to The Muse Collaborative's author dashboard.  Put more instructions here for future users. <br>
+  echo "Welcome to The Muse Collaborative's author dashboard.  You can join our
   <a href='https://join.slack.com/t/themusecollaborative/shared_invite/enQtNDgwMjM4NjQxNTEwLTk3NzIwOWRmM2MwYmEzNWNlM2RlYWUwMTFkNWYxM2Y0MDI0MzY2MWY1YjU1MTg3N2NmMjIwNGZlMTc0MGZmZmI'>Slack Channel</a>
-  If you have questions, email <a href='mailto:michael@themusecollaborative.org'>michael@themusecollaborative.org</a>";
+	to connect with other witers and artists.  We'll add more information to this dashboard as requested. <br><br>
+	If you have any questions, email <a href='mailto:michael@themusecollaborative.org'>michael@themusecollaborative.org</a>";
 }
 
 // Current Contributors Widget
