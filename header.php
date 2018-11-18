@@ -22,7 +22,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php wp_head(); ?>
 	<link href="https://fonts.googleapis.com/css?family=Archivo:400,400i,500,500i,700|Saira:300,600,700" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.typekit.net/zbs3oue.css">
+	<link rel="icon" href="/favicon.ico">
 </head>
 
 <body <?php body_class(); ?>>

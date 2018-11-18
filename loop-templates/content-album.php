@@ -8,7 +8,7 @@
 ?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 	<div class="row col-md-12">
-			<div class="col-md-7">
+			<div class="col-md-6">
         <div>
           <h2><?php the_field('album_name'); ?></h2>
             <div class="mt-3 mc-news-header">
@@ -19,18 +19,22 @@
           <p style="text-align:justify"><?php the_field('album_description'); ?></p>
        </div>
       </div>
-
+			<div class="col-md-1"></div>
       <div class="col-md-5">
-        <?php
-        $images = get_field('album_art');
-
-        if( $images ): ?>
-          <?php foreach( $images as $image ): ?>
-            <a href="<?php echo $image['url']; ?>" data-toggle="lightbox" >
-              <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php the_title(); ?>" class="img-fluid" />
-            </a>
-          <?php endforeach; ?>
-        <?php endif; ?>
+				<?php
+					$image = get_field('album_cover');
+					if( $image ): ?>
+						<a href="<?php echo $image['url']; ?>" data-toggle="lightbox" data-gallery="hidden-images">
+							<img src="<?php echo $image['url']; ?>" alt="<?php the_title(); ?>" class="img-fluid" />
+						</a>
+				<?php endif; ?>
+				<?php
+        	$images = get_field('album_art');
+        	if( $images ): ?>
+          	<?php foreach( $images as $image ): ?>
+							<div data-toggle="lightbox" data-gallery="hidden-images" data-remote="<?php echo $image['url']; ?>" data-footer="<?php echo $image['caption']?>"></div>
+          	<?php endforeach; ?>
+        	<?php endif; ?>
       </div>
     </div>
 
@@ -52,7 +56,7 @@
       			<?php
       				$string = sanitize_title( get_sub_field('track_name') );
       			?>
-      		    <div role="tabpanel" style="background-color:yellow" class="tab-pane fade <?php if ($i==0) { ?>in active<?php } ?>" id="<?php echo $string; ?>">
+      		    <div role="tabpanel" class="album-track tab-pane fade <?php if ($i==0) { ?>in active<?php } ?>" id="<?php echo $string; ?>">
       		    	<h2><?php the_sub_field('track_name'); ?></h2>
                   <?php // Displays track details on right side of page
                     //the_sub_field('track_length');
