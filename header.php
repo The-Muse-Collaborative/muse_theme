@@ -22,7 +22,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<meta property="og:description" content='<?php the_excerpt(); ?>' />
 	<meta property="og:title" content='<?php the_title(); ?> – The Muse Collaborative' />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="<?php echo the_permalink(); ?>"/>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php wp_head(); ?>
