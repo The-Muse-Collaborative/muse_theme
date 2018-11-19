@@ -18,6 +18,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-title" content="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
+	<meta property="og:image" content='<?php if ( has_post_thumbnail() ) { the_post_thumbnail_url(); } else { echo get_template_directory_uri() . '/images/logo.png'; } ?>' />
+	<meta property="og:description" content='<?php the_excerpt(); ?>' />
+	<meta property="og:title" content='<?php the_title(); ?> – The Muse Collaborative' />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="<?php echo the_permalink(); ?>"/>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php wp_head(); ?>

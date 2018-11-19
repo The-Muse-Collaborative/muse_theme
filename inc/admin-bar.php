@@ -5,6 +5,9 @@
  * @package understrap
  */
 
+//adds expert fields to pages (already default for posts and custom posts)
+add_post_type_support( 'page', 'excerpt' );
+
 //determines order of left admin bar icons in wordpress dashboard
 function custom_menu_order($menu_ord) {
   if (!$menu_ord) return true;
