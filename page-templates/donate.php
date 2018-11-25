@@ -58,8 +58,22 @@ $container = get_theme_mod( 'understrap_container_type' );
 
               <section id="donation">
                 <div id="donation-form" class=""></div>
-                <div id="donation-success" hidden="">Thanks for you donation! A receipt has been emailed to you.</div>
+                <div id="donation-success" style="display: none;">
+                  <div class="row">
+                    <div class="col-sm justify-content-sm-end justify-content-center align-items-center d-flex">
+                      <div class="text-sm-left text-center">
+                        <h2 class="entry-title">Thank you for the support</h2>
+                        <p class="">A receipt has been emailed to you. If you have any questions, please contact us at <a href="mailto:info@themusecollaborative.org">info@themusecollaborative.org</a></p>
+                      </div>
+                    </div>
+                    <div class="col-sm d-sm-flex justify-content-start ">
+                      <img class="vinyl_img align-self-start d-none d-sm-block" style="max-height: 663px; width: auto; transform: scaleX(-1)" src="<?php echo get_template_directory_uri() . '/images/contact-vinyl.svg'; ?>)">
+                      <img class="vinyl_sm mb-5 d-sm-none d-block" style="transform: scaleY(-1)" src="<?php echo get_template_directory_uri() . '/images/vinyl_0padding.png'; ?>)">
+                    </div>
+                  </div>
+                </div>
               </section>
+              
             </div><!-- .entry-content -->
           </article>
         </main><!-- #main -->
