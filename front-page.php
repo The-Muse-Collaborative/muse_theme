@@ -13,8 +13,32 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php
 	$image = get_field('home_background_image');
+	$large = $image['sizes'][ 'large' ];
+	$full = $image[ 'url' ];
+?>
+<style>
+@media screen and (min-width: 1024px) {
+	.mc-homepage-background-image {
+		background-image: url(<?php echo $full; ?>);
+	}
+}
+@media screen and (min-width: 501px) and (max-width: 1023px) {
+	.mc-homepage-background-image {
+		background-image: url(<?php echo $large; ?>);
+	}
+}
+@media screen and (max-width: 500px) {
+	.mc-homepage-background-image {
+		background-image: none;
+	}
+}
+
+</style>
+
+<?php
+	$image = get_field('home_background_image');
 	if( !empty($image) ): ?>
-		<div class="mc-homepage-background-image" style="background-image: url(<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>)">
+		<div class="mc-homepage-background-image" alt="<?php echo $image['alt']; ?>)">
 		</div>
 <?php endif; ?>
 
