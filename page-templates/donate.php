@@ -73,7 +73,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                   </div>
                 </div>
               </section>
-              
+
             </div><!-- .entry-content -->
           </article>
         </main><!-- #main -->
@@ -91,7 +91,6 @@ could cause the next script to fail. Maybe set a better checker there? -->
 	window.$ = jQuery.noConflict();
 
 	(function(){
-		// This needs to be moved to a secret if possible.
 		var stripe = Stripe('pk_test_ngn8Hld7TMTDi4jPc48D20HU');
 		var elements = stripe.elements();
 		var card = elements.create('card', {
@@ -132,61 +131,56 @@ could cause the next script to fail. Maybe set a better checker there? -->
 			}
 		});
 
-
-
 		// Get Alpaca-ready field to build form.
-		// Using my silly test file  . . .
-		//$.getJSON( "/donation/donate", function(schema) {
+	  $.getJSON( "/donation/donate", function(schema) {
 
-		// Self invoking function to stub out JSON call.
-		var schema =  window.schemaTest;
-		var now = new Date();
-		schema.options.fields.donation_info.fields.first_charge = {
-			"picker": {
-				"defaultDate": now,
-				"minDate": now,
-				"maxDate": new Date().setDate(now.getDate() + 60)
-			}
-		};
+  		var now = new Date();
+  		schema.options.fields.donation_info.fields.first_charge = {
+  			"picker": {
+  				"defaultDate": now,
+  				"minDate": now,
+  				"maxDate": new Date().setDate(now.getDate() + 60)
+  			}
+  		};
 
-		schema.options.fields.donation_info.fields.custom_amount['validator'] = function(callback) {
-			value = this.getValue();
-			if (!value) {
-				callback({
-					'status': false,
-					'message': 'This field is not optional.'
-				});
-			} else if (value < this.schema.minimum) {
-				callback({
-					'status': false,
-					'message': Alpaca.substituteTokens("Value must be at least ${0}.", [this.schema.minimum])
-				});
-			} else if (value > this.schema.maximum) {
-				callback({
-					'status': false,
-					'message': Alpaca.substituteTokens("Value may be at most ${0}.", [this.schema.maximum])
-				});
-			} else {
-				callback({'status': true});
-			}
-		};
+  		schema.options.fields.donation_info.fields.custom_amount['validator'] = function(callback) {
+  			value = this.getValue();
+  			if (!value) {
+  				callback({
+  					'status': false,
+  					'message': 'This field is not optional.'
+  				});
+  			} else if (value < this.schema.minimum) {
+  				callback({
+  					'status': false,
+  					'message': Alpaca.substituteTokens("Value must be at least ${0}.", [this.schema.minimum])
+  				});
+  			} else if (value > this.schema.maximum) {
+  				callback({
+  					'status': false,
+  					'message': Alpaca.substituteTokens("Value may be at most ${0}.", [this.schema.maximum])
+  				});
+  			} else {
+  				callback({'status': true});
+  			}
+  		};
 
-		schema.postRender = function(control) {
-			$('#donation-form button[type=submit]').addClass('ladda-button')
-				.addClass('btn-primary')
-				.removeClass('btn-default')
-				.attr('data-style', 'expand-left');
-			if ($("#card-element").length) {
-				card.mount('#card-element');
-			}
-			addRadioHandlers();
-		};
+  		schema.postRender = function(control) {
+  			$('#donation-form button[type=submit]').addClass('ladda-button')
+  				.addClass('btn-primary')
+  				.removeClass('btn-default')
+  				.attr('data-style', 'expand-left');
+  			if ($("#card-element").length) {
+  				card.mount('#card-element');
+  			}
+  			addRadioHandlers();
+  		};
 
-		$("#donation-form").alpaca(schema);
-		//}); //When going live. Remove self-invoking part.
+  		$("#donation-form").alpaca(schema);
+
 
 		//Function to add yellow BG to inputs when selected;
-		function addRadioHandlers(){
+		  function addRadioHandlers(){
 			var $radios = $("#donation-form").find(".alpaca-field-radio");
 
 			$radios.find('input[type="radio"]').hide();
@@ -200,9 +194,9 @@ could cause the next script to fail. Maybe set a better checker there? -->
 		}
 
 
-		$('#donation-form').submit(function(event) {
+		  $('#donation-form').submit(function(event) {
 			event.preventDefault();
-			// Ladda.create(document.querySelector('#donation-form button[type=submit]')).start();
+			Ladda.create(document.querySelector('#donation-form button[type=submit]')).start();
 			var address = {
 				address_line_1: $('#donation-form input[name=billing_address_address_line_1]').val(),
 				address_line_2: $('#donation-form input[name=billing_address_address_line_2]').val(),
@@ -221,14 +215,13 @@ could cause the next script to fail. Maybe set a better checker there? -->
 					var errorElement = document.getElementById('error_modal_text');
 					errorElement.textContent = result.error;
 					$('#error_modal').modal('show');
-					// Ladda.stopAll();
+					Ladda.stopAll();
 				}
 			});
 		});
 
-		// TODO: Remove from global scope.
-		var address;
-		function process_validated_address(data) {
+		  var address;
+		  function process_validated_address(data) {
 			if (!($('#donation-form input[name=billing_address_address_line_1]').val() != data['address_line_1'] ||
 				$('#donation-form input[name=billing_address_address_line_2]').val() != data['address_line_2'] ||
 				$('#donation-form input[name=billing_address_city]').val() != data['city'] ||
@@ -254,7 +247,7 @@ could cause the next script to fail. Maybe set a better checker there? -->
 			$('#address_validate_modal').modal('show');
 			address = data;
 		}
-		$('#use_validated_address').click(function(event) {
+		  $('#use_validated_address').click(function(event) {
 			$('#donation-form input[name=billing_address_address_line_1]').val(address["address_line_1"]);
 			$('#donation-form input[name=billing_address_address_line_2]').val(address["address_line_2"]);
 			$('#donation-form input[name=billing_address_city]').val(address["city"]);
@@ -263,26 +256,26 @@ could cause the next script to fail. Maybe set a better checker there? -->
 			address_selected();
 		});
 
-		$('#use_entered_address').click(address_selected);
+		  $('#use_entered_address').click(address_selected);
 
-		//TODO: Remove
-		$('#cancel_address_validation').click(function(event) {
+  		//TODO: Remove
+  		$('#cancel_address_validation').click(function(event) {
 
-		});
+  		});
 
-		function address_selected() {
-			var stripe_info = {
-				name: $('#donation-form input[name=personal_info_first_name]').val() + ' ' + $('#donation-form input[name=personal_info_last_name]').val(),
-				address_line1: $('#donation-form input[name=billing_address_address_line_1]').val(),
-				address_line2: $('#donation-form input[name=billing_address_address_line_2]').val(),
-				address_city: $('#donation-form input[name=billing_address_city]').val(),
-				address_state: $('#donation-form select[name=billing_address_state]').val(),
-				address_zip: $('#donation-form input[name=billing_address_zip_code]').val(),
-			};
-			stripe.createToken(card, stripe_info).then(process_stripe_token_creation);
-		}
+  		function address_selected() {
+  			var stripe_info = {
+  				name: $('#donation-form input[name=personal_info_first_name]').val() + ' ' + $('#donation-form input[name=personal_info_last_name]').val(),
+  				address_line1: $('#donation-form input[name=billing_address_address_line_1]').val(),
+  				address_line2: $('#donation-form input[name=billing_address_address_line_2]').val(),
+  				address_city: $('#donation-form input[name=billing_address_city]').val(),
+  				address_state: $('#donation-form select[name=billing_address_state]').val(),
+  				address_zip: $('#donation-form input[name=billing_address_zip_code]').val(),
+  			};
+  			stripe.createToken(card, stripe_info).then(process_stripe_token_creation);
+  		}
 
-		function process_stripe_token_creation(result) {
+		  function process_stripe_token_creation(result) {
 			if (result.token) {
 				$('#donation-form input[name=donation_info_stripe_token]').val(result.token.id);
 				$.ajax({
@@ -300,31 +293,31 @@ could cause the next script to fail. Maybe set a better checker there? -->
 							errorElement.textContent = 'Unknown error.';
 						}
 						$('#error_modal').modal('show');
-						// Ladda.stopAll();
+						Ladda.stopAll();
 					}
 				});
 			} else if (result.error) {
 				var errorElement = document.getElementById('error_modal_text');
 				errorElement.textContent = result.error.message;
 				$('#error_modal').modal('show');
-				// Ladda.stopAll();
+				Ladda.stopAll();
 			}
 		}
 
-		function process_donation(result) {
+		  function process_donation(result) {
 			if (result.error) {
 				var errorElement = document.getElementById('error_modal_text');
 				errorElement.textContent = result.error;
 				$('#error_modal').modal('show');
-				// Ladda.stopAll();
+				Ladda.stopAll();
 			} else {
 				$('#donation-form').hide();
 				$('#donation-success').show();
-				// Ladda.stopAll();
+				Ladda.stopAll();
 			}
 		}
+  })
 	})();
-
 
 </script>
 <style type="text/css">
