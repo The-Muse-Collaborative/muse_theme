@@ -86,7 +86,6 @@
   &.navbar-dark .navbar-nav .nav-link:hover { color: transparentize($yellow, .7)}
   .dropdown:hover .dropdown-menu { display: block; }
 
-
   @media (max-width: 768px) {
     .nav-link:focus + .dropdown-menu { display: block; }
     .dropdown-menu.focus { display: block; }

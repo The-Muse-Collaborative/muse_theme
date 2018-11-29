@@ -68,17 +68,33 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</button>
 
 				<!-- The WordPress Menu goes here -->
-				<?php wp_nav_menu(
-					array(
-						'theme_location'  => 'primary',
-						'container_class' => 'collapse navbar-collapse mc-header__menu',
-						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'navbar-nav',
-						'fallback_cb'     => '',
-						'menu_id'         => 'main-menu',
-						'walker'          => new understrap_WP_Bootstrap_Navwalker(),
-					)
-				); ?>
+				<div class="d-block navbar-collapse d-md-none">
+					<?php wp_nav_menu(
+						array(
+							'theme_location'  => 'mobile',
+							'container_class' => 'collapse mc-header__menu',
+							'container_id'    => 'navbarNavDropdown',
+							'menu_class'      => 'navbar-nav',
+							'fallback_cb'     => '',
+							'menu_id'         => '58',
+							'walker'          => new understrap_WP_Bootstrap_Navwalker(),
+						)
+					); ?>
+				</div>
+				<div class="d-none d-md-block">
+					<?php wp_nav_menu(
+						array(
+							'theme_location'  => 'primary',
+							'container_class' => 'collapse navbar-collapse mc-header__menu',
+							'container_id'    => 'navbarNavDropdown',
+							'menu_class'      => 'navbar-nav',
+							'fallback_cb'     => '',
+							'menu_id'         => 'main-menu',
+							'walker'          => new understrap_WP_Bootstrap_Navwalker(),
+						)
+					); ?>
+				</div>
+
 			<?php if ( 'container' == $container ) : ?>
 			</div><!-- .container -->
 			<?php endif; ?>
