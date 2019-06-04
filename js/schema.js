@@ -46,7 +46,8 @@ var schemaTest = {
             "first_charge": {
               "title": "First Donation Date",
               "type": "string",
-              "format": "date"
+              "format": "date",
+              "pattern": "^[0-9]{2}/[0-9]{2}/[0-9]{4}$"
             },
             "stripe_token": {
               "title": "Credit/Debit Card",
@@ -210,6 +211,11 @@ var schemaTest = {
             "invalidPattern": "This is not a five-digit (99999) or nine-digit (99999-9999) zip code."
           }
         },
+        "/donation_info/first_charge": {
+          "messages": {
+            "invalidPattern": "This is not a valid date in the format MM/DD/YYYY."
+          }
+        },
         "/donation_info/stripe_token": {
           "templates": {
             "control-text": "<input type=\"hidden\" name=\"stripe_token\"/><div id=\"card-element\"></div><div id=\"card-errors\" class=\"help-block\"></div>"
@@ -257,6 +263,7 @@ var schemaTest = {
               ]
             },
             "custom_amount": {
+              "placeholder": "$0.00",
               "dependencies": {
                 "amount": 0.00
               },
